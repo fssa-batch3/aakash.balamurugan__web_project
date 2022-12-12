@@ -14,6 +14,7 @@ font-family: 'Source Code Pro', monospace; */
 body{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    background-color: #f6f6f6;
 }
 h2{
     font-family: 'Source Code Pro', monospace;
@@ -88,6 +89,7 @@ p{
     padding: 15px 30px;
     border-radius: 25px;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 .maincont .start{
     background-color: red;
@@ -126,7 +128,7 @@ a{
 }
 .user{
     width: 300px;
-    background-color: #cfcbcb;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -174,7 +176,7 @@ footer{
     right: 60px;
 }
 .sub1{
-    background-color:antiquewhite;
+    background-color: #ffffff;
     padding: 10px 10px;
  
     margin-right: 20px;
