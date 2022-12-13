@@ -23,7 +23,6 @@
     margin-left: 245px;
     margin-bottom: 100px;
   }
-  
   .topbar {
     display: flex;
     justify-content: space-between;
@@ -31,7 +30,6 @@
     background-color: #101010;
     padding: 14px 30px;
   }
- 
 .head{
     background-color: #663595;
     display: flex;
@@ -153,11 +151,7 @@
 .start a{
   text-decoration: none;
 }
-footer{
-  background-color: cornsilk;
-  padding: 40px;
-  text-align: center;
-}
+
 .pho img{
   width: 400px;
   height: 350px;
@@ -303,4 +297,16 @@ h2{
 .final{
   display: flex;
   justify-content: space-evenly;
+}
+input{
+  background-color: #fbeaeb;
+height: 40px;
+width: 350px;
+  border: none;
+  border-bottom:2px solid black ;
+}
+footer{
+  background-color: cornsilk;
+  padding: 40px;
+  text-align: center;
 }

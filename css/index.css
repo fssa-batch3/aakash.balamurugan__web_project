@@ -14,7 +14,7 @@ font-family: 'Source Code Pro', monospace; */
 body{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: #fbeaeb;
 }
 h2{
     font-family: 'Source Code Pro', monospace;
@@ -85,18 +85,29 @@ p{
     font-family: 'Inconsolata', monospace;
 }
 .start{
-    background-color: red;
-    padding: 15px 30px;
-    border-radius: 25px;
-    letter-spacing: 1px;
-    color: #ffffff;
+    background-color: #663595;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 10px;
+    border-radius: 40px;
+    margin-left: 20px;
 }
 .maincont .start{
-    background-color: red;
+    background-color: #663595;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    margin-left: 20px;
     position: relative;
     top: 30px;
-    margin-left: 10px;
-    border-radius: 25px;
+}
+.start:hover{
+    background-color: #6803c7;
 }
 .second{
     text-align: center;
@@ -106,12 +117,9 @@ p{
 }
 #works{
     text-align: center;
-   
     width: 900px;
-  
     margin-left: 295px;
 }
-
 a{
     text-decoration: none ;
     color: #000000;
@@ -140,7 +148,6 @@ a{
 .subwork{
     display: flex;
     justify-content: space-evenly;
-  
 }
 ul li{
     list-style: none;
@@ -149,8 +156,7 @@ ul li{
 #benifits{
     padding: 30px 100px;
     color: #ffffff;
-    background-color: rgba(165,160,164,255)
-    ;
+    background-color: rgba(165,160,164,255) ;
 }
 .benifits{
     margin-top: 30px;
@@ -160,7 +166,8 @@ ul li{
 footer{
     background-color: cornsilk;
     padding: 40px;
-}
+    text-align: center;
+  }
 .list img{
     width: 20px;
     margin-right: 10px;
@@ -169,18 +176,16 @@ footer{
     width: 700px;
     height: 350px;
 }
-
-
 #review{
     position: relative;
     right: 60px;
 }
 .sub1{
     background-color: #ffffff;
-    padding: 10px 10px;
- 
+    padding: 40px 30px;
     margin-right: 20px;
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 .sub1 p{
     width: 280px;
@@ -192,3 +197,12 @@ footer{
     padding: 10% 0px;
     margin-right: 10px;
 }
+.kuttybox{
+    background-color: #ffffff;
+    margin: 10px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 600PX;
+  }
+  
