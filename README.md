@@ -15,4 +15,4 @@ Flow chart
 https://drive.google.com/file/d/1PuzbXdCagc1ulwUg4ILj1ev228OWEjYd/view?usp=sharing 
 
 live server:
-https://aakashbalamurugan.github.io
+https://aakashbalamurugan.github.io/100day-project/
