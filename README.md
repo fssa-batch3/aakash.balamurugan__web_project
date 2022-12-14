@@ -12,7 +12,7 @@ MVP pdf:
 https://drive.google.com/file/d/1PuzbXdCagc1ulwUg4ILj1ev228OWEjYd/view?usp=sharing
 
 Flow chart
-https://drive.google.com/file/d/1PuzbXdCagc1ulwUg4ILj1ev228OWEjYd/view?usp=sharing 
+https://drive.google.com/file/d/17AeD-vTX7x6QsIbaV4cB2i6oG0eSmEfq/view?usp=sharing
 
 live server:
 https://aakashbalamurugan.github.io/100day-project/
