@@ -59,9 +59,10 @@ html{
   color: white;
   font-size: 16px;
   font-weight: bold;
-  padding: 14px 30px;
+  padding: 15px 30px;
   border: 10px;
-  border-radius: 40px;
+  border-radius: 25px;
+  letter-spacing: 1px;
   margin-left: 20px;
 }
 .maincont .start{
@@ -297,10 +298,6 @@ html{
 .event_content h2{
   text-align: center;
 }
-.event_content{
-  padding: 25px;
-  margin: 10px;
-}
 .event_content h1 , .event_content p{
 text-align: center;
 }
@@ -398,7 +395,6 @@ iframe{
 /* more info for the experts */
 
 .info{
-  margin: 30px;
   background-color: #88888875;
   padding: 25px;
   margin: 0px 30px;  
@@ -416,7 +412,6 @@ iframe{
 .user .flex img{
   width: 50px;
   border-radius: 50%;
-  width: 50px;
   height: 50px;
   margin-right: 10px;
 }
@@ -532,16 +527,12 @@ select{
 #book th , #book td{
   width: 70px;
   height: 35px;
+  border: 1px solid #000000;
+  padding: 8px;
 }
 .days{
   background-color: #8400ff;
 }
-
-#book td, #book th {
-  border: 1px solid #000000;
-  padding: 8px;
-}
-
 #book tr:nth-child(even){
   background-color: #f9c3c7;
 }
@@ -564,9 +555,6 @@ footer{
     padding: 30px;
     border: 2px solid rgba(0, 0, 0, 0.418);
     border-radius: 5px;
-}
-.center{
-  align-self: center;
 }
 .visitbox .cancel{
   position: relative;
