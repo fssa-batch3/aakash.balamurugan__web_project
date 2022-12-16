@@ -22,12 +22,13 @@
           </div></div>
 
 
-    <div class="booking">
+    <div class="bookingbox">
  <h1> Appointment Booking</h1><br>
  <hr><br>
 <div class="flex">
     <div class="">
-        <label for="info">
+       <form action="">
+        <label for="info" class="">
             Reason for visit: <br>
             <select >
                 <option value="">Having stage fear</option>
@@ -35,12 +36,13 @@
                 <option value="">Inferiority Complex</option>
             </select><br>
             Name: 
-            <input type="text" placeholder="Eg:Aakash"> <br>
+            <input type="text" placeholder="Eg:Aakash" class="bookinginput" required> <br>
             Email-address: 
-            <input type="email" placeholder="Eg:someone@gmail.com"><br>
+            <input type="email" placeholder="Eg:someone@gmail.com" class="bookinginput" required><br>
             Phone-Number: 
-            <input type="number" placeholder="Eg:9876543210">
+            <input type="number" placeholder="Eg:9876543210" class="bookinginput" required>
          </label>
+       
     </div>
     
     <div id="book">
@@ -84,17 +86,18 @@
 </div>
 
  <div class="final">
-    <a href="">
+    <a href="private.html">
         <div class="cancel">
             Cancel
         </div>
     </a>
-   <a href="">
-    <div class="confirm">
-        conform
-    </div>
+   <a href="visit conformation.html">
+    <button class="confirm" for="info">
+        confirm
+    </button>
    </a>
  </div>
+</form>
     </div>
     <footer>
         <p> Copyright © BetterMe. All right reserved.</p>

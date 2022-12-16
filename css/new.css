@@ -25,6 +25,115 @@ font-family: 'Source Code Pro', monospace; */
   .logo a{
     text-decoration: none;
   }
+
+
+  /* index */
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.banner{
+  background-image: url(../img/home/elon.webp);
+  height: 80vh;
+  position: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  color: #ffffff; 
+  background-color: #1d1c1c83;
+  background-blend-mode: multiply;
+}
+.maincont{
+  position:relative;
+  text-align: center;
+  width: 600px;
+  top:250px;
+  left: 600px;
+  font-family: 'Inconsolata', monospace;
+}
+/* login buttons on index */
+.start{
+  background-color: #663595;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 10px;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+.maincont .start{
+  position: relative;
+  top: 30px;
+}
+.navs .start{
+  position:relative;
+  top: 15px;
+}
+.start:hover{
+  background-color: #6803c7;
+}
+
+/* content_in_second _section in index page  */
+.second{
+ text-align: center;
+ padding: 30px 300px;
+  
+}
+/* content_in_third _section in index page  */
+#works{
+  text-align: center;
+  width: 900px;
+  margin-left: 295px;
+  padding-top: 75px;
+}
+.banner2 img{
+  height: 450px;
+}
+.center{
+  text-align: center;
+}
+/* content_in third _section in index page  */
+#benifits{
+  padding: 5px 100px;
+  color: #ffffff;
+  background-color: rgba(165,160,164,255) ;
+  margin-top: 30px;
+}
+.list{
+  padding: 50px 0px;
+}
+.list img{
+  width: 20px;
+  margin-right: 10px;
+}
+.maincont ul li , .list ul li{
+  list-style: none;
+  line-height: 50px;
+}
+
+
+/* .sub1{
+  background-color: #ffffff;
+  padding: 40px 30px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+} */
+.sub1 p{
+  width: 280px;
+}
+.ARROW  img{
+  width: 30PX;
+}
+.ARROW{
+  padding: 10% 0px;
+  margin-right: 10px;
+}
+
+
   /* methods box in tips page */
   .head{
     background-color: #663595;
@@ -56,6 +165,17 @@ font-family: 'Source Code Pro', monospace; */
     position: sticky;
     top: 0px;
     z-index: 2;
+  }
+  .navbar button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
   }
   .navs{
     display: flex;
@@ -226,9 +346,9 @@ text-align: center;
   transform: scale(1.0225);
   transition: 1s;
 }
-.box a{
+/* .box a{
   color: #ec1111;
-}
+} */
 .box h1{
   text-align: center;
   margin-bottom: 10px;
@@ -346,7 +466,7 @@ a .appoitement{
   margin-top: 50px;
   text-align: center;
 } */
-.booking{
+.bookingbox{
   margin: 125px 300px;
   padding: 30px;
   border: 2px solid rgba(0, 0, 0, 0.418);
@@ -386,13 +506,15 @@ select{
   border: 2px solid #00000052;
  margin-bottom: 10px;
 }
-input{
+.bookinginput{
   background-color: #fbeaeb;
   height: 40px;
   width: 350px;
-  border: none;
-  border-bottom:2px solid #00000052 ;
-  margin-bottom: 10px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid #888888;
+  margin: 10px 0px;
 }
 /* table in appointment page  */
 #book {
@@ -435,119 +557,35 @@ footer{
   text-align: center;
 }
 
+/* conform visit */
 
-
-/* index */
-
-
-html{
-  scroll-behavior: smooth;
-}
-.navbar button {
-  background-color: #ffffff;
-  color: #000000;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 14px 30px;
-  border: 0px;
-  border-radius: 40px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-.banner{
-  background-image: url(../img/home/elon.webp);
-  height: 80vh;
-  position: 30%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-  color: #ffffff; 
-  background-color: #1d1c1c83;
-  background-blend-mode: multiply;
-}
-.maincont{
-  position:relative;
-  text-align: center;
-  width: 600px;
-  top:250px;
-  left: 600px;
-  font-family: 'Inconsolata', monospace;
-}
-/* login buttons on index */
-.start{
-  background-color: #663595;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 14px 30px;
-  border: 10px;
-  border-radius: 40px;
-  margin-left: 20px;
-}
-.maincont .start{
-  position: relative;
-  top: 30px;
-}
-.navs .start{
-  position:relative;
-  top: 15px;
-}
-.start:hover{
-  background-color: #6803c7;
-}
-
-/* content_in_second _section in index page  */
-.second{
- text-align: center;
- padding: 30px 300px;
-  
-}
-/* content_in_third _section in index page  */
-#works{
-  text-align: center;
-  width: 900px;
-  margin-left: 295px;
-  padding-top: 75px;
+.visitbox{
+    margin: 200px 300px;
+    padding: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.418);
+    border-radius: 5px;
 }
 .center{
-  text-align: center;
+  align-self: center;
 }
-/* content_in third _section in index page  */
-#benifits{
-  padding: 5px 100px;
-  color: #ffffff;
-  background-color: rgba(165,160,164,255) ;
-  margin-top: 30px;
+.visitbox .cancel{
+  position: relative;
+  top: 150px;
 }
-.list{
-  padding: 50px 0px;
-}
-.list img{
-  width: 20px;
-  margin-right: 10px;
-}
-.maincont ul li , .list ul li{
-  list-style: none;
-  line-height: 50px;
+.visitbox img{
+  height: 100px;
 }
 
+/* ticket booking */
+.ticketbox{
+  margin: 250px 500px;
+  padding: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  border-radius: 5px;
 
-/* .sub1{
-  background-color: #ffffff;
-  padding: 40px 30px;
-  margin-right: 20px;
-  margin-bottom: 40px;
-  border-radius: 10px;
-} */
-.sub1 p{
-  width: 280px;
 }
-.ARROW  img{
-  width: 30PX;
-}
-.ARROW{
-  padding: 10% 0px;
-  margin-right: 10px;
+.ticketbox input{
+  width: 30px;
 }
 
 
@@ -564,43 +602,8 @@ html{
 
 
 
-/* login */
-.login{
-  margin: 300px;
-}
-form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
 
 
-button:hover {
-  opacity: 0.8;
-}
-input{
-  height: 20px;  
-}
-
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-
-
-
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
 
 
 
