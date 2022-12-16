@@ -23,29 +23,83 @@
 
 
     <div class="booking">
- <h1> Appoitement Booking</h1><br>
+ <h1> Appointment Booking</h1><br>
  <hr><br>
- <label for="">
-    Name: <br>
-    <input type="text"> <br>
-    Email-address: <br>
-    <input type="email"><br>
-    Phone-Number: <br>
-    <input type="number">
- </label>
+<div class="flex">
+    <div class="">
+        <label for="info">
+            Reason for visit: <br>
+            <select >
+                <option value="">Having stage fear</option>
+                <option value="">Need Consultation</option>
+                <option value="">Inferiority Complex</option>
+            </select><br>
+            Name: 
+            <input type="text" placeholder="Eg:Aakash"> <br>
+            Email-address: 
+            <input type="email" placeholder="Eg:someone@gmail.com"><br>
+            Phone-Number: 
+            <input type="number" placeholder="Eg:9876543210">
+         </label>
+    </div>
+    
+    <div id="book">
+        <table>
+            <tr class="days">
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THUR</th>
+            </tr>
 
- <div class="table">
-    <th></th>
- </div>
+            <tr>
+                <th class="hover">09:00</th>
+                <th class="hover">NA</th>
+                <th class="hover">09:00</th>
+                <th class="hover">09:00</th>
+            </tr>
+
+            <tr>
+                <th class="hover">NA</th>
+                <th class="hover">10:30</th>
+                <th class="hover">NA</th>
+                <th class="hover">10:30</th>
+            </tr>
+
+            <tr>
+                <th class="hover">02:00</th>
+                <th class="hover">NA</th>
+                <th class="hover">NA</th>
+                <th class="hover">02:00</th>
+            </tr>
+
+            <tr>
+                <th class="hover">04:00</th>
+                <th class="hover">NA</th>
+                <th class="hover">04:00</th>
+                <th class="hover">NA</th>
+            </tr>
+        </table>
+    </div>
+</div>
 
  <div class="final">
-    <div class="cancel">
-        Cancel
-    </div>
-    <div class="conform">
+    <a href="">
+        <div class="cancel">
+            Cancel
+        </div>
+    </a>
+   <a href="">
+    <div class="confirm">
         conform
     </div>
+   </a>
  </div>
     </div>
+    <footer>
+        <p> Copyright © BetterMe. All right reserved.</p>
+         <p>Privacy policy     |     Contact us</p><br><br>
+         <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
+     </footer>
 </body>
 </html>
