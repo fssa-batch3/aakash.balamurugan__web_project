@@ -1,6 +1,7 @@
 # 100day-project
 it is the 100th day project i made
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_aakash.balamurugan__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_aakash.balamurugan__web_project)
 
 Market Research:
 https://docs.google.com/document/d/1EozQtf5ByiSnKMsf-svxuzf1-zj3sELa6ocDsDqipis/edit?usp=sharing
