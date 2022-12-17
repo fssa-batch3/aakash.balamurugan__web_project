@@ -16,4 +16,4 @@ Flow chart
 https://drive.google.com/file/d/17AeD-vTX7x6QsIbaV4cB2i6oG0eSmEfq/view?usp=sharing
 
 live server:
-https://aakashbalamurugan.github.io/100day-project/
+https://fssa-batch3.github.io/aakash.balamurugan__web_project/
