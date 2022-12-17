@@ -37,6 +37,7 @@ html{
 .banner{
   background-image: url(../img/home/elon.webp);
   height: 80vh;
+  width: 100vh;
   position: 30%;
   background-repeat: no-repeat;
   background-position: center;
@@ -133,7 +134,11 @@ html{
   padding: 10% 0px;
   margin-right: 10px;
 }
-
+#review img{
+  height: 50px;
+  width: 50px;
+  margin-left: -50px;
+}
 
   /* methods box in tips page */
   .head{
@@ -412,7 +417,8 @@ iframe{
 .user .flex img{
   border-radius: 50%;
   height: 50px;
-  margin-right: 10px;
+  width: 50px;
+  margin-left: -50px;
 }
 .user{
   width: 300px;
