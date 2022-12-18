@@ -37,7 +37,6 @@ html{
 .banner{
   background-image: url(../img/home/elon.webp);
   height: 80vh;
-  width: 100vh;
   position: 30%;
   background-repeat: no-repeat;
   background-position: center;
