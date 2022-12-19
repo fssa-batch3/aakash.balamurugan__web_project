@@ -560,10 +560,12 @@ footer{
     border: 2px solid rgba(0, 0, 0, 0.418);
     border-radius: 5px;
 }
+
 .visitbox .cancel{
   position: relative;
   top: 150px;
 }
+
 .visitbox img{
   height: 100px;
 }
@@ -576,9 +578,47 @@ footer{
   border-radius: 5px;
 
 }
+
 .ticketbox input{
   width: 30px;
 }
+
+/* login */
+
+.login{
+  margin: 250px 500px;
+  padding: 30px;
+  border: #888888 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+.login input{
+  margin: 10px;
+}
+.login a{
+  text-decoration:underline;
+  color: blue ;
+}
+
+/* sign up  */
+
+.signup{
+  margin: 250px 500px;
+  padding: 30px;
+  border: #888888 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+.signup input{
+  margin: 10px;
+  height: 30px;
+  width: 100%;
+}
+.signup p{
+  float: right;
+}
+
+
 
 
 
