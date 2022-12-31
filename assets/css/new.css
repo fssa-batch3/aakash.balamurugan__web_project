@@ -205,6 +205,15 @@ html{
     font-size: 14px;
     letter-spacing: 1px;
   }
+  .select{  background-color: #663595;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    margin-left: 20px;
+  }
   .button {
     background-color: #ffffff;
     color: #000000;
@@ -267,15 +276,16 @@ html{
   color: #fbeaeb;
   height: 300px;
 }
-
-.event a{
-  text-decoration: none;
-}
 .eventbox img{
  
   height: 280px;
   margin-right: 20px;
 }
+
+.event a{
+  text-decoration: none;
+}
+
 .eventbox:hover{
   box-shadow: #888888 5px 2px;
   transform: scale(1.02);
@@ -347,9 +357,7 @@ text-align: center;
   transform: scale(1.0225);
   transition: 1s;
 }
-/* .box a{
-  color: #ec1111;
-} */
+
 .box h1{
   text-align: center;
   margin-bottom: 10px;
@@ -623,6 +631,78 @@ footer{
   {
     overflow: hidden;
   }
+  .betterme{
+    padding: 80px 10px;
+    font-size: 20px;
+  }
+  .navbar button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 10px;
+    padding: 7px 5px;
+    width: 75px;
+    margin-left: 10px;
+  }
+  .navbar .start{
+    padding: 10px 15px;
+   
+    position: relative;
+    top: 5px;
+  }
+
+  .start{
+    background-color: #663595;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 75px;
+    margin-left: 10px;
+    border-radius: 25px;
+    position: relative;
+    top:0px
+  }
+
+  .select{  background-color: #663595;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+   
+    margin-left: 20px;
+  }
+  .button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+   
+    margin-left: 20px;
+  }
+
+  .box{
+    background-color:  #663595;
+    color:#fbeaeb ;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 10px;
+    height: 530px;
+  }
+  .box img{
+    height: 150px;
+    align-items: center;
+    margin-left: 100px;
+    border-radius: 10px;
+  }
+
+  .box .flex{
+    display: block;
+  }
+  
+ .eventbox{
+
+ }
   .banner{
     background-image: url(../img/home/elon.webp);
     height: 40vh;
@@ -778,6 +858,22 @@ footer{
   width: 20px;
   margin-left: 0px;
 
+}
+
+.eventbox{
+  background-color: #663595;
+  border-radius: 10px;
+  display: block;
+  justify-content: space-between ;
+  padding: 10px;
+  margin: 10px;
+  color: #fbeaeb;
+  height: 550px;
+}
+.eventbox img{
+ 
+ width: 80%;
+ margin-left: 40px;
 }
 footer p{
   font-size: 10px;
