@@ -378,10 +378,11 @@ text-align: center;
 /* review star */
 .checked {
   color: orange;
+}
 
   /* videos/youtube video for second section of more event info  */
-}
-video{
+
+  video{
   margin-left: 400px;
   height: 400px;
   width:700px;
@@ -436,14 +437,14 @@ iframe{
 
 /* suggestion page */
 
-.suggestion{
+ .suggestion{
   background-color: #ffffff;
-  margin: 10px;
+  /* margin: 10px; */
   width: 400px;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 10px;
-  height: 600PX;
-}
+  /* height: 600PX; */
+} 
 .suggestion img{
   width: 200px;
   padding: 20px 100px;
@@ -563,10 +564,10 @@ footer{
 /* conform visit */
 
 .visitbox{
-    margin: 200px 300px;
-    padding: 30px;
-    border: 2px solid rgba(0, 0, 0, 0.418);
-    border-radius: 5px;
+  margin: 200px 300px;
+  padding: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  border-radius: 5px;
 }
 
 .visitbox .cancel{
@@ -628,9 +629,7 @@ footer{
 
 
 @media (max-width: 414px) {
-  {
-    overflow: hidden;
-  }
+  
   .betterme{
     padding: 80px 10px;
     font-size: 20px;
@@ -879,6 +878,135 @@ footer p{
   font-size: 10px;
 }
 
+.flex .user{
+  font-size: 10px;
+  margin: 3px;
+  padding: 10px;
+} 
+.flex .user img{
+  width: 25px;
+  height: 25px;
+  margin-left: 0px;
+}
+ /* videos/youtube video for second section of more event info  */
+
+ video{
+
+  height: 300px;
+  width:380px;
+  margin: 40px 20px;
+  border-radius: 10px;
+}
+iframe{
+ 
+  height: 300px;
+  width:380px;
+  margin: 40px 20px;
+  border-radius: 10px;
+}
+
+.appoitement{
+  padding: 20px;
+font-size: 13px;
+  margin-left: 150px;
+
+}
+
+.suggestion{
+ width: 100px;
+  font-size: 10px;
+  margin: 10px;
+padding: 10px;
+height: 500px;
+}
+
+.suggestion img{
+  width: 100px;
+  padding: 20px 0px;
+}
+.story{
+  font-size: 10px;
+}
+.info{
+display: none;
+}
+/* content page for events */
+.event_content{
+  display: block;
+  padding: 25px;
+  border: #000000 3px solid;
+  margin: 10px;
+  /* height: 350px; */
+  align-items: center;
+}
+
+.event_content img{
+
+  height: 170px;
+}
+
+
+.event_content h2{
+  text-align: center;
+}
+.event_content h1 , .event_content p{
+text-align: center;
+}
+.venue{
+  margin: 30px 0px;
+margin-bottom: 60px;
+}
+.moreimg {
+  font-size: 10px;
+  height: 300px;
+}
+.moreimg img{
+  height: 100px;
+} 
+.brief_on_event {
+  text-align: center;
+  font-size: 10px;
+}
+.brief_on_event h1{
+  font-size: 15px;
+}
+.brief_on_event h2{
+  font-size: 12px;
+}
+.bookingbox{
+  margin: 1px 0px;
+  padding: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  border-radius: 5px;
+}
+
+.bookingbox .flex{
+  display: block;
+}
+
+#book{
+  margin: 20px 0px;
+}
+
+.visitbox{
+  margin: 90px 00px;
+  padding: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  border-radius: 5px;
+}
+
+.visitbox .cancel{
+  position: relative;
+  top: 10px;
+}
+
+.ticketbox{
+  margin: 50px 20px;
+  padding: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  border-radius: 5px;
+
+}
 }
 
 
