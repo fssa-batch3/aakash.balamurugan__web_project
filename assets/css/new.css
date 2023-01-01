@@ -1007,6 +1007,31 @@ margin-bottom: 60px;
   border-radius: 5px;
 
 }
+
+.pho img{
+  height:150px ;
+}
+
+.pho{
+  margin: 3px;
+}
+
+.pic{
+ margin: 3px;
+  font-size: 10px;
+}
+.topic{
+  font-size: 10px;
+}
+
+.point{
+  margin-top: 10px;
+}
+
+.head{
+  font-size: 13px;
+  top: 52px;
+}
 }
 
 
