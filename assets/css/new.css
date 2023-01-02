@@ -778,6 +778,9 @@ footer{
   font-size: 13px;
   text-align: center;
 }
+.ARROW img{
+  width: 20px;
+}
 #works .flex{
  justify-content: flex-start;
 }
@@ -1032,6 +1035,8 @@ margin-bottom: 60px;
   font-size: 13px;
   top: 52px;
 }
+
+.
 }
 
 
