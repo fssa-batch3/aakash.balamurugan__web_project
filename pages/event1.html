@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/new.css">
+</head>
+<body>
+
+ 
+    <script>
+       
+
+        const info = [{title : "Phoenix Books Virtual Poetry Open Mic",
+                       para: "Join us for an evening of poetry hosted by Phoenix Books' own Bianca Amira Zanella!" },
+
+                      {title: "It's All Connected - Open Mic by Pooja",
+                     para: "Ever wondered what your favourite inanimate thing would say if they could express their emotions? What if they were brought to life and allowed to talk? Well we've got a stage for you." },
+
+                       {title : "Spot On - More than an Open Mic",
+                      para: "We can hear the gears twisting and turning in your heads trying to figure out what this collaborative event with House of T is all about."} ];
+
+
+        const redirect_link = ["../pages/events/event1.html" , "../pages/events/event2.html" ,
+                           "../pages/events/event3.html"]
+       
+
+        const event_images = [{link : "../assets/img/events/phoneix_event.webp",
+                               alt:"Phoenix Books Virtual Poetry Open Mic"}  ,
+
+                             {link: "../assets/img/events/pooja_open_mic.webp",
+                               alt:"It's All Connected - Open Mic by Pooja"}, 
+    
+                             {link:"../assets/img/events/spot_on_open_mic.jpg",
+                                alt:"Spot On - More than an Open Mic" }]
+
+        const content =[ {date:"15th December 2022",Time : "5:30am To 7 PM ", venue:"online"},
+        {date:" 10th December 2022",Time : "4 PM To 6 PM ", venue:"Cover it up Studio The Podium KNK Road Chennai"},
+        {date:"11th December 2022",Time : " 3 PM To 5 PM ", venue:"PH cafe, EgmoreChennai"}]
+       
+       
+       
+        for (let i = 0; i < 3; i++){
+
+let redirect = document.createElement("a");
+redirect.setAttribute ("href" , redirect_link[i] );
+document.body.append(redirect);
+
+let div_event = document.createElement("div");
+div_event.setAttribute("class" , "event");
+redirect.append(div_event);
+
+let div_event_box = document.createElement("div");
+div_event_box.setAttribute("class" , "eventbox");
+div_event.append(div_event_box); 
+
+let div_onuila = document.createElement("div");
+div_onuila.setAttribute("class","");
+div_event_box.append(div_onuila);
+
+let img_photo =document.createElement("img");
+img_photo.setAttribute("src" , event_images[i].link);
+img_photo.setAttribute("alt" ,event_images[i].alt);
+div_onuila.append(img_photo);
+
+let div_none = document.createElement("div");
+div_none.setAttribute("class","");
+div_event_box.append(div_none);
+
+let h2_title = document.createElement("h2");
+h2_title.innerHTML = info [i].title;
+div_none.append(h2_title);
+
+let p_para = document.createElement("p");
+p_para.innerText= info [i].para;
+div_none.append(p_para); 
+
+let div_nothing = document.createElement("div");
+div_nothing.setAttribute("class","");
+div_event_box.append(div_nothing);
+
+let venue =document.createElement("h4");
+venue.innertext="date"
+venue.innerText=
+content[i].Time
+content[i].venue;
+div_nothing.append(venue);
+
+
+        }
+       
+
+
+    </script>
+</body>
+</html>

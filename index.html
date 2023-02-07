@@ -12,7 +12,7 @@
    <body>
 
     <!-- navbar  -->
-    <div class="navbar">
+    <!-- <div class="navbar">
         <div class="logo">
           
            <a href="index.html"> <span class="betterme">BetterMe</a></span>
@@ -25,7 +25,7 @@
                 Log in
             </span></a>
       </div>
-    </div>
+    </div> -->
     <!-- first section  -->
     <div class="banner">
         <div class="maincont">
@@ -149,7 +149,34 @@
         <p>Privacy policy     |     Contact us</p><br><br>
         <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
     </footer>
-    
+    <script>
+        const div_index= document.createElement("div")
+        div_index.setAttribute("class", "index")
+        document.querySelector("body").prepend(div_index)
+
+         const div_navbar = document.createElement("div")
+            div_navbar.setAttribute("class", "navbar")
+            document.querySelector("div_index").prepend(div_navbar)
+
+            const div_logo = document.createElement("div")
+            div_navbar.setAttribute("class", "logo")
+            document.querySelector("div_navbar").prepend(div_logo)
+
+            const a = document.createElement("a")
+            a.setAttribute("href", "index.html")
+            a.innerText="BetterMe"
+            document.querySelector("span_betterme").prepend(a)
+
+            const span = document.createElement("span")
+            span.setAttribute("class", "betterme")
+            span.innerText="BetterMe"
+            document.querySelector("div_logo").prepend(span_betterme)
+
+            const div = document.createElement("div")
+            div.setAttribute("class", "navs")
+            div_navs.innerText="BetterMe"
+            document.querySelector("div_navbar").append(div_navs)
+    </script>
     
    </body>
    </html>

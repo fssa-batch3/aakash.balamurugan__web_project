@@ -26,21 +26,22 @@
 
                 <h1>Sign Up for Free</h1>
           
-          <form action="../tips.html">
+         
           
           <div class="flex">
             <div class="">
               <label>
                 First Name
               </label>
-              <input type="text">
+              <input type="text" id="first_name" >
             </div>
         
             <div class="">
               <label>
                 Last Name
               </label>
-              <input type="text">
+              <input type="text"
+              id="last_name" >
             </div>
           </div>
 
@@ -48,22 +49,74 @@
             <label>
               Email Address
             </label>
-            <input type="email">
+            <input type="email"
+            id="gmail" >
           </div>
           
           <div class="field-wrap">
             <label>
               Set A Password
             </label>
-            <input type="password">
+            <input type="password" id="password" >
           </div>
 
           <br>
           <p><a href="login.html">Already a user!!</a></p>
           
           <br>
-          <button type="submit" class="button button-block">Get Started</button>
+          <button type="submit" class="button button-block" onclick="sumbit()">Get Started</button>
           
-          </form>
+
+
+        
+       
 
             </div>
+
+            </div>
+            <script>
+
+              const user_name =[{},]
+
+              function sumbit(){
+
+                const First_name = document .getElementById("first_name").value
+                const last_name = document .getElementById("last_name").value
+
+                const email = document.getElementById("gmail").value
+                const password = document.getElementById("password").value
+ 
+  console.log(First_name)
+  console.log(last_name)
+  console.log(email)
+  console.log(password)
+ 
+
+
+
+
+  let user_records= new Array();
+ user_records= JSON.parse(localStorage.getItem("user_details"))
+ ?JSON.parse(localStorage.getItem("user_details")):[];
+
+ user_records.push(
+    {
+        "user_name":First_name,
+        "user_email":email,
+        "last-name":last_name,
+        "user_Password":password
+    }
+ )
+ localStorage.setItem("user_details",JSON.stringify(user_records));
+
+
+
+
+
+
+  window.location.href="../tips.html"
+                
+              }
+                
+            </script>
+   </body></html>

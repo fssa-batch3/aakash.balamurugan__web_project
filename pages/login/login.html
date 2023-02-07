@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- displays site properly based on user's device -->
-   <link rel="stylesheet" href="../../assets/css/new.css">
-   <title>BetterMe</title>
-   <link rel="icon" type="img/png" sizes="32x32" href="../assets/img/self.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="../../assets/css/new.css">
+  <title>BetterMe</title>
+  <link rel="icon" type="img/png" sizes="32x32" href="../assets/img/self.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap"
+    rel="stylesheet">
 </head>
-   <body>
-    
 
-        <div class="content">
+<body>
 
-            <div class="navbar">
-                <div class="logo">
-                  
-                    <span class="betterme"><a href="../index.html">BetterMe</a></span>
-                   
-                 </div>
-            </div>
-        <div class="login">
-            <h2>Welcome Back</h2>
-            <form action="../tips.html">
-          
-                <div class="">
-                <label>
-                  Email Address
-                </label>
-                <input type="email"required>
-              </div>
-              
-              <div class="">
-                <label>
-                  Password
-                </label>
-                <input type="password"required>
-              </div>
-              
-              <div class="flex">
-                <div class=""><a href="#">Forgot Password?</a></div>
-                <div class=""><a href="signup.html">Not a user Already</a></div>
-              </div>
-              <br>
-              
-              <button class="button button-block">Log In</button>
-              
-              </form>
-    
-            </div>
+
+  <div class="content">
+
+    <div class="navbar">
+      <div class="logo">
+
+        <span class="betterme"><a href="../index.html">BetterMe</a></span>
+
+      </div>
+    </div>
+    <div class="login">
+      <h2>Welcome Back</h2>
+      <!-- <form   > -->
+
+        <div class="">
+          <label>
+            Email Address
+          </label>
+          <input type="email" id="log_email" required>
         </div>
+
+        <div class="">
+          <label>
+            Password
+          </label>
+          <input type="password" id="log_password" required>
+        </div>
+
+        <div class="flex">
+          <div class=""><a href="../profile.html">Forgot Password?</a></div>
+          <div class=""><a href="signup.html">Not a user Already</a></div>
+        </div>
+        <br>
+
+        <button class="button button-block" type="submit" onclick="aakash()">Log In</button>
+
+      <!-- </form> -->
+
+    </div>
+  </div>
+  <script>
+    function aakash() {
+      const log_email = document.getElementById("log_email").value;
+      const log_password = document.getElementById("log_password").value;
+    
+      let arr = JSON.parse(localStorage.getItem("user_details"))
+      let res;
+        arr.find(element => {
+            if (element["user_email"] == log_email && element["user_Password"]== log_password) {
+                return res=1  ;
+            }
+            else {
+                return res=0;
+            }
+        });
+        if(res==1){
+      window.location.href="../tips.html"
+      }
+      else{
+      alert("none")
+      }
+      }
+    
+
+
+
+
+
+
+     
+  </script>
+</body>
+
+</html>

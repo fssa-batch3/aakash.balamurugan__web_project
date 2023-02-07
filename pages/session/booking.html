@@ -27,21 +27,28 @@
  <h1> Appointment Booking</h1><br>
  <hr><br>
 <div class="flex">
-    <div class="">
-      <form action="../visit_conformation.html">
+    <div class="form">
+      <!-- <form action="../visit_conformation.html"> -->
         <label for="info" class="">
             Reason for visit: <br>
-            <select >
-                <option value="">Having stage fear</option>
-                <option value="">Need Consultation</option>
-                <option value="">Inferiority Complex</option>
-            </select><br>
-            Name: 
-            <input type="text" placeholder="Eg:Aakash" class="bookinginput" required> <br>
+
+
+
+            <select value="Need Consultation" id="reason" >
+                <option value="10" id="reason">Having stage fear</option>
+                <option value="2" id="reason">Need Consultation</option>
+                <option value="3" id="reason">Inferiority Complex</option>
+            </select>
+            
+            
+            
+            <br>
+            <!-- Name: 
+            <input type="text" placeholder="Eg:Aakash" class="bookinginput" id="name" value=First_name required> <br>
             Email-address: 
-            <input type="email" placeholder="Eg:someone@gmail.com" class="bookinginput" required><br>
+            <input type="email" placeholder="Eg:someone@gmail.com" class="bookinginput" id="gmail"  required><br>
             Phone-Number: 
-            <input type="text" placeholder="Eg:9876543210" class="bookinginput" maxlength="10" minlength="10"  pattern="[1-9]{1}[0-9]{9}" required>
+            <input type="text" placeholder="Eg:9876543210" class="bookinginput" maxlength="10" minlength="10"  pattern="[1-9]{1}[0-9]{9}" id="phone_number"  required> -->
            
          </label>
        
@@ -95,11 +102,11 @@
             Cancel
         </div>
     </a>
-   <a href="../visit_conformation.html">
-    <button class="confirm" for="info">
+
+    <button type="button" class="confirm" for="info" onclick="sumbit()">
         confirm
     </button>
-   </a>
+   
  </div>
 </form>
 
@@ -111,5 +118,48 @@
          <p>Privacy policy     |     Contact us</p><br><br>
          <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
      </footer>
+      <!-- Name: 
+            <input type="text" placeholder="Eg:Aakash" class="bookinginput" id="name" value=First_name required> <br>
+            Email-address: 
+            <input type="email" placeholder="Eg:someone@gmail.com" class="bookinginput" id="gmail"  required><br>
+            Phone-Number: 
+            <input type="text" placeholder="Eg:9876543210" class="bookinginput" maxlength="10" minlength="10"  pattern="[1-9]{1}[0-9]{9}" id="phone_number"  required> -->
+           
+
+
+     <script>
+
+        let input =[{type:"text" , placeholder:"Eg:Aakash",id:"name"   },{type:"email" , placeholder:"Eg:someone@gmail.com",id:"gmail"   },
+        {type:"text" , placeholder:"Eg:9876543210",id:"phone_number"   }]
+        let form_input  
+        for(i=0; i<3 ;i++){
+        form_input = document.createElement("input");
+        form_input.setAttribute("type", input[i].type)
+        form_input.setAttribute("placeholder",input[i].placeholder)
+        form_input.setAttribute("class","bookinginput")
+        form_input.setAttribute("id",input[i].id)
+        form_input.setAttribute("requried",)
+       
+        document.querySelector(".form").append(form_input)
+        }
+        
+      function sumbit() { 
+
+        const reason = document.querySelector("reason").value
+        const name = document.getElementById("name").value 
+        const gmail = document.getElementById("gmail").value
+        const phone_number = document.getElementById("phone_number").value 
+
+
+        console.log(reason)
+        console.log(name)   
+        console.log(gmail)
+        console.log(phone_number)
+
+        localStorage.
+
+        window.location.href="../visit_conformation.html"
+
+      }  </script>
 </body>
 </html>

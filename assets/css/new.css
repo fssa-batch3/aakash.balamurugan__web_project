@@ -45,7 +45,7 @@ html{
   background-color: #1d1c1c83;
   background-blend-mode: multiply;
 }
-.maincont{
+#maincont{
   position:relative;
   text-align: center;
   width: 600px;
@@ -1036,7 +1036,6 @@ margin-bottom: 60px;
   top: 52px;
 }
 
-.
 }
 
 
