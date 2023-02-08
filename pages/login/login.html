@@ -61,24 +61,38 @@
     function aakash() {
       const log_email = document.getElementById("log_email").value;
       const log_password = document.getElementById("log_password").value;
-    
-      let arr = JSON.parse(localStorage.getItem("user_details"))
-      let res;
-        arr.find(element => {
-            if (element["user_email"] == log_email && element["user_Password"]== log_password) {
-                return res=1  ;
-            }
-            else {
-                return res=0;
-            }
-        });
-        if(res==1){
-      window.location.href="../tips.html"
+
+      
+      let arr = JSON.parse(localStorage.getItem("user_details"));
+      
+      let result = arr.find(function(value){
+        return value.user_email === log_email ;
       }
+      )
+
+      
+
+   
+
+      if(log_email==result.user_email ){
+        if(log_password==result.user_Password){
+          
+          localStorage.setItem("details",JSON.stringify(result));
+          window.location.href="../tips.html";
+         
+        }
+        else{
+          alert("incorret password")
+        }
+        }
       else{
-      alert("none")
+        alert("incorrect password or email")
       }
       }
+
+      
+
+     
     
 
 
