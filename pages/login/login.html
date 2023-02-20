@@ -1,107 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="../../assets/css/new.css" />
+    <title>BetterMe</title>
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="32x32"
+      href="../assets/img/self.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="../../assets/css/new.css">
-  <title>BetterMe</title>
-  <link rel="icon" type="img/png" sizes="32x32" href="../assets/img/self.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap"
-    rel="stylesheet">
-</head>
+  <body>
+    <div class="content">
+      <div class="navbar">
+        <div class="logo">
+          <span class="betterme"><a href="../index.html">BetterMe</a></span>
+        </div>
+      </div>
+      <div class="login">
+        <h2>Welcome Back</h2>
+        <form>
+          <div class="">
+            <label> Email Address </label>
+            <input type="email" id="log_email" required />
+          </div>
 
-<body>
+          <div class="">
+            <label> Password </label>
+            <input
+              type="password"
+              id="log_password"
+              pattern="(?=^.{4,}(?=.*[A-Z])(?=.*[a-z]).*$"
+              required
+            />
+          </div>
 
+          <div class="flex">
+            <div class=""><a href="../profile.html">Forgot Password?</a></div>
+            <div class=""><a href="signup.html">Not a user Already</a></div>
+          </div>
+          <br />
 
-  <div class="content">
-
-    <div class="navbar">
-      <div class="logo">
-
-        <span class="betterme"><a href="../index.html">BetterMe</a></span>
-
+          <button class="button button-block">Log In</button>
+        </form>
       </div>
     </div>
-    <div class="login">
-      <h2>Welcome Back</h2>
-      <!-- <form   > -->
+    <script>
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        aakash();
+      });
 
-        <div class="">
-          <label>
-            Email Address
-          </label>
-          <input type="email" id="log_email" required>
-        </div>
+      function aakash() {
+        const log_email = document.getElementById("log_email").value;
+        const log_password = document.getElementById("log_password").value;
 
-        <div class="">
-          <label>
-            Password
-          </label>
-          <input type="password" id="log_password" required>
-        </div>
+        let arr = JSON.parse(localStorage.getItem("user_details"));
 
-        <div class="flex">
-          <div class=""><a href="../profile.html">Forgot Password?</a></div>
-          <div class=""><a href="signup.html">Not a user Already</a></div>
-        </div>
-        <br>
+        let result = arr.find(function (value) {
+          return value.user_email === log_email;
+        });
 
-        <button class="button button-block" type="submit" onclick="aakash()">Log In</button>
-
-      <!-- </form> -->
-
-    </div>
-  </div>
-  <script>
-    function aakash() {
-      const log_email = document.getElementById("log_email").value;
-      const log_password = document.getElementById("log_password").value;
-
-      
-      let arr = JSON.parse(localStorage.getItem("user_details"));
-      
-      let result = arr.find(function(value){
-        return value.user_email === log_email ;
-      }
-      )
-
-      
-
-   
-
-      if(log_email==result.user_email ){
-        if(log_password==result.user_Password){
+        if (log_password == result.user_Password) {
           
-          localStorage.setItem("details",JSON.stringify(result));
-          window.location.href="../tips.html";
-         
+          localStorage.setItem("details", JSON.stringify(result));
+
+          alert("login succes");
+
+          console.log(" password");
+
+          window.location.href = "../tips.html";
+        } else {
+          alert("incorret password");
+          console.log("incorret password");
         }
-        else{
-          alert("incorret password")
-        }
-        }
-      else{
-        alert("incorrect password or email")
       }
-      }
-
-      
-
-     
-    
-
-
-
-
-
-
-     
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

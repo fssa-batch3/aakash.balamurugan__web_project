@@ -1,136 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- displays site properly based on user's device -->
-   <link rel="stylesheet" href="../../assets/css/new.css">
-   <title>BetterMe</title>
-   <link rel="icon" type="img/png" sizes="32x32" href="../assets/img/self.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
-</head>
-   <body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="../../assets/css/new.css" />
+    <title>BetterMe</title>
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="32x32"
+      href="../assets/img/self.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-        <div class="content">
+  <body>
+    <div class="content">
+      <div class="navbar">
+        <div class="logo">
+          <span class="betterme"><a href="../index.html">BetterMe</a></span>
+        </div>
+      </div>
 
-            <div class="navbar">
-                <div class="logo">
-                  
-                    <span class="betterme"><a href="../index.html">BetterMe</a></span>
-                   
-                 </div>
-            </div>
+   <form>
 
-            <div class="signup">
+    <div class="signup">
+      <h1>Sign Up for Free</h1>
 
-                <h1>Sign Up for Free</h1>
-          
-         
-          
-          <div class="flex">
-            <div class="">
-              <label>
-                First Name
-              </label>
-              <input type="text" id="first_name" >
-            </div>
-        
-            <div class="">
-              <label>
-                Last Name
-              </label>
-              <input type="text"
-              id="last_name" >
-            </div>
-          </div>
+      <div class="flex">
+        <div class="">
+          <label> First Name </label>
+          <input type="text" id="first_name" pattern="[a-zA-Z]+" required />
+        </div>
 
-          <div class="">
-            <label>
-              Email Address
-            </label>
-            <input type="email"
-            id="gmail" >
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Set A Password
-            </label>
-            <input type="password" id="password" >
-          </div>
+        <div class="">
+          <label> Last Name </label>
+          <input type="text" id="last_name" pattern="[a-zA-Z]+" required/>
+        </div>
+      </div>
 
-          <br>
-          <p><a href="login.html">Already a user!!</a></p>
-          
-          <br>
-          <button type="submit" class="button button-block" onclick="sumbit()">Get Started</button>
-          
+      <div class="">
+        <label> Email Address </label>
+        <input type="email" id="gmail" required/>
+      </div>
 
+      <div class="field-wrap">
+        <label> Set A Password </label>
+        <input type="password" id="password" required />
 
-        
+        <div class="field-wrap">
+          <label> check password </label>
+          <input type="password" id="conpassword" required/>
+      </div>
+
+      <br />
+      <p><a href="login.html">Already a user!!</a></p>
+
+      <br />
+      <button class="button button-block">SIgn up</button>
        
 
-            </div>
+   </form>
 
-            </div>
-            <script>
-
-             
-
-              function sumbit(){
-
-                const First_name = document .getElementById("first_name").value
-                const last_name = document .getElementById("last_name").value
-
-                const email = document.getElementById("gmail").value
-                const password = document.getElementById("password").value
- 
-  console.log(First_name)
-  console.log(last_name)
-  console.log(email)
-  console.log(password)
- 
- 
-
-
-
-
-  let user_records= new Array();
- user_records= JSON.parse(localStorage.getItem("user_details"))
- ?JSON.parse(localStorage.getItem("user_details")):[];
-
- user_records.push(
-    {
-        "user_name":First_name,
-        "user_email":email,
-        "last-name":last_name,
-        "user_Password":password
-    }
- )
- localStorage.setItem("user_details",JSON.stringify(user_records));
-
- let arr = JSON.parse(localStorage.getItem("user_details"));
+      </div>
+    </div>
+    <script>
       
- let result = arr.find(function(value){
-   return value.user_email === email ;
- }
- )
+        let form =document.querySelector("form");
+        form.addEventListener("submit",e=>{
+          e.preventDefault();
+          signup();
+        })
 
- if(result.user_email===email){
-  window.location.href="login.html"
+       function signup(){
+        const First_name = document.getElementById("first_name").value;
+        const last_name = document.getElementById("last_name").value;
+        const email = document.getElementById("gmail").value;
+        const password = document.getElementById("password").value;
+        const conpass = document.getElementById("conpassword").value;
+        let arr = JSON.parse(localStorage.getItem("user_details"));
+        let res;
+        arr.find(e=> { 
+          if(e["user_email"]==email){
+              return res=1;
+            
+          }
+          else{
+            return res=0;
+          }
+        });
+        if(res==1){
+          alert("Account already exists")
+        }
+else{
+  if (password==conpass){
+    let user_data =     {
+      "user_name":First_name,
+      "second_name":last_name,
+      "user_email":email,
+      "user_Password":password
+  }
+    let user_records;
+    user_records= JSON.parse(localStorage.getItem("user_details"))?JSON.parse(localStorage.getItem("user_details")):[]
+
+    
+
+    user_records.push(user_data)
+   
+   localStorage.setItem("user_details",JSON.stringify(user_records));
+   window.location.href = "login.html";
 }
- else{  window.location.href="../tips.html"
-}
+
+        
+    }
+
+        
+      
+    
 
 
+//if (password==conpass){
+          //user_records.push(user_data)
+       
+       //localStorage.setItem("user_details",JSON.stringify(user_records));
+       //window.location.href = "login.html";
 
+        //}else{
+          //alert("confirm password and password didn't match")
+      // }
+        
+      }
 
+       
 
-
-  window.location.href="../tips.html"
-                
-              }
-                
-            </script>
-   </body></html>
+        
+    
+    </script>
+  </body>
+</html>

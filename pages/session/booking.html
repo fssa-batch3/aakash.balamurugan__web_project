@@ -43,12 +43,12 @@
             
             
             <br>
-            <!-- Name: 
-            <input type="text" placeholder="Eg:Aakash" class="bookinginput" id="name" value=First_name required> <br>
+             Name: 
+            <input type="text" placeholder="Eg:Aakash" class="bookinginput" id="name"  required> <br>
             Email-address: 
             <input type="email" placeholder="Eg:someone@gmail.com" class="bookinginput" id="gmail"  required><br>
             Phone-Number: 
-            <input type="text" placeholder="Eg:9876543210" class="bookinginput" maxlength="10" minlength="10"  pattern="[1-9]{1}[0-9]{9}" id="phone_number"  required> -->
+            <input type="text" placeholder="Eg:9876543210" class="bookinginput" maxlength="10" minlength="10"  pattern="[1-9]{1}[0-9]{9}" id="phone_number"  required>
            
          </label>
        
@@ -118,75 +118,37 @@
          <p>Privacy policy     |     Contact us</p><br><br>
          <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
      </footer>
-      <!-- Name: 
-            <input type="text" placeholder="Eg:Aakash" class="bookinginput" id="name" value=First_name required> <br>
-            Email-address: 
-            <input type="email" placeholder="Eg:someone@gmail.com" class="bookinginput" id="gmail"  required><br>
-            Phone-Number: 
-            <input type="text" placeholder="Eg:9876543210" class="bookinginput" maxlength="10" minlength="10"  pattern="[1-9]{1}[0-9]{9}" id="phone_number"  required> -->
            
 
 
      <script>
 
-        let input =[{type:"text" , placeholder:"Eg:Aakash",id:"name"   },{type:"email" , placeholder:"Eg:someone@gmail.com",id:"gmail"   },
-        {type:"text" , placeholder:"Eg:9876543210",id:"phone_number"   }]
-        
-        
+         let profile_details=JSON.parse(localStorage.getItem("user_details"));
+         let details=JSON.parse(localStorage.getItem("details"));
+let res;
+         profile_details.find(e=>{
+            if(e["user_email"]==details["user_email"]){
+                return res=e;
+
+            }
+            else{
+                return res=0;
+            }
+         })
+
+         if(res){
+            document.getElementById("name").value=res["user_name"];
+            document.getElementById("gmail").value=res["user_email"];
+         }
+         else{
+            console.log("error")
+         }
+
+
+      
+
+
     
-
-       let details= JSON.parse(localStorage.getItem("details"));
-       
-        
-
-        form_input = document.createElement("input");
-        form_input.setAttribute("type", input[0].type)
-        form_input.setAttribute("placeholder",input[0].placeholder)
-        form_input.setAttribute("class","bookinginput")
-        form_input.setAttribute("id",input[0].id)
-        form_input.setAttribute("requried","");
-        form_input.setAttribute("value",  details.user_name )
-       
-        document.querySelector(".form").append(form_input)
-
-        form_input1 = document.createElement("input");
-        form_input1.setAttribute("type", input[1].type)
-        form_input1.setAttribute("placeholder",input[1].placeholder)
-        form_input1.setAttribute("class","bookinginput")
-        form_input1.setAttribute("id",input[1].id)
-        form_input1.setAttribute("requried","");
-        form_input1.setAttribute("value",details.user_email)
-       
-        document.querySelector(".form").append(form_input1)
-
-        form_input2 = document.createElement("input");
-        form_input2.setAttribute("type", input[2].type)
-        form_input2.setAttribute("placeholder",input[2].placeholder)
-        form_input2.setAttribute("class","bookinginput")
-        form_input2.setAttribute("id",input[2].id)
-        form_input2.setAttribute("requried","");
-        form_input2.setAttribute("value","")
-       
-        document.querySelector(".form").append(form_input2)
-        
-        
-      function sumbit() { 
-
-        const reason = document.querySelector("reason").value
-        const name = document.getElementById("name").value 
-        const gmail = document.getElementById("gmail").value
-        const phone_number = document.getElementById("phone_number").value 
-
-     
-
-        window.location.href="../visit_conformation.html"
-
-       
-
-      } 
-    
-      let mobile_number= getElementById(input[2].id).value ;
-      console.log(mobile_number);
     </script>
 </body>
 </html>

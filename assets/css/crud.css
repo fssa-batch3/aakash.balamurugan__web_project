@@ -1,0 +1,68 @@
+
+.box1{
+    background-color: black;
+    color: aliceblue;
+    padding: 12px;
+    border: red 10px solid;
+    height: 250px;
+    
+}
+#box{
+    overflow: scroll;
+    height: 200px;
+}
+.comments{
+    background-color: red;
+    margin: 2px 20px;
+    padding: 5px 10px;
+}
+.comments p{
+    margin: 2px;
+}
+
+#button{
+position: relative;
+
+left: -30px;
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+#name{
+    width: 75%;
+    height: 40px;
+   
+}
+.content{
+    position:sticky;
+    top: 10px;
+    width: 100%;
+    padding: -12px;
+    background-color: black;
+}
+.edit{
+    position: relative;
+    bottom: 25px;
+    left: 260px
+}
+.delete{
+    position: relative;
+    left: 205px;
+    top: 3px
+}
+tr{
+    width: 100%;
+}
+
+
+
+
+for (let i=user_records.length-1 ; i<user_records.length ;i++){
+        
+    let box = document.createElement("p");
+     box.setAttribute("class" , "comments"  );
+     box.innerHTML = user_records[i] ;
+     potti.append(box);
+     }
+
+     document.getElementById("name").value ="";

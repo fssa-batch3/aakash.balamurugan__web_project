@@ -1,0 +1,77 @@
+const inventory = [
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+];
+
+const result = inventory.find(({ name }) => name === "cherries");
+
+
+
+'[{"user_name":"aakash","user_email":"aakashbala205@gmail.com","last-name":"balamurugan","user_Password":"12345"},
+{"user_name":"bala","user_email":"dsjvcyasd@kjbsf","last-name":"murugan","user_Password":"jhbsdfk"},
+{"user_name":"sandeep ","user_email":"sandeep@bvsjdk","last-name":"prakesh","user_Password":"aakash"}]'
+
+const result = user_details.find(({"user_name"}) => log_name)
+
+
+
+function login() {
+  let name = document.getElementById("name").value
+  let password = document.getElementById("password").value
+  let arr = JSON.parse(localStorage.getItem("array"))
+let res;
+  arr.find(element => {
+      if (element["name"] == name && element["password"]== password) {
+          return res=1  ;
+      }
+      else {
+          return res=0;
+      }
+  });
+  if(res==1){
+alert("Logged in")
+window.location.href="../pages/ranklist.html"
+}
+else{
+alert("none")
+}
+}
+
+
+
+ const mail = localStorage.getItem("email");
+      const pass = localStorage.getItem("password");
+
+      
+
+      if(log_email==mail ){
+        if(log_password==pass){
+          window.location.href="../tips.html"
+         
+        }
+        else{
+          alert("incorret password")
+        }
+        }
+      else{
+        alert("incorrect password or email")
+      }
+    }
+    const First_name = document.getElementById("first_name").value;
+    const last_name = document.getElementById("last_name").value;
+    const email = document.getElementById("gmail").value;
+    const password = document.getElementById("password").value;
+    const conpass = document.getElementById("conpassword").value;
+    let user_data =     {
+      "user_name":First_name,
+      "second_name":last_name,
+      "user_email":email,
+      "user_Password":password
+  }
+    let user_records;
+    user_records= JSON.parse(localStorage.getItem("user_details"))?JSON.parse(localStorage.getItem("user_details")):[]
+  
+    user_records.push(user_data)
+   
+   localStorage.setItem("user_details",JSON.stringify(user_records));
