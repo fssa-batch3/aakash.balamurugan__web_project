@@ -1,121 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- displays site properly based on user's device -->
-   <link rel="stylesheet" href="../assets/css/new.css">
-   <title>BetterMe</title>
-   <link rel="icon" type="img/png" sizes="32x32" href="../assets/img/self.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
-   </head>
-   <body>
-<!-- navbar  -->
-<div class="navbar">
-  <div class="logo">
-    
-      <span class="betterme"><a href="home.html">BetterMe</a></span>
-     
-   </div>
-   <div class="navs">
-    <a href="../pages/tips.html"> <div class="button">  Tips</div></a>
-    <a href="../pages/event.html"><div class="select">Events</div></a>
-    <a href="../pages/private.html"><div class="button">Session</div></a>
-    </div></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="../assets/css/new.css" />
+    <title>BetterMe</title>
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="32x32"
+      href="../assets/img/self.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <div class="navbar">
+      <div class="logo">
+        <span class="betterme"><a href="home.html">BetterMe</a></span>
+      </div>
+      <div class="navs">
+        <a href="../pages/tips.html"> <div class="button">Tips</div></a>
+        <a href="../pages/event.html"><div class="select">Events</div></a>
+        <a href="../pages/private.html"><div class="button">Session</div></a>
+      </div>
+    </div>
 
     
-     
 
-     <script>
-       
+    <script>
+  let info = (JSON.parse(localStorage.getItem("info")));
 
-      const info = [{title : "Phoenix Books Virtual Poetry Open Mic",
-                     para: "Join us for an evening of poetry hosted by Phoenix Books' own Bianca Amira Zanella!" },
+      for (let i = 0; i < info.length; i++) {
+        let redirect = document.createElement("a");
+        redirect.setAttribute("href", "./events/eventinfo.html?name="+info[i]["title"]);
+        document.body.append(redirect);
 
-                    {title: "It's All Connected - Open Mic by Pooja",
-                   para: "Ever wondered what your favourite inanimate thing would say if they could express their emotions? What if they were brought to life and allowed to talk? Well we've got a stage for you." },
+        let div_event = document.createElement("div");
+        div_event.setAttribute("class", "event");
+        redirect.append(div_event);
 
-                     {title : "Spot On - More than an Open Mic",
-                    para: "We can hear the gears twisting and turning in your heads trying to figure out what this collaborative event with House of T is all about."} ];
+        let div_event_box = document.createElement("div");
+        div_event_box.setAttribute("class", "eventbox");
+        div_event.append(div_event_box);
 
+        let div_onuila = document.createElement("div");
+        div_onuila.setAttribute("class", "");
+        div_event_box.append(div_onuila);
 
-      const redirect_link = ["../pages/events/event1.html" , "../pages/events/event2.html" ,
-                         "../pages/events/event3.html"]
-     
+        let img_photo = document.createElement("img");
+        img_photo.setAttribute("src", info[i].images.link);
+        img_photo.setAttribute("alt", info[i].images.alt);
+        div_onuila.append(img_photo);
 
-      const event_images = [{link : "../assets/img/events/phoneix_event.webp",
-                             alt:"Phoenix Books Virtual Poetry Open Mic"}  ,
+        let div_none = document.createElement("div");
+        div_none.setAttribute("class", "");
+        div_event_box.append(div_none);
 
-                           {link: "../assets/img/events/pooja_open_mic.webp",
-                             alt:"It's All Connected - Open Mic by Pooja"}, 
-  
-                           {link:"../assets/img/events/spot_on_open_mic.jpg",
-                              alt:"Spot On - More than an Open Mic" }]
+        let h2_title = document.createElement("h2");
+        h2_title.innerHTML = info[i].title;
+        div_none.append(h2_title);
 
-      const content =[ {date:"15th December 2022",Time : "5:30am To 7 PM ", venue:"online"},
-      {date:" 10th December 2022",Time : "4 PM To 6 PM ", venue:"Cover it up Studio The Podium KNK Road Chennai"},
-      {date:"11th December 2022",Time : " 3 PM To 5 PM ", venue:"PH cafe, EgmoreChennai"}]
-     
-     
-     
-      for (let i = 0; i < 3; i++){
+        let p_para = document.createElement("p");
+        p_para.innerText = info[i].para;
+        div_none.append(p_para);
 
-let redirect = document.createElement("a");
-redirect.setAttribute ("href" , redirect_link[i] );
-document.body.append(redirect);
+        let div_nothing = document.createElement("div");
+        div_nothing.setAttribute("class", "");
+        div_event_box.append(div_nothing);
 
-let div_event = document.createElement("div");
-div_event.setAttribute("class" , "event");
-redirect.append(div_event);
-
-let div_event_box = document.createElement("div");
-div_event_box.setAttribute("class" , "eventbox");
-div_event.append(div_event_box); 
-
-let div_onuila = document.createElement("div");
-div_onuila.setAttribute("class","");
-div_event_box.append(div_onuila);
-
-let img_photo =document.createElement("img");
-img_photo.setAttribute("src" , event_images[i].link);
-img_photo.setAttribute("alt" ,event_images[i].alt);
-div_onuila.append(img_photo);
-
-let div_none = document.createElement("div");
-div_none.setAttribute("class","");
-div_event_box.append(div_none);
-
-let h2_title = document.createElement("h2");
-h2_title.innerHTML = info [i].title;
-div_none.append(h2_title);
-
-let p_para = document.createElement("p");
-p_para.innerText= info [i].para;
-div_none.append(p_para); 
-
-let div_nothing = document.createElement("div");
-div_nothing.setAttribute("class","");
-div_event_box.append(div_nothing);
-
-let venue =document.createElement("h4");
-venue.innertext="date"
-venue.innerText=
-content[i].Time
-content[i].venue;
-div_nothing.append(venue);
-
-
+        let venue = document.createElement("h4");
+        venue.innerHTML = `Date:  ${info[i].date.date} <br><br>
+        time : ${info[i].date.Time }<br> <br>
+        venue :${info[i].date.venue } ` ;
+       // venue.innerText = info[i].date.Time +`<br>` info[i].date.date `<br>`+  ${info[i].date.Time };
+        div_nothing.append(venue);
       }
-     
+    </script>
 
-
-  </script>
-
-     
     <footer>
-      <p> Copyright © BetterMe. All right reserved.</p>
-       <p>Privacy policy     |     Contact us</p><br><br>
-       <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
+      <p>Copyright © BetterMe. All right reserved.</p>
+      <p>Privacy policy | Contact us</p>
+      <br /><br />
+      <p>
+        If you are in a life threatening situation - don’t use this site. Call
+        +1 (800) 273-8255 or use these resources to get immediate help.
+      </p>
     </footer>
 
 
@@ -123,8 +99,5 @@ div_nothing.append(venue);
 
 
     
-   </body>
+  </body>
 </html>
-
-
-

@@ -42,140 +42,8 @@
 
 
 
-  <div class="sessionbox">
-    <div class="box">
-      <h1>Deepak Chopra</h1>
-      <div class="flex">
-
-        <a href="../pages/session/Deepak_Chopra.html">
-          <div class="">
-            <img src="../assets/img/session/Deepak_Chopra.jpg" alt="Deepak Chopra">
-
-          </div>
-          <div class=""><b>Occupation</b> :Alternative medicine advocatepublic speakerwriter<br><br>
-            <b>Deepak Chopra</b> is an Indian-American author and alternative medicine advocate. A prominent figure in
-            the New Age movement, his books and videos have made him one of the best-known and wealthiest figures in
-            alternative medicine.His discussions of quantum healing have been characterised as technobabble "incoherent
-            babbling strewn with scientific terms" which drives those who actually understand physics "crazy" and as
-            "redefining Wrong".
-            <a href="session/Deepak_Chopra.html">More Info...</a>
-
-
-            <br><br><br>
-            Review:
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            (20 reviews)
-          </div>
-      </div>
-    </div>
-    </a>
-
-
-
-
-    <div class="box">
-      <h1>Chris Gardner</h1>
-      <div class="flex">
-        <a href="session/Chris_Gardner.html">
-          <div class="">
-            <img src="../assets/img/session/Chris_Gardner.jpg" alt="Chris Gardner">
-
-          </div>
-
-
-          <div class=""><b>Occupation</b> :Businessman, motivational speaker <br><br>
-            <b>Christopher Paul Gardner</b> is an American businessman and motivational speaker. During the early 1980s,
-            Gardner struggled with homelessness while raising a toddler son. He became a stockbroker and eventually
-            founded his own brokerage firm Gardner Rich & Co in 1987. In 2006, Gardner sold his minority stake in the
-            firm and published a memoir. That book was made into the motion picture The Pursuit of Happyness starring
-            Will Smith.
-            <a href="session/Chris_Gardner.html">More Info...</a>
-
-
-            <br><br><br>
-            Review:
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            (12 reviews)
-          </div>
-      </div>
-    </div>
-    </a>
-
-
-    <div class="box">
-      <h1>Iyanla Vanzant</h1>
-      <div class="flex">
-        <a href="session/Iyanla_Vanzant.html">
-          <div class="">
-            <img src="../assets/img/session/Iyanla_Vanzant.png" alt="Iyanla Vanzant">
-
-          </div>
-          <div class=""><b>Occupation</b> :Inspirational speaker, lawyer, spiritual teacher, author, TV personality
-            <br><br>
-            <b>Iyanla Vanzant</b> is an American inspirational speaker, lawyer, New Thought spiritual teacher, author,
-            life coach, and television personality. She is known primarily for her books, her eponymous talk show, and
-            her appearances on The Oprah Winfrey Show. She can currently be seen on television as the host of Iyanla:
-            Fix My Life, on OWN: Oprah Winfrey Network.
-            <a href="session/Iyanla_Vanzant.html">More Info...</a>
-
-
-
-
-            <br><br><br>
-            Review:
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            (12 reviews)
-          </div>
-      </div>
-    </div>
-    </a>
-
-
-
-
-    <div class="box">
-      <h1>Darren Hardy</h1>
-      <div class="flex">
-        <a href="session/Darren_Hardy.html">
-          <div class="">
-            <img src="../assets/img/session/Darren_Hardy.jpg" alt="Darren Hardy">
-
-          </div>
-          <div class=""><b>Occupation</b> :Writer
-            CEO Advisor
-            High-Performance Trainer
-            Motivational Speaker <br><br>
-            <b>Darren Hardy</b> is an American author, keynote speaker, advisor, and former publisher of SUCCESS
-            magazine. Hardy is a New York Times best-selling author, who wrote The Entrepreneur Roller Coaster, Living
-            Your Best Year Ever and The Compound Effect . <br>
-            <a href="session/Darren_Hardy.html">More Info...</a>
-
-
-            <br><br><br>
-            Review:
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            (12 reviews)
-          </div>
-      </div>
-    </div>
-    </a>
-
+  <div id="sessionbox">
+    
   </div>
   <footer>
     <p> Copyright © BetterMe. All right reserved.</p>
@@ -183,6 +51,91 @@
     <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources
       to get immediate help.</p>
   </footer>
+
+  <script>
+
+    let session = document.getElementById("sessionbox");
+
+    let sessionsitems =JSON.parse( localStorage.getItem("sessionsitems"));
+
+    
+  
+  
+  
+   for(let i=0;i<4;i++){
+    let box = document.createElement("div");
+    box.classList.add("box");
+    session.prepend(box);
+
+    let flex = document.createElement("div");
+    flex.classList.add("flex");
+    box.append(flex);
+
+    let pic = document.createElement("div");
+    pic.classList.add("pic");
+    flex.append(pic);
+
+    let link = document.createElement("a");
+    link.setAttribute("href", "./session/sessioninfo.html?name="+ sessionsitems[i]["person_name"]);
+    pic.append(link);
+
+    let photo = document.createElement("img");
+    photo.setAttribute("src", sessionsitems[i].images.link);
+    photo.setAttribute("alt", sessionsitems[i].images.alt);
+    link.append(photo);
+
+    let detail = document.createElement("div");
+    detail.classList.add("detail");
+flex.append(detail);
+
+let link4 = document.createElement("a");
+link4.setAttribute("href","./session/sessioninfo.html?name="+ sessionsitems[i].person_name);
+detail.append(link4);
+
+let person = document.createElement("h1");
+person.innerHTML = sessionsitems[i].person_name;
+link4.append(person);
+
+let occupation = document.createElement("div");
+occupation.classList.add("occupation");
+detail.append(occupation);
+
+let link2 = document.createElement("a");
+link2.setAttribute("href","./session/sessioninfo.html?name="+ sessionsitems[i].person_name);
+occupation.append(link2);
+
+let para = document.createElement("p");
+let span = document.createElement("span");
+span.innerHTML="Occupation";
+para.innerText=sessionsitems[i].occupation
+
+link2.append(span);
+link2.append(para);
+
+let person_detail = document.createElement("div");
+person_detail.classList.add("person_detail");
+detail.append(person_detail);
+
+let link3 =document.createElement("a");
+link3.setAttribute("href","./session/sessioninfo.html?name="+ sessionsitems[i].person_name)
+occupation.append(link3);
+
+let para2 = document.createElement("p");
+let span2 = document.createElement("span");
+span2.innerHTML=sessionsitems[i] .person_name;
+para2.innerText= sessionsitems[i].content;
+
+link3.append(span2);
+link3.append(para2);
+
+   }
+
+   localStorage.setItem("sessionsitems", JSON.stringify( sessionsitems))
+
+
+
+
+  </script>
 </body>
 
 </html>

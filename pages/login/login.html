@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <div class="content">
+    <div class="">
       <div class="navbar">
         <div class="logo">
           <span class="betterme"><a href="../index.html">BetterMe</a></span>
@@ -63,6 +63,7 @@
       });
 
       function aakash() {
+
         const log_email = document.getElementById("log_email").value;
         const log_password = document.getElementById("log_password").value;
 
@@ -72,18 +73,18 @@
           return value.user_email === log_email;
         });
 
+        let ind = arr.findIndex(value => value == result)
+
         if (log_password == result.user_Password) {
           
-          localStorage.setItem("details", JSON.stringify(result));
+          localStorage.setItem("details",result.user_email);
 
           alert("login succes");
 
-          console.log(" password");
 
           window.location.href = "../tips.html";
         } else {
           alert("incorret password");
-          console.log("incorret password");
         }
       }
     </script>

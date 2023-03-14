@@ -281,6 +281,9 @@ html{
   height: 280px;
   margin-right: 20px;
 }
+.eventbox p{
+  font-size: 20px;
+}
 
 .event a{
   text-decoration: none;
@@ -333,26 +336,88 @@ text-align: center;
 
 /* aligement for session/private page  */
 
-.sessionbox{
-  display: flex;
+.box h1{
+  /* margin: 1%; */
+  /* display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+}
+.flex .pic img{
+  height: 250px;
+  width: 200px;
+}
+.detail span{
+  font-weight: bold;
+}
+.occupation{
+margin-top:1% ;
+
+}
+.person_detail{
+  margin-top:1.5% ;
+}
+.flex{
+display: flex;
+align-items: center;
+/* display: flex;
+justify-content: space-evenly; */
+}
+.detail{
+  float:right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 30vh;
+  /* justify-content: space-evenly; */
+}
+.reviews{
+  display: flex;
+  /* padding-bottom: 4rem; */
+
+  /* align-items: center; */
+}
+.reviews p{
+  font-size: 1.2rem;
+}
+.start span{
+  font-size: 1rem;
+  margin-right: 0.2rem;
 }
 .box{
+  margin-top: 5%;
+  margin-left: 12%;
+  padding: 1.5rem 1rem;
+  background-color:  #4267c4;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70em;
+  height: auto;
+  border-radius: 6px;
+  /* color:#fbeaeb ;
+  padding: 20px;
+  margin: 10px;
+  width: 80%;
+  border-radius: 10px;
+  height: 500px; */
+}
+/* .box{
   background-color:  #663595;
   color:#fbeaeb ;
   padding: 20px;
   margin: 10px;
-  width: 40%;
+  width: 80%;
   border-radius: 10px;
   height: 500px;
 }
 .box img{
-  height: 400px;
-  margin-right: 10px;
-  border-radius: 10px;
-}
-.box:hover{
+  height: 200px;
+  /* margin-right: 10px; */
+  /* border-radius: 10px;
+} */
+/* .box:hover{
   box-shadow: #888888 5px 2px;
   transform: scale(1.0225);
   transition: 1s;
@@ -361,7 +426,7 @@ text-align: center;
 .box h1{
   text-align: center;
   margin-bottom: 10px;
-}
+} */
 /* appoitement booking in session page  */
 .venue .confirm{
   position: relative;
@@ -1040,8 +1105,133 @@ margin-bottom: 60px;
 }
 
 
+/* .box1{
+  background-color: black;
+  color: aliceblue;
+  padding: 12px;
+  border: red 10px solid;
+  height: 250px;
+  
+}
+#box{
+  overflow: scroll;
+  height: 200px;
+}
+.comments{
+  background-color: red;
+  margin: 2px 20px;
+  padding: 5px 10px;
+}
+.comments p{
+  margin: 2px;
+}
+
+#button{
+position: relative;
+
+left: -30px;
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+#name{
+  width: 75%;
+  height: 40px;
+ 
+}
+.content{
+  position:sticky;
+  top: 10px;
+  width: 100%;
+  padding: -12px;
+  background-color: black;
+}
+.edit{
+  position: relative;
+  bottom: 25px;
+  left: 260px
+}
+.delete{
+  position: relative;
+  left: 205px;
+  top: 3px
+} */
 
 
+
+
+
+
+#eventbox{
+  background-color: #663595;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between ;
+  padding: 20px;
+  margin: 30px;
+  color: #fbeaeb;
+  height: 300px;
+}
+#eventbox img{
+ 
+  height: 280px;
+  margin-right: 20px;
+}
+#eventbox p{
+  font-size: 20px;
+}
+
+#event a{
+  text-decoration: none;
+}
+
+#eventbox:hover{
+  box-shadow: #888888 5px 2px;
+  transform: scale(1.02);
+}
+
+/* content page for events */
+#event_content{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border: #000000 3px solid;
+  margin: 10px;
+}
+
+#event_content img{
+
+  height: 400px;
+}
+#eventname{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+}
+#event_content h2{
+  text-align: center;
+}
+#event_content h1 , #event_content p{
+text-align: center;
+}
+#event_content .conform{
+  margin-top:100px ;
+}
+#moreimg img{
+  height: 250px;
+} 
+#brief_on_event{
+  text-align: center;
+}
+
+
+/* ADD EVENT FORM */
+
+.event_form input{
+width: 70%;
+margin: 20px 13%;
+
+}
 
 
 

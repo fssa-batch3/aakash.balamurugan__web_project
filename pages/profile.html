@@ -1,27 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-       
-        h1{
-            color: black;
-        }
-    </style>
+    <title>BetterMe</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../assets/css/crud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+​
 <body>
-    <h1 id="email">aakash</h1>
+    <!-- This is profile-section -->
+    <div class="account-section">
+        <div class="side-item">
+            <div class="page">
+                <img src="https://ui-avatars.com/api/?name=Aakash" id="profile" alt="error">
+                <div>
+                    <h4 id="customer">namw</h4>
+                    <small>Customer_ID</small>
+                </div>
+            </div>
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                            <span>My Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-bag-shopping"></span>
+                            <span>Events</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
+                            <span>Session</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                            <span>Wishlist</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                            <span>Offers</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
+                            <span>History</span></a>
+                    </li>
+​
+                </ul>
+            </div>
+​
+        </div>
+​
+        <div class="main-item">
+            <!-- This is header section -->
+          
+            <!-- This is profile update section-->
+            <div class="user-condainer">
+                
+                <div class="information">
+                <form >
+                    <!-- This is First name  -->
+                    <div class="first-name" id="align-num">
+                        <label class="more"> First Name</label>
+                        <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name"
+                            title="First name connot contain spaces" placeholder="First Name" value="" 
+                            disabled="true">
+​
+                    </div>
+                    <!-- This is Last name  -->
+                    <div class="last-name" id="align-num">
+                        <label class="more"> Last Name</label>
+                        <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}"
+                            placeholder="Last Name" value="" title="Last name connot contain spaces" disabled="true">
+​
+                    </div>
+                    
+                    <!-- This is email input  -->
+                    <div class="email" id="align-num">
+                        <label class="more"> Email</label>
+                        <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
+                            value="" required="true" disabled>
+​
+                    </div>
+                    <!-- This is password input  -->
+                    <div class="password" id="align-num">
+                        <label class="more"> Password</label>
+                        <input class="name" id="user-password" type="password" 
+                            name="user password" >
+​
+                    </div>
+                    <!-- This is city -->
+                    <div class="fCity-name" id="align-num">
+                        <label class="more"> City</label>
+                        <select name="city" class="name" id="district">
+                            <option value="">Chennai</option>
+                            <option value="">Tiruchy</option>
+                            <option value="">Vilupuram</option>
+                            <option value="">Madurai</option>
+                            <option value="">Selem</option>
+                        </select>
+                        <!-- <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name"
+                            title="First name connot contain spaces" placeholder="First Name" value="" required="true"> -->
+​
+                    </div>
+                    <!-- This is number -->
+                    <div class="Number" id="align-num">
+                        <label class="more"> mobile number</label>
+​
+                        <input class="name" id="number" type="text" pattern="[A-za-z0-9]{6,90}"
+                            name="number" placeholder="mobile number" >
+​
+                    </div>
+                    <!-- This is Address input  -->
+                    <div class="pincode" id="align-num">
+                        <label class="more"> Pincode</label>
+                        <input class="name" id="pincode" type="text" pattern="[A-za-z0-9]{6,90}"
+                            name="user address" placeholder="Pincode" >
+​
+                    </div>
+                    <div>
+                        <button type="submit" id="edit_btn">edit</button>
+                        <button onclick="delete1()" id="delete_btn">Delete profile</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+
+            <script>
+
+                let form = document.querySelector("form");
+                form.addEventListener("submit", (e) => {
+                  e.preventDefault();
+                  aakash();
+                });
 
 
-    <script>
 
-        const email=localStorage.getItem("email") ;
-        console.log(email);
+         
+                let arr = JSON.parse(localStorage.getItem("user_details"));
+ 
+                let details = localStorage.getItem("details");
+                let result = arr.find(function (value) {
+                    return value.user_email === details;
+                  });
 
-        document.getElementById("email").innerText = email
-    </script>
+                document.getElementById("profile").setAttribute("src","https://ui-avatars.com/api/?name=" +result.user_name)
+                  
+                document.getElementById("customer").innerHTML =result.user_name;
+                
+                document.getElementById("user-firstname").value=result.user_name;
+                
+                document.getElementById("user-lastname").value= result.second_name;
+
+                document.getElementById("user-email").value=result.user_email;
+
+                document.getElementById("user-password").value=result.user_Password
+
+                function aakash(){
+                    let ind =arr.findIndex(function (value){
+                        return value.user_email === details});
+
+                let firstname = document.getElementById("user-firstname").value;
+                
+                let lastname = document.getElementById("user-lastname").value;
+
+                let useremail = document.getElementById("user-email").value;
+
+                let password = document.getElementById("user-password").value;
+                
+                let mobile = document.getElementById("number").value;
+
+                let district = document.getElementById("district").value;
+
+                let pincode = document.getElementById("pincode").value;
+
+                let new123 = document.getElementsByClassName("name");
+
+               
+                let edit_btn = document.getElementById("edit_btn");
+
+                
+
+               
+        
+
+let user_data =  {
+    "user_name":firstname,
+    "second_name":lastname,
+    "user_email":useremail,
+    "user_Password":password,
+    "district":district,
+    "mobile_number":mobile,
+    "pincode":pincode,
+}
+  //arr[ind].push(user_data);         
+
+        arr[ind].mobile_number=`${mobile}`;
+        arr[ind].pincode=`${district}`;
+
+        localStorage.setItem("user_details",JSON.stringify(arr));
+
+                }
+
+
+function delete1(){
+    let ind =arr.findIndex(function (value){
+        return value.user_email === details});
+
+    arr.splice(ind,1);
+    localStorage.setItem("user_details",JSON.stringify(arr));
+    window.location.href="./login/login.html"
+}
+                
+                
+            </script>
+​
+            
 </body>
+​
 </html>

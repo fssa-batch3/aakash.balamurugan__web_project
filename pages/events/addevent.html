@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/new.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="event_form">
+      <input type="text" id="event_name" placeholder="event name">
+      
+     
+          <input type="url" name="" id="cover_img"
+          placeholder="cover img" >
+      
+
+               venue <input type="text" id="venue" placeholder="venue"/><br />
+          time <input type="text" id="time" placeholder="time" /><br />
+          date <input type="text" id="date" placeholder="date" />
+
+        
+      
+          <p>one liner: <input type="text" id="intro" placeholder="intro"/></p>
+
+          <input type="text" id="about" placeholder="about"/>
+          
+     
+          <b>More images at the event :</b>
+          <input type="url" name=""
+          placeholder="more im 1" id="more_img_1" />
+     
+          <input type="url" name="" id="more_img_2" />
+      
+      <input type="submit" style="width: 50px" />
+    </form>
+
+    <script>
+      let info = JSON.parse(localStorage.getItem("info"));
+
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        new_event();
+      });
+
+      function new_event() {
+        let event_name = document.getElementById("event_name").value;
+        let cover_img = document.getElementById("cover_img").value; 
+        let venue = document.getElementById("venue").value;
+        let time = document.getElementById("time").value;
+        let date = document.getElementById("date").value;
+        let intro = document.getElementById("intro").value;
+        let about = document.getElementById("about").value;
+        let more_img_1 = document.getElementById("more_img_1").value;
+        let more_img_2 = document.getElementById("more_img_2").value;
+        let eventnew = {
+          title: event_name,
+          para: intro,
+        
+          about:about,
+          images: { link: cover_img, alt: event_name },
+          date: { date: date, Time: time, venue: venue },
+        };
+        console.log(cover_img)
+        info.push(eventnew);
+
+        localStorage.setItem("info", JSON.stringify(info));
+
+
+      }
+    </script>
+  </body>
+</html>
