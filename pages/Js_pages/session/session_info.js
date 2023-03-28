@@ -35,7 +35,7 @@ youtube.src = result.iframe;
 
 
 let info_img = document.getElementById("info_img");
-info_img.src = "../"+result.images.link;
+info_img.src = result.images.link;
 info_img.alt = result.images.alt;
 
 
