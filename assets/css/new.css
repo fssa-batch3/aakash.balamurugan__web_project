@@ -182,6 +182,17 @@ html{
     cursor: pointer;
     margin-left: 20px;
   }
+  .navbar .profile {
+    background-color: greenyellow;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
   .navs{
     display: flex;
   }
@@ -476,6 +487,7 @@ iframe{
   background-color: #88888875;
   padding: 25px;
   margin: 0px 30px;  
+  width: 225px;
 }
 .info img{
   width: 200px;
@@ -1231,6 +1243,29 @@ text-align: center;
 width: 70%;
 margin: 20px 13%;
 
+}
+
+
+.comment_box{
+  background-color: #b978f6;
+}
+
+.comments{
+  background-color: greenyellow;
+}
+
+.content1 input{
+  width: 80%;
+  height: 40px;
+}
+
+.content1 button{
+  width: 10%;
+  height: 40px;
+}
+
+.content1{
+  padding: 10%;
 }
 
 
