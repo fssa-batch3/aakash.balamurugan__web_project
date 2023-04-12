@@ -112,7 +112,7 @@ if(arr[ind].user_email==details){
 arr.splice(ind,1);
 console.log(arr)
 localStorage.setItem("user_details",JSON.stringify(arr));
-window.location.href="./login/login.html"
+window.location.href="./login.html"
 }
 }
 

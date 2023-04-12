@@ -13,6 +13,10 @@ function new_session(){
   let content = document.getElementById("content").value;
   let videolink = document.getElementById("video").value;
 
+  let unique_id = new Date().getTime();
+
+  console.log(unique_id);
+
    let newsession = {
    person_name:expert_name,
    images:{link:cover_img,alt:expert_name},
@@ -24,7 +28,7 @@ function new_session(){
     
   }
 let number =0
-  for (let i = 0; i < infsessionsitemso.length; i++) {
+  for (let i = 0; i < sessionsitems.length; i++) {
         
     if (sessionsitems[i].expert_name===expert_name) {
         alert("event already exists")

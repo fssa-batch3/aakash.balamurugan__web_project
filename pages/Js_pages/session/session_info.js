@@ -16,7 +16,7 @@ let url =window.location.search;
         return result=e;
     }
   })
-      console.log(result)
+
 
    
 let person_name = document.getElementById("name");
@@ -40,6 +40,63 @@ info_img.alt = result.images.alt;
 
 
 let appoitement = document.getElementById("appoitement");
+let appo = document.querySelector(".booking_session")
+
+
+appoitement.addEventListener("click",function (e){
+  e.preventDefault();
+
+ 
+ appo.style.display="block";
+ 
+  
+})
+
+const cancel1 = document.getElementById("cancel");
+
+cancel1.addEventListener("click",function (e){
+  e.preventDefault();
+
+ 
+ appo.style.display="none";
+
+  
+})
+
+
+
+let profile_details=JSON.parse(localStorage.getItem("user_details"));
+let details=JSON.parse(localStorage.getItem("details"));
+let res;
+profile_details.find(value=>{
+   if(value.user_email==details.user_email){ 
+      res=value;
+       console.log("res");
+return res;
+   }
+   else{
+       return res=0;
+   }
+})
+
+if(res){
+   document.getElementById("name").value=res["user_name"];
+   document.getElementById("gmail").value=res.user_email;
+}
+else{
+ 
+}
+
+
+const confirm = document.getElementById("sumbit");
+confirm.addEventListener("click",function (e){
+   e.preventDefault();}
+   )
+
+function sumbit(){
+
+   window.location.href="./../visit_conformation.html"
+}
 
 
 

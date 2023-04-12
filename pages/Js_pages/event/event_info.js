@@ -106,58 +106,132 @@ body.appendChild(container);
 
 
 
-function crud(){
+// let comt
+// if (localStorage.getItem("comments")) {
+//     comt =JSON.parse(localStorage.getItem("comments"))
+// } else {
+//    comt = [{
+//         comment : "aakash",
+//         user : "wanted",
 
-        
-    let potti = document.getElementById("comment_box");
+//        },{
+//         comment : "nithalan",
+//         user : "oneheart",
 
- const comment = document.getElementById("name").value;
- 
+//        },{
+//         comment : "isac",
+//         user : "rcb",
 
- let box = document.createElement("div");
- box.setAttribute("class" , "comments"  );
- potti.append(box);
+//        }];
+// }
 
- let para = document.createElement("p");
- para.setAttribute("id" ,"para")
- para.innerHTML= comment;
- box.append(para);
+let potti = document.getElementById("comment_box");
 
- let edit = document.createElement("button");
- edit.setAttribute("class" , "edit");
- edit.setAttribute("onclick" , "edit()")
- edit.innerHTML="Edit";
- box.append(edit);
+//    for(let i=0;i<comt.length;i++){
 
- let delete_btn = document.createElement("button");
- delete_btn.setAttribute("class" , "delete");
- 
- delete_btn.innerHTML="delete";
- box.append(delete_btn);
+//  let box = document.createElement("div");
+// box.setAttribute("class" , "comments"  );
+// potti.append(box);
 
+// let user_name = document.createElement("h5");
+// user_name.setAttribute("id" ,"paraa")
+// user_name.innerHTML= comt[i].user;
+// box.append(user_name);
 
+// let para = document.createElement("p");
+// para.setAttribute("id" ,"para")
+// para.innerHTML= comt[i].comment;
+// box.append(para);
 
+// let edit = document.createElement("button");
+// edit.setAttribute("class" , "edit");
+// edit.setAttribute("onclick" , "edit()")
+// edit.innerHTML="Edit";
+// box.append(edit);
 
+// let delete_btn = document.createElement("button");
+// delete_btn.setAttribute("class" , "delete");
 
+// delete_btn.innerHTML="delete";
+// box.append(delete_btn);
 
- document.getElementById("name").value ="";
+//    }
 
+let comt = JSON.parse(localStorage.getItem("comments")) ?? [];
 
+function crud() {
+  let potti = document.getElementById("comment_box");
+  let comment = document.getElementById("name").value;
+let details = localStorage.getItem("details");
+  let coms = {
+    comment: comment,
+    id: Math.floor(Math.random() * Date.now()),
+    user: details
+  };
 
+  comt.push(coms);
 
- } 
+  localStorage.setItem("comments", JSON.stringify(comt));
 
- function edit(){
+ potti.innerHTML = " ";
+ document.getElementById("name").value="";
 
+  list_comments();
+}
+
+function list_comments() {
+
+  comt.forEach((item, index) => {
    
-     let paraa=document.getElementById("para");
+    let box = document.createElement("div");
+    box.setAttribute("class", "comments");
+    potti.append(box);
 
-     document.getElementById("name").value =paraa.innerText;
+    let user_mail = document.createElement("h5");
+    user_mail.setAttribute("id", "para");
+    user_mail.innerText = item.user;
+    box.append(user_mail);
 
-     console.log(paraa.innerHTML)
+    let user_name = document.createElement("p");
+    user_name.setAttribute("id", "paraa");
+    user_name.innerText = item.comment;
+    box.append(user_name);
 
+    let edit = document.createElement("button");
+    edit.setAttribute("class", "edit");
+    edit.setAttribute("onclick", `update(${item.id})`);
+    edit.innerHTML = "Update";
+    box.append(edit);
+
+     
+    let delete_btn = document.createElement("button");
+    delete_btn.setAttribute("class", "delete");
+    delete_btn.setAttribute("onclick", `deletecom(${index})`);
+
+    delete_btn.innerHTML = "delete";
+    box.append(delete_btn);
+  });
+}
+
+function update(item) {
+  comt.find(function (obj) {
+    if (obj.id === item) {
+      document.getElementById("name").value = obj.comment;
+    }
+  });
+}
+
+
+
+function deletecom(index){
+
+   comt.splice(index, 1);
+
+   localStorage.setItem("comments", JSON.stringify(comt));
+
+   potti.innerHTML = " ";
  
+   list_comments();
+}
 
- }
-
-
+list_comments();
