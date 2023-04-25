@@ -4,14 +4,16 @@ const info = [
       para: "Join us for an evening of poetry hosted by Phoenix Books' own Bianca Amira Zanella!",
       about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
       ,
+      event_id:1,
       images: { link: "https://iili.io/HNOIUZb.webp",
         alt: "Phoenix Books Virtual Poetry Open Mic",
       },
       date: {
-        date: "15th December 2022",
-        Time: "5:30am To 7 PM ",
+        date: "2023-04-27",
+        Time: "22:00",
         venue: "online",
       },
+      status: true
     },
 
     {
@@ -19,25 +21,30 @@ const info = [
       para: "Ever wondered what your favourite inanimate thing would say if they could express their emotions? What if they were brought to life and allowed to talk? Well we've got a stage for you.",
       about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
       ,
+      event_id:2,
+
       images: {link: "https://iili.io/HNOISwu.webp",
         alt: "It's All Connected - Open Mic by Pooja",
       },
-      date:{date: " 10th December 2022",
-      Time: "4 PM To 6 PM ",
-      venue: "Cover it up Studio The Podium KNK Road Chennai",}
+      date:{date: "2023-04-27",
+      Time: "22:00",
+      venue: "Cover it up Studio The Podium KNK Road Chennai",},
+      status: true
     },
 
     {
       title: "Spot On - More than an Open Mic",
       para: "We can hear the gears twisting and turning in your heads trying to figure out what this collaborative event with House of T is all about.",
       about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
-      ,
+      ,      event_id:3,
+
       images: { link: "https://iili.io/HNOIrnj.jpg",
         alt: "Spot On - More than an Open Mic",
       },
-      date:{date: "11th December 2022",
-      Time: " 3 PM To 5 PM ",
-      venue: "PH cafe, EgmoreChennai",}
+      date:{date: "2023-04-27",
+      Time: "22:00",
+      venue: "PH cafe, EgmoreChennai",},
+      status: true
     }
   ];
 
@@ -53,7 +60,10 @@ const info = [
     "redefining Wrong".`,
     rating:4,
     no_ratings:"(30 reviews)",
-    iframe:" https://www.youtube.com/embed/mmcJdoKftnM"
+    iframe:" https://www.youtube.com/embed/mmcJdoKftnM",
+    id:1,
+    status:true
+
 
 
 },
@@ -68,7 +78,9 @@ const info = [
     Will Smith.`,
     rating:3,
     no_ratings:"(12 reviews)",
-    iframe:"https://www.youtube.com/embed/GthNhcppldc"
+    iframe:"https://www.youtube.com/embed/GthNhcppldc",
+    id:2,
+    status:true
 },
 {
     person_name:"Iyanla Vanzant",
@@ -80,7 +92,9 @@ const info = [
     Fix My Life, on OWN: Oprah Winfrey Network`,
     rating:3,
     no_ratings:"(12 reviews)",
-    iframe:"https://www.youtube.com/embed/Qm9ZbthOGs0"
+    iframe:"https://www.youtube.com/embed/Qm9ZbthOGs0",
+    status:true,
+    id:3,
 
 },
 {
@@ -96,8 +110,20 @@ const info = [
     rating:3,
     no_ratings:"(12 reviews)",
     iframe:"https://www.youtube.com/embed/RlHTRFyjwT0",
+    status:true,
+    id:4,
 
 }]
+
+//person_name:expert_name,
+//    images:{link:cover_img,alt:expert_name},
+//    occupation:occupation,
+//    content:content,
+//    rating:0,
+//    no_ratings:"",
+//    iframe:videolink,
+//    id: sessionsitems.length,
+//    status:true
 
 
 

@@ -50,21 +50,10 @@ function aakash(){
 let ind =arr.findIndex(function (value){
 return value.user_email === details});
 
-let firstname = document.getElementById("user-firstname").value;
-
-let lastname = document.getElementById("user-lastname").value;
-
-let useremail = document.getElementById("user-email").value;
-
-let password = document.getElementById("user-password").value;
-
-let mobile = document.getElementById("number").value;
 
 let district = document.getElementById("district");
 
-let pincode = document.getElementById("pincode").value;
 
-let new123 = document.getElementsByClassName("name");
 
 new123.setAttribute=("enable")
 
@@ -80,22 +69,28 @@ district.addEventListener("change", (event) => {
 
 
 
-let user_data =  {
-"user_name":firstname,
-"second_name":lastname,
-"user_email":useremail,
-"user_Password":password,
-"district":selectedValue,
-"mobile_number":mobile,
-"pincode":pincode,
-}
+
+
+
+
+
+
+
+arr[ind].user_name=document.getElementById("user-firstname").value
+arr[ind].second_name=document.getElementById("user-lastname").value;
+arr[ind].district=document.getElementById("number").value;
+arr[ind].mobile_number=document.getElementById("district");
+arr[ind].pincode=document.getElementById("pincode").value;
+
+
+
+ 
+document.getElementsByClassName("name");
+
+
+
 // arr[ind] = user_data;         
 
-arr[ind].mobile_number=`${mobile}`;
-arr[ind].pincode=`${pincode}`;
-arr[ind].pincode=selectedValue;
-
-console.log(selectedValue);
 
 localStorage.setItem("user_details",JSON.stringify(arr));
 

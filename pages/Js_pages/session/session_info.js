@@ -65,7 +65,7 @@ cancel1.addEventListener("click",function (e){
 
 
 
-let profile_details=JSON.parse(localStorage.getItem("user_details"));
+let profile_details=JSON.parse(localStorage.getItem("sessioninfo"));
 let details=JSON.parse(localStorage.getItem("details"));
 let res;
 profile_details.find(value=>{
@@ -88,16 +88,17 @@ else{
 }
 
 
-const confirm = document.getElementById("sumbit");
+const confirm = document.getElementById("sumbit_confirm");
 confirm.addEventListener("click",function (e){
+   sumbit_confirm()
    e.preventDefault();}
    )
 
-function sumbit(){
+function sumbit_confirm(){
 
    window.location.href="./../visit_conformation.html"
 }
 
-
+ 
 
 

@@ -2,16 +2,69 @@
     padding: 0;
     margin: 0;
   }
-  /* font-family: 'Cinzel', serif;
+
+  :root{
+    --primary: #FF6000;
+    --secondery: #454545;
+    --shade:#FFA559;
+    --light-shade:#FFE6C7;
+    --nav:#146C94;
+    --box-shadow0:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --box-shado-whover: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --white:#ffffff;
+  }
+/* font-family: 'Cinzel', serif;
 font-family: 'Inconsolata', monospace;
 font-family: 'Kdam Thmor Pro', sans-serif;
 font-family: 'Lobster Two', cursive;
 font-family: 'Outfit', sans-serif;
 font-family: 'Source Code Pro', monospace; */
   body {
-    background-color:#fbeaeb;
+    /* background-color:#fbeaeb; */
     font-family: 'Montserrat', sans-serif;
   }
+
+
+  /* topbar/navbar section */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color:var(--nav);
+      position: sticky;
+      top: 0px;
+      height: 80px;
+      z-index: 2;
+    }
+    .navbar button {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: bold;
+      padding: 14px 30px;
+     background:none;
+     border:  none;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .navbar button:hover{
+      background-color: #ffffff;
+      color: #000000;
+      padding: 14px 30px;
+      border: 0px;
+      border-radius: 40px;
+    }
+    .navbar .profile {
+      background-color: greenyellow;
+      color: #000000;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 14px 30px;
+      border: 0px;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-left: 20px;
+    }
   .betterme {
     font-weight: 900;
     font-size: 25px;
@@ -21,11 +74,25 @@ font-family: 'Source Code Pro', monospace; */
   }
   .betterme a{
     color:#d1d1d1 ;
+    
+
+  
   }
   .logo a{
     text-decoration: none;
+    
   }
 
+
+
+  /* This navs */
+  .navs, .start{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 20px;
+  }
 
   /* index */
 
@@ -34,9 +101,12 @@ html{
   scroll-behavior: smooth;
 }
 
+
+
+/* This is first banner section */
 .banner{
   background-image: url(../img/home/elon.webp);
-  height: 80vh;
+  height: 90vh;
   position: 30%;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,57 +115,120 @@ html{
   background-color: #1d1c1c83;
   background-blend-mode: multiply;
 }
-#maincont{
-  position:relative;
+#maincont {
+  float: right;
+  margin-top: 30vh;
+}
+/* #maincont .align{
+text-align: start;
+
+} */
+
+#maincont h1{
   text-align: center;
-  width: 600px;
-  top:250px;
-  left: 600px;
-  font-family: 'Inconsolata', monospace;
+  font-size: 60px;
+  width: 850px;
 }
 /* login buttons on index */
-.start{
-  background-color: #663595;
+#maincont button{
+  background-color: var(--primary);
   color: white;
   font-size: 16px;
-  font-weight: bold;
   padding: 15px 30px;
   border: 10px;
-  border-radius: 25px;
+  border-radius: 6px;
   letter-spacing: 1px;
-  margin-left: 20px;
+ margin-left: 350px;
+ margin-top: 40px;
 }
-.maincont .start{
-  position: relative;
-  top: 30px;
+#maincont button:hover{
+  background-color: var(--shade);
 }
-.navs .start{
-  position:relative;
-  top: 15px;
-}
-.start:hover{
-  background-color: #6803c7;
-}
+
+
 
 /* content_in_second _section in index page  */
 .second{
  text-align: center;
- padding: 30px 300px;
-  
+ height: 600px;
+}
+.second h2{
+font-size: 2.5rem;
+margin-top: 5%;
+}
+.second p{
+  margin-top: 25px;
+  width: 800px;
+  text-align: center;
+  margin-left: 345px;
+}
+.pic img{
+  height: 400px;
 }
 /* content_in_third _section in index page  */
 #works{
+  background-color: #F6F1F1;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  width: 900px;
-  margin-left: 295px;
-  padding-top: 75px;
+  justify-content: space-around;
+  width: auto;
+  padding: 10PX;
+  margin-top: 55px;
+  height: 650px;
 }
+#works h2{
+  font-size: 2.5rem;
+  margin-top: 2%;
+  }
 .banner2 img{
   height: 450px;
 }
 .center{
   text-align: center;
 }
+.flex{
+  /* margin-top: 30PX; */
+  width: 1000px;
+  margin-left: 200px;
+  padding-left: 60px;
+}
+.flex div:nth-child(1){
+background-color: #e91f2cc9;
+margin-top: 80px;
+}
+.flex div:nth-child(2){
+  background-color: #f1b80eb9;
+  margin-top: 50px;
+  }
+  .flex div:nth-child(3){
+    background-color: #e07122c4;
+    margin-top: 20px;
+    }
+    .flex div:nth-child(4){
+      background-color:  #3b2d7fb8;
+      }
+/* .user .flex img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -50px;
+} */
+.user{
+  color: black;
+  width: 550px;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: var(--box-shadow0);
+  margin-left: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user p{
+  margin-top: 30px;
+}
+
 /* content_in third _section in index page  */
 #benifits{
   padding: 5px 100px;
@@ -110,10 +243,10 @@ html{
   width: 20px;
   margin-right: 10px;
 }
-.maincont ul li , .list ul li{
+/* .maincont ul li , .list ul li{
   list-style: none;
   line-height: 50px;
-}
+} */
 
 
 /* .sub1{
@@ -126,13 +259,13 @@ html{
 .sub1 p{
   width: 280px;
 }
-.ARROW  img{
+/* .ARROW  img{
   width: 30PX;
 }
 .ARROW{
   padding: 10% 0px;
   margin-right: 10px;
-}
+} */
 #review img{
   height: 50px;
   width: 50px;
@@ -161,40 +294,12 @@ html{
     padding: 10px;
 }
 
-   /* topbar/navbar */
-   .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #000000;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-  }
-  .navbar button {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 14px 30px;
-    border: 0px;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-left: 20px;
-  }
-  .navbar .profile {
-    background-color: greenyellow;
-    color: #000000;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 14px 30px;
-    border: 0px;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-left: 20px;
-  }
+
   .navs{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     margin-right: 40px;
   }
   .select{  background-color: #663595;
     color: white;
@@ -238,10 +343,11 @@ html{
   .start{
     background-color: #663595;
     padding: 15px 30px;
-    border-radius: 25px;
+    border-radius: 6px;
     letter-spacing: 1px;
   }
-  .start a{
+ 
+  a{
     text-decoration: none;
   }
   /* .topbar {
@@ -499,19 +605,6 @@ iframe{
 
 /* user Review */
 
-.user .flex img{
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-left: -50px;
-}
-.user{
-  width: 300px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 30px 40px;
-}
-
 /* suggestion page */
 
  .suggestion{
@@ -703,6 +796,11 @@ footer{
 .signup p{
   float: right;
 }
+#p_para{
+  text-align: center;
+  word-wrap: break-word;
+  width: 200px;
+}
 
 
 
@@ -711,6 +809,7 @@ footer{
   .betterme{
     padding: 80px 10px;
     font-size: 20px;
+    
   }
   .navbar button {
     background-color: #ffffff;

@@ -48,8 +48,8 @@ venueWrapper.classList.add('venue');
 venueWrapper.innerHTML =`<p>
 <b>date:</b>${result.date.date}
 <br>
-<b>time:</b>${result.date.time}<br>
-<b>date:</b>${result.date.venue}
+<b>Time:</b>${result.date.time}<br>
+<b>Venue:</b>${result.date.venue}
 </p>`
 venueWrapper.appendChild(venueLink);
 

@@ -6,6 +6,12 @@ form.addEventListener("submit", (e) => {
   new_session();
 });
 
+let delete_sessions = document.getElementById("delete_session");
+delete_sessions.addEventListener("click", (e) => {
+  e.preventDefault();
+  delete_session()
+});
+
 function new_session(){
   let expert_name = document.getElementById("expert_name").value;
   let cover_img = document.getElementById("cover_img").value;
@@ -25,13 +31,16 @@ function new_session(){
    rating:0,
    no_ratings:"",
    iframe:videolink,
+   id: sessionsitems.length,
+   status:true
+   
     
   }
 let number =0
   for (let i = 0; i < sessionsitems.length; i++) {
         
     if (sessionsitems[i].expert_name===expert_name) {
-        alert("event already exists")
+        alert("therapist already exists")
     }else{
         number =1
     }
@@ -42,6 +51,13 @@ let number =0
   sessionsitems.push(newsession);
   localStorage.setItem("sessioninfo", JSON.stringify(sessionsitems));
  }
+
+
+
+
+}
+
+function delete_session(){
 
 
 

@@ -53,11 +53,11 @@
       <div class="field-wrap">
         <label> Set A Password </label>
         <input type="password" id="password" title="password should contain one capital letter ,one small letter , one symbol and a number  "
-         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required />
+         pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"  required />
 
         <div class="field-wrap">
           <label> check password </label>
-          <input type="password" id="conpassword"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+          <input type="password" id="conpassword"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
       </div>
 
       <br />
