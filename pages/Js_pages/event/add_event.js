@@ -23,7 +23,8 @@ function new_event() {
   let about = document.getElementById("about").value;
   let more_img_1 = document.getElementById("more_img_1").value;
   let more_img_2 = document.getElementById("more_img_2").value;
-  let serial_number = info.length + 1;
+  
+  let serial_number = info.length ;
 
   let eventnew = {
     title: event_name,
@@ -35,7 +36,8 @@ function new_event() {
     date: { date: date, Time: time, venue: venue },
     images1: more_img_1,
     images2: more_img_2,
-    status :true
+    status :true,
+    Commentt :"",
   };
 
   let number = 1;

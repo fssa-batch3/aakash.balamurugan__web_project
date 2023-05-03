@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="../../../assets/css/new.css" />
+    <link rel="stylesheet" href="./../../../assets/css/signup.css">
     <title>BetterMe</title>
     <link
       rel="icon"
@@ -22,12 +22,6 @@
 
   <body>
     <div class="">
-      <div class="navbar">
-        <div class="logo">
-          <span class="betterme"><a href="../../../index.html">BetterMe</a></span>
-        </div>
-      </div>
-
    <form id="forms">
 
     <div class="signup">
@@ -46,12 +40,12 @@
       </div>
 
       <div class="">
-        <label> Email Address </label>
+        <label> Email Id </label>
         <input type="email" id="gmail" required/>
       </div>
 
       <div class="field-wrap">
-        <label> Set A Password </label>
+        <label>  Password </label>
         <input type="password" id="password" title="password should contain one capital letter ,one small letter , one symbol and a number  "
          pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"  required />
 
@@ -61,12 +55,15 @@
       </div>
 
       <br />
+
+    <div class="flex"> 
+      <div class="">
       <p><a href="login.html">Already a user!!</a></p>
-
-      <br />
+    </div>
+    <div class="">
       <button class="button button-block" type="submit">SIgn up</button>
-       
-
+    </div>
+  </div>
    </form>
 
       </div>

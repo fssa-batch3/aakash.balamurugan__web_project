@@ -4,7 +4,7 @@ const info = [
       para: "Join us for an evening of poetry hosted by Phoenix Books' own Bianca Amira Zanella!",
       about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
       ,
-      event_id:1,
+      event_id:0,
       images: { link: "https://iili.io/HNOIUZb.webp",
         alt: "Phoenix Books Virtual Poetry Open Mic",
       },
@@ -21,7 +21,7 @@ const info = [
       para: "Ever wondered what your favourite inanimate thing would say if they could express their emotions? What if they were brought to life and allowed to talk? Well we've got a stage for you.",
       about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
       ,
-      event_id:2,
+      event_id:1,
 
       images: {link: "https://iili.io/HNOISwu.webp",
         alt: "It's All Connected - Open Mic by Pooja",
@@ -36,7 +36,7 @@ const info = [
       title: "Spot On - More than an Open Mic",
       para: "We can hear the gears twisting and turning in your heads trying to figure out what this collaborative event with House of T is all about.",
       about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
-      ,      event_id:3,
+      ,      event_id:2,
 
       images: { link: "https://iili.io/HNOIrnj.jpg",
         alt: "Spot On - More than an Open Mic",

@@ -48,6 +48,7 @@ appoitement.addEventListener("click",function (e){
 
  
  appo.style.display="block";
+ body.style.backgroundColor = "black"
  
   
 })

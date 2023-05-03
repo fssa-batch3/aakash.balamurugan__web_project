@@ -14,6 +14,8 @@
 </head>
 ​
 <body>
+
+    
     <!-- This is profile-section -->
     <div class="account-section">
         <div class="side-item">
@@ -21,7 +23,7 @@
                 <img src="https://ui-avatars.com/api/?name=Aakash" id="profile" alt="error">
                 <div>
                     <h4 id="customer">namw</h4>
-                    <small>Customer_ID</small>
+                    
                 </div>
             </div>
             <div class="side-menu">
@@ -31,7 +33,7 @@
                             <span>My Profile</span></a>
                     </li>
                     <li>
-                        <a href="" class="active"><span class="fa-solid fa-bag-shopping"></span>
+                        <a href="" class="active" ><span class="fa-solid fa-bag-shopping"></span>
                             <span>Events</span></a>
                     </li>
                     <li>
@@ -98,11 +100,11 @@
                     <div class="fCity-name" id="align-num">
                         <label class="more"> City</label>
                         <select name="city" class="name" id="district">
-                            <option value="">Chennai</option>
-                            <option value="">Tiruchy</option>
-                            <option value="">Vilupuram</option>
-                            <option value="">Madurai</option>
-                            <option value="">Selem</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Tiruchy">Tiruchy</option>
+                            <option value="Vilupuram">Vilupuram</option>
+                            <option value="Madurai">Madurai</option>
+                            <option value="Salem">Salem</option>
                         </select>
                         <!-- <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name"
                             title="First name connot contain spaces" placeholder="First Name" value="" required="true"> -->
@@ -123,9 +125,10 @@
                             name="user address" placeholder="Pincode" >
 ​
                     </div>
-                    <div>
-                        <button type="submit" id="edit_btn">edit</button>
-                        <button id="delete_btn">Delete profile</button>
+                    <div class ="edit_btns">
+                        <button id="edit_btn">edit</button>
+                        <button id="save_btn" onclick="editProfile()">Save</button>
+                        <button id="delete_btn">Log Out</button>
                     </div>
                 </form>
                 </div>

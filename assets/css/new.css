@@ -4,11 +4,11 @@
   }
 
   :root{
-    --primary: #FF6000;
+    --primary: #0077b6;
     --secondery: #454545;
-    --shade:#FFA559;
-    --light-shade:#FFE6C7;
-    --nav:#146C94;
+    --shade:#caf0f8;
+    --light-shade:#e2fdff;
+    --nav:#023e8a;
     --box-shadow0:rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --box-shado-whover: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     --white:#ffffff;
@@ -48,14 +48,14 @@ font-family: 'Source Code Pro', monospace; */
       margin-left: 20px;
     }
     .navbar button:hover{
-      background-color: #ffffff;
-      color: #000000;
+      background-color:white;
+      color: #000;
       padding: 14px 30px;
       border: 0px;
       border-radius: 40px;
     }
     .navbar .profile {
-      background-color: greenyellow;
+      background-color: #90e0ef;
       color: #000000;
       font-size: 16px;
       font-weight: bold;
@@ -93,6 +93,12 @@ font-family: 'Source Code Pro', monospace; */
     letter-spacing: 1px;
     margin-left: 20px;
   }
+
+  .start:hover{
+    background-color: var(--shade);
+    color: black;
+  }
+  
 
   /* index */
 
@@ -143,6 +149,7 @@ text-align: start;
 }
 #maincont button:hover{
   background-color: var(--shade);
+  color: #000;
 }
 
 
@@ -167,7 +174,7 @@ margin-top: 5%;
 }
 /* content_in_third _section in index page  */
 #works{
-  background-color: #F6F1F1;
+  background-color: #ecf8f8;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -179,70 +186,108 @@ margin-top: 5%;
 }
 #works h2{
   font-size: 2.5rem;
-  margin-top: 2%;
   }
 .banner2 img{
-  height: 450px;
+  height: 500px;
+}
+
+#benifits .list ul li{
+  list-style: none;
+  font-size: 22px;
+  margin: 25px;
+}
+
+#benifits .list h2{
+  font-size: 39px;
+  text-align: center;
+  margin-bottom: 80px;
 }
 .center{
   text-align: center;
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.flex{
-  /* margin-top: 30PX; */
+/* .flex{
+  margin-top: 30PX;
   width: 1000px;
   margin-left: 200px;
-  padding-left: 60px;
-}
-.flex div:nth-child(1){
+  padding-left: 60px; */
+/* } */
+#works .flex  div:nth-child(1){
 background-color: #e91f2cc9;
 margin-top: 80px;
+height: 95px;
 }
-.flex div:nth-child(2){
+#works, .flex, .user1, h3{
+  text-align: center;
+  padding: 15px;
+}
+.user1{
+  height: 175px;
+  border-radius: 6px;
+  width:300px;
+  box-shadow: var(--box-shadow0);
+}
+
+#works .flex div:nth-child(2){
   background-color: #f1b80eb9;
-  margin-top: 50px;
+  margin-top: 55px;
+  height: 130px;
+
   }
-  .flex div:nth-child(3){
+  #works .flex div:nth-child(3){
     background-color: #e07122c4;
-    margin-top: 20px;
+    margin-top: 30px;
+    height: 150px;
+
+
     }
-    .flex div:nth-child(4){
-      background-color:  #3b2d7fb8;
+    #works .flex div:nth-child(4){
+      background-color:  #9d4edd;
+      height: 180px;
+
       }
-/* .user .flex img{
+.user .flex img{
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-left: -50px;
-} */
+  width: 10px;
+  margin-left: 10px;
+}
 .user{
   color: black;
-  width: 550px;
+  width: 450px;
+  height: 175px;
   border-radius: 10px;
-  padding: 40px;
   box-shadow: var(--box-shadow0);
-  margin-left: 45px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;  
+  
 }
 .user p{
-  margin-top: 30px;
+  margin-top: 0px;
+}
+
+.user h4,h6 {
+  margin-left: 20px;
+}
+
+#review .center{
+  margin-bottom: 2%;
 }
 
 /* content_in third _section in index page  */
 #benifits{
-  padding: 5px 100px;
-  color: #ffffff;
-  background-color: rgba(165,160,164,255) ;
+  padding: 0px 0px;
+  color: #000000;
+  background-color: #fefeff ;
   margin-top: 30px;
-}
-.list{
-  padding: 50px 0px;
 }
 .list img{
   width: 20px;
   margin-right: 10px;
 }
+
 /* .maincont ul li , .list ul li{
   list-style: none;
   line-height: 50px;
@@ -267,9 +312,9 @@ margin-top: 80px;
   margin-right: 10px;
 } */
 #review img{
-  height: 50px;
-  width: 50px;
-  margin-left: -50px;
+  height: 80px;
+  width: 80px;
+  
 }
 
   /* methods box in tips page */
@@ -301,7 +346,7 @@ margin-top: 80px;
     align-items: center;
      margin-right: 40px;
   }
-  .select{  background-color: #663595;
+  .select{  background-color: #168aad;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -321,8 +366,8 @@ margin-top: 80px;
     font-size: 14px;
     letter-spacing: 1px;
   }
-  .select{  background-color: #663595;
-    color: white;
+  .select{  background-color: #ffffff;
+    color: black;
     font-size: 16px;
     font-weight: bold;
     padding: 14px 30px;
@@ -331,7 +376,7 @@ margin-top: 80px;
     margin-left: 20px;
   }
   .button {
-    background-color: #ffffff;
+    background-color: #90e0ef;
     color: #000000;
     font-size: 16px;
     font-weight: bold;
@@ -341,7 +386,7 @@ margin-top: 80px;
     margin-left: 20px;
   }
   .start{
-    background-color: #663595;
+    background-color: #0077b6;
     padding: 15px 30px;
     border-radius: 6px;
     letter-spacing: 1px;
@@ -387,6 +432,8 @@ margin-top: 80px;
   background-color: #663595;
   border-radius: 10px;
   display: flex;
+  flex-wrap: wrap;
+width: 90%;
   justify-content: space-between ;
   padding: 20px;
   margin: 30px;
@@ -400,6 +447,8 @@ margin-top: 80px;
 }
 .eventbox p{
   font-size: 20px;
+  
+  align-items: center;
 }
 
 .event a{
@@ -447,6 +496,9 @@ text-align: center;
 .review{
   margin-top: 70px;
   margin-left: 30px;
+}
+.title_para p {
+  width: 200px;
 }
 
 
@@ -726,9 +778,10 @@ select{
 
 /* footer */
 footer{
-  background-color: cornsilk;
+  background-color: #ecf8f8;
   padding: 40px;
   text-align: center;
+  height: 130px;
 }
 
 /* conform visit */
@@ -764,43 +817,7 @@ footer{
 
 /* login */
 
-.login{
-  margin: 250px 500px;
-  padding: 30px;
-  border: #888888 2px solid;
-  border-radius: 10px;
-  text-align: center;
-}
-.login input{
-  margin: 10px;
-}
-.login a{
-  text-decoration:underline;
-  color: blue ;
-}
-
 /* sign up  */
-
-.signup{
-  margin: 250px 500px;
-  padding: 30px;
-  border: #888888 2px solid;
-  border-radius: 10px;
-  text-align: center;
-}
-.signup input{
-  margin: 10px;
-  height: 30px;
-  width: 100%;
-}
-.signup p{
-  float: right;
-}
-#p_para{
-  text-align: center;
-  word-wrap: break-word;
-  width: 200px;
-}
 
 
 
@@ -962,7 +979,7 @@ footer{
  justify-content: flex-start;
 }
 .banner2 img{
-  height: 100px;
+  height: 200px;
 }
 #works h2{
   /* margin-left: 20px; */

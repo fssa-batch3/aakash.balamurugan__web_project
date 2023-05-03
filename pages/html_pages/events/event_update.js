@@ -135,6 +135,8 @@ let update_event_value=update_event.value
 update_event_value=result.event_id;
 
 
+console.log(update_event.value);
+
 
 delete_event.addEventListener("click", (e) => {
     e.preventDefault();
@@ -147,6 +149,9 @@ delete_event.addEventListener("click", (e) => {
   });
 
 
+  if (  a[update_event_value].status == false) {
+    delete_event.innerText="Undo"  
+  }
 
 
   function display_off_function() {

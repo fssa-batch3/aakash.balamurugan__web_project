@@ -28,7 +28,7 @@ for (let i = 0; i < info.length; i++) {
     div_onuila.append(img_photo);
 
     let div_none = document.createElement("div");
-    div_none.setAttribute("class", "");
+    div_none.setAttribute("class", "title_para");
     div_event_box.append(div_none);
 
     let h2_title = document.createElement("h2");
