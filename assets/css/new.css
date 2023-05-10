@@ -319,13 +319,13 @@ height: 95px;
 
   /* methods box in tips page */
   .head{
-    background-color: #663595;
+    background-color:#2196f3;
     display: flex;
     font-size: 30px;
     align-items: center;
     position: sticky;
     color: #ffffff;
-    top: 65px;
+    top: 100px;
     border: #ffffff 2px solid;
     margin-top: 20px;
     z-index: 3;
@@ -412,7 +412,7 @@ height: 95px;
 .topic{
     font-weight: 600;
     font-size: 30px;
-    color: #8400ff;
+    color: #4ea8de;
     margin-bottom: 20px;
 }
 .pho , .pic{
@@ -429,7 +429,7 @@ height: 95px;
 
  /* alignment for event page  */
 .eventbox{
-  background-color: #663595;
+  background-color: #a9def9;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -437,7 +437,7 @@ width: 90%;
   justify-content: space-between ;
   padding: 20px;
   margin: 30px;
-  color: #fbeaeb;
+  /* colo */
   height: 300px;
 }
 .eventbox img{
@@ -1397,18 +1397,44 @@ margin: 20px 13%;
 
 
 
+#startFunction, #stop_vid,#btn_stop{
+   width:15vh;
+   height: 5vh;
+   border-radius: 20px;
+   background-color:#00b4d8;
+   color:#1D2231;
+   box-shadow: -15px 4px 16px -16px rgba(0,0,0,0.68);
+   margin-top: 20px;
+   border: none;
+   
+}
+
+.edit_btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.edit_btns_cam{
+  /* margin-left: 150px; */
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+#startFunction:hover,
+#stop_vid:hover,
+#btn_stop:hover  {
+   color: white;
+   background-color:#48cae4 ;
+
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+#recording{
+  width: 70px;
+  position: absolute;
+  left: 930px;
+  top: 430px;
+  display: none;
+}

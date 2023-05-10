@@ -50,66 +50,124 @@ const info = [
 
 
   let sessionsitems =[{
-    person_name:"Deepak Chopra",
-    images:{link:"https://iili.io/HNSXKrv.jpg",alt:"Deepak Chopra"},
-    occupation:"Alternative medicine advocatepublic speakerwriter",
-    content:`is an Indian-American author and alternative medicine advocate. A prominent figure in
-    the New Age movement, his books and videos have made him one of the best-known and wealthiest figures in
-    alternative medicine.His discussions of quantum healing have been characterised as technobabble "incoherent
-    babbling strewn with scientific terms" which drives those who actually understand physics "crazy" and as
-    "redefining Wrong".`,
+    person_name:"Tanishka Israni",
+    images:{link:"https://d1e5r2yarttfjn.cloudfront.net/0asSPmYDm_Tanishka.jpg"},
+    occupation:"Psychologist",
+    content:` is a trained Psychologist who holds immense knowledge in mental health concerns ranging between multiple age groups.
+
+    She is well-versed in counseling for various psychological issues such as Post-traumatic stress disorder, Generalised anxiety disorder, Expressive language disorder, Behavioural addiction and so on. She has had the experience of working with individuals and conducted private therapies and peer counseling sessions through her hands-on knowledge.
+    
+    Ms. Tanshika uses an eclectic approach to therapy wherein she inculcates techniques like person-centred therapy, gestalt therapy, narrative therapy, rational emotive behaviour therapy, and trauma-informed approaches. Systematic Desensitisation, Applied relaxation, Diaphragmatic breathing, and CBT to name a few.
+    
+    Additionally, she holds expertise in career and corporate mapping and is well-versed in conducting psychometric assessments like the Sentence completion test, State trait anxiety inventory, and Leibowitz Social Anxiety scale - to name a few. These facilitate early diagnosis of mental health issues for better prognosis.
+    
+    Ms. Tanshika is fluent in English and Hindi.".`,
     rating:4,
     no_ratings:"(30 reviews)",
-    iframe:" https://www.youtube.com/embed/mmcJdoKftnM",
+    education:`  <li>M.Sc in Psychology</li>
+    
+    <li>Diploma in Counseling Psychology</li>
+    
+    <li>BA in Psychology</li>`,
+
+    exprience:`<li>Worked in a leading multispeciality hospital in Manipal Karnataka</li>
+    
+    <li>Worked in a renowned mental health organisation for children in Karnataka</li>
+    
+    <li>Worked in a prestigious behavioural science setting in Delhi</li>
+
+    <li>Worked in a reputed mental health organisation in Haryana</li>`,
+
     id:1,
+    startTime    : "7:00 AM",
+    endTime : "7:00 PM",
     status:true
 
 
 
 },
 {
-    person_name:"Chris Gardner",
-    images:{link:"https://iili.io/HNSXq2R.jpg", alt:"Chris Gardner"},
-    occupation:"Businessman, motivational speaker ",
-    content:`is an American businessman and motivational speaker. During the early 1980s,
-    Gardner struggled with homelessness while raising a toddler son. He became a stockbroker and eventually
-    founded his own brokerage firm Gardner Rich & Co in 1987. In 2006, Gardner sold his minority stake in the
-    firm and published a memoir. That book was made into the motion picture The Pursuit of Happyness starring
-    Will Smith.`,
+    person_name:"Ananya Purkayastha",
+    images:{link:"https://d1e5r2yarttfjn.cloudfront.net/2sQYiF21a_Ananya.jpeg"},
+    occupation:"Clinical Psychologist",
+    content:`Ananya is a trained Clinical Psychologist (RCI registered) who has experience in the field of mental health for more than 9 years. Having worked in a variety of hospitals and clinical settings, she has gained experience in clinical diagnosis, psychometric assessments, and evidence-based therapeutic techniques. As a therapist, Ananya is fluent in English, Hindi, and Bengali.
+
+    As someone who believes in keeping an empathy-oriented non-judgmental approach in her sessions, Ananya has been able to help children and adults with various psychological issues like Depression, Anxiety, Substance abuse, ADHD, Conduct disorders, Academic stress, family and relationship issues, to name a few.She has been helping her clients unleash their true potential through her expertise in therapeutic techniques like Cognitive Behavioural Therapy (CBT), Behaviour Modification, Motivational Enhancement Therapy, Supportive Psychotherapy, and so on. Through her expertise in the field, she aspires to normalise seeking help and make therapy accessible to all..`,
     rating:3,
     no_ratings:"(12 reviews)",
-    iframe:"https://www.youtube.com/embed/GthNhcppldc",
+    education:`  <li>M.Phil in Clinical Psychology</li>`,
+
+    exprience:`<li>Private Practitioner in Kolkata</li>
+
+<li>School Counselor at a renowned school in Kolkata</li>
+
+<li>Hospital settings in Kolkata</li>`,
+
+startTime    : "7:00 AM",
+endTime : "7:00 PM",
     id:2,
     status:true
 },
 {
-    person_name:"Iyanla Vanzant",
-    images:{link:"https://iili.io/HNSXCkN.png", alt:"Iyanla Vanzant"},
-    occupation:"Inspirational speaker, lawyer, spiritual teacher, author, TV personality",
-    content:`is an American inspirational speaker, lawyer, New Thought spiritual teacher, author,
-    life coach, and television personality. She is known primarily for her books, her eponymous talk show, and
-    her appearances on The Oprah Winfrey Show. She can currently be seen on television as the host of Iyanla:
-    Fix My Life, on OWN: Oprah Winfrey Network`,
+    person_name:"Radhika Jaiswal",
+    images:{link:"	https://d1e5r2yarttfjn.cloudfront.net/jrlwGaXSa_Radhika.PNG"},
+    occupation:"Clinical Psychologist",
+    content:`Radhika is an RCI-registered trained clinical psychologist. She aims to provide an empathetic and a non-judgemental space for her clients.
+
+    As a Clinical Psychologist, Radhika has been extensively trained in conducting various therapeutic interventions including Cognitive behaviour therapy, behaviour modification, motivational enhancement therapy, Drill Therapy, Hypnotherapy, Behaviour Therapy, Behaviour Modification, Family Therapy, Supportive Therapy, dialectical behaviour therapy and mindfulness-based cognitive therapy to name a few.
+    
+    Through her experience working with individuals with various psychological issues, Radhika has been able to help people with marital issues, substance abuse, anxiety, depression, adjustment issues, OCD, schizophrenia, autism, intellectual disability, and many more.
+    
+    Her stellar research background in the field of psychology has helped her diagnose clients aptly and utilise evidence-based therapy methods to help them become a better version of themselves. By attending multiple workshops across India on Intensive short-term dynamic psychotherapy, C.O.A.T Therapy, and Mindfulness based Cognitive Behaviour Therapy she has mentored budding psychologists.
+    
+    She goes by an eclectic approach and believes in collaborating with clients to create a safe space where they can express themselves freely and aims to inculcate psychological assessments to better understand the clients.
+    
+    Expert Radhika is well-versed in English and Hindi.`,
     rating:3,
     no_ratings:"(12 reviews)",
-    iframe:"https://www.youtube.com/embed/Qm9ZbthOGs0",
+    education:`  <li>M.Phil. in Clinical Psychology</li>
+    
+    <li>M.A in Clinical Psychology</li>
+    
+    <li>B.Sc. in Biotechnology</li>`,
+
+    exprience:`<li>Worked at a well-renowned hospital and various other clinical settings in Delhi NCR and Indore</li>
+    
+    <li>Worked in several mental health and Non-Profit Organisations in multiple cities across India</li>`,
+    
+    startTime    : "7:00 AM",
+    endTime : "7:00 PM",
     status:true,
     id:3,
 
 },
 {
-    person_name:"Darren Hardy",
-    images:{link:"https://iili.io/HNSXB7p.jpg",alt:"Darren Hardy"},
-    occupation:`Writer
-    CEO Advisor
-    High_Performance Trainer
-    Motivational Speaker `,
-    content:`is an American author, keynote speaker, advisor, and former publisher of SUCCESS
-    magazine. Hardy is a New York Times best-selling author, who wrote The Entrepreneur Roller Coaster, Living
-    Your Best Year Ever and The Compound Effect .`,
+    person_name:"Anusuya R",
+    images:{link:"	https://d1e5r2yarttfjn.cloudfront.net/9VfR5KuMm_Anusuya.jpg",},
+    occupation:`Clinical Psychologist `,
+    content:`Anusuya is a trained RCI Licensed Clinical Psychologist and an Internationally trained yoga instructor. She has extensive experience in the mental health field catering to both children and the adult population. Anusuya is well-versed with various therapeutic techniques including Transactional Analysis (TA) and Cognitive Behavioural Therapy (CBT).
+
+    Through her expertise in working with various well-renowned mental health institutions and NGOs, Anusuya has been helping clients across all ages deal with issues like anxiety, depression, adjustment issues, career confusion, relationship issues and so on. She is committed to her goal of helping her clients unleash their potential through her non-judgmental and empathetic approach.
+    
+    Anusuya is fluent in English, Hindi and Tamil.`,
     rating:3,
     no_ratings:"(12 reviews)",
-    iframe:"https://www.youtube.com/embed/RlHTRFyjwT0",
+    education:`  <li>M.Phil in Clinical Psychology</li>
+    
+    <li>M.A. in Psychology</li>
+    
+    `,
+
+    exprience:`<li>Assisstant Professor in a prestigious academic institution in Chennai
+    </li>
+    
+    <li>Private Practitioner in Chennai</li>
+    
+    <li>
+    Worked at well-renowned hospitals and NGOs in Chennai</li>`,
+    
+    startTime    : "7:00 AM",
+    endTime : "7:00 PM",
     status:true,
     id:4,
 

@@ -58,7 +58,8 @@ if (res === 0){
         "user_Password":password,
         "district":"",
         "mobile_number":"",
-        "pincode":""
+        "pincode":"",
+        "per_exp_id":0
         }
 
         user.push(user_data);

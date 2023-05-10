@@ -38,7 +38,7 @@
     background-color:whitesmoke;
 
   }
-  .login input , .signup input{
+  .login input {
     height: 30px;
     width: 250px;
     margin: 10px;
@@ -61,6 +61,7 @@
     box-shadow: -15px 4px 16px -16px rgba(0,0,0,0.68);
     margin-top: 20px;
     border: none;
+    cursor: pointer;
     
   }
 
@@ -76,4 +77,19 @@
   .signup h1{
     font-size: 40px;
     font-family: 'Lobster Two', cursive;
+  }
+ 
+  .signup_btn{
+    margin-left: 105px;
+
+  }
+  .signup input{
+    height: 35px;
+    width: 300px;
+    margin: 10px;
+    }
+
+  .signup_a{
+    padding-bottom: 40px;
+    margin-right: 20px;
   }

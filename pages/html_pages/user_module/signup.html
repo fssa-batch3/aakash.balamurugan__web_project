@@ -21,46 +21,71 @@
   </head>
 
   <body>
-    <div class="">
+    <div class="signup_form">
    <form id="forms">
 
     <div class="signup">
       <h1>Sign Up for Free</h1>
 
-      <div class="flex">
+      <div class="flex1">
         <div class="">
+          <div class="signup_inputfield_name">
           <label> First Name </label>
+        </div>
+        <div class="signup_inputfield">
           <input type="text" id="first_name" pattern="[a-zA-Z]+" required  title="First name should contain only alphabets"/>
         </div>
+        </div>
 
-        <div class="">
+       <div class="">
+        <div class="signup_inputfield_name">
           <label> Last Name </label>
+        </div>
+        <div class="signup_inputfield">
           <input type="text" id="last_name" pattern="[a-zA-Z]+" title="Last name should contain only alphabets" required/>
         </div>
-      </div>
+        </div>
 
       <div class="">
+        <div class="signup_inputfield_name">
         <label> Email Id </label>
+      </div>
+      <div class="signup_inputfield">
         <input type="email" id="gmail" required/>
       </div>
-
-      <div class="field-wrap">
-        <label>  Password </label>
-        <input type="password" id="password" title="password should contain one capital letter ,one small letter , one symbol and a number  "
-         pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"  required />
-
-        <div class="field-wrap">
-          <label> check password </label>
-          <input type="password" id="conpassword"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
       </div>
 
+
+      <div class="field-wrap">
+        <div class="">
+      <div class="signup_inputfield_name">
+        <label>  Password </label>
+      </div>
+      <div class="signup_inputfield">
+        <input type="password" id="password" title="password should contain one capital letter ,one small letter , one symbol and a number  "
+         pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"  required />
+       </div>
+       </div>
+
+
+        <div class="field-wrap">
+          <div class="">
+        <div class="signup_inputfield_name">
+          <label> Check password </label>
+        </div>
+        <div class="signup_inputfield">
+          <input type="password" id="conpassword"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+        </div>
+          </div>
+        </div>
+      </div>
       <br />
 
-    <div class="flex"> 
-      <div class="">
+    <div class=""> 
+      <div class="signup_a">
       <p><a href="login.html">Already a user!!</a></p>
     </div>
-    <div class="">
+    <div class="signup_btn">
       <button class="button button-block" type="submit">SIgn up</button>
     </div>
   </div>

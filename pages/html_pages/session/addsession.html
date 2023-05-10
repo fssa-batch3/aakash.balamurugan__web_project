@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../assets/css/new.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
   </head>
   <body>
@@ -21,6 +22,11 @@
         <input type="text" name="" id="content" placeholder="content">
 
         <input type="url" name="" id="video" placeholder="video">
+
+        
+     <input type="text" id="startTime" required placeholder="12:00">
+    
+    <input type="text" id="endTime" required placeholder="12:00">
     
 
     
@@ -29,9 +35,11 @@
       <button id="update_session">Update</button>=
 
   </form>
-    <script src="../../Js_pages/session/add_session.js">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../Js_pages/session/add_session.js"></script>
+
      
  
-        </script>
+        
   </body>
 </html>

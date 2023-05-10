@@ -64,13 +64,13 @@ let link3 =document.createElement("a");
 link3.setAttribute("href","./sessioninfo.html?name="+ sessionsitems[i].person_name)
 occupation.append(link3);
 
-let para2 = document.createElement("p");
-let span2 = document.createElement("span");
-span2.innerHTML=sessionsitems[i] .person_name;
-para2.innerText= sessionsitems[i].content;
+// let para2 = document.createElement("p");
+// let span2 = document.createElement("span");
+// span2.innerHTML=sessionsitems[i] .person_name;
+// para2.innerText= sessionsitems[i].content;
 
-para2.prepend(span2);
-link3.append(para2);
+// para2.prepend(span2);
+// link3.append(para2);
 
    }
 

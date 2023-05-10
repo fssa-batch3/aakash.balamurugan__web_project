@@ -40,6 +40,9 @@ Feature scenario
         3. Click the "Create Account" button.
     - Expected Result:
         - The user is redirected to the login page.
+    - Example inputs:
+        - first_Name : john , 
+        -     
 
 **login an account
 - Scenario 1: Successfully login in to account

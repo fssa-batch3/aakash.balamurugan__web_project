@@ -22,7 +22,7 @@
             <div class="page">
                 <img src="https://ui-avatars.com/api/?name=Aakash" id="profile" alt="error">
                 <div>
-                    <h4 id="customer">namw</h4>
+                    <h4 id="customer">name</h4>
                     
                 </div>
             </div>
@@ -115,19 +115,19 @@
                         <label class="more"> mobile number</label>
 ​
                         <input class="name" id="number" type="tel" pattern="[0-9]{10,12}"
-                            name="number" placeholder="mobile number" >
+                            name="number" placeholder="mobile number" maxlength="10" >
 ​
                     </div>
                     <!-- This is Address input  -->
                     <div class="pincode" id="align-num">
                         <label class="more"> Pincode</label>
                         <input class="name" id="pincode" type="text" pattern="[0-9]{6,6}"
-                            name="user address" placeholder="Pincode" >
+                           maxlength="6" name="user address" placeholder="Pincode" >
 ​
                     </div>
                     <div class ="edit_btns">
                         <button id="edit_btn">edit</button>
-                        <button id="save_btn" onclick="editProfile()">Save</button>
+                        <button id="save_btn" type="submit" onclick="editProfile()">Save</button>
                         <button id="delete_btn">Log Out</button>
                     </div>
                 </form>
