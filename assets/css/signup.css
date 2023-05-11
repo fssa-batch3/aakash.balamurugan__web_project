@@ -30,7 +30,8 @@
   }
   
 .login ,.signup {
-    margin: 250px 500px;
+  /* margin-top: 100px; */
+    margin: 170px 500px 0px 500px;
     padding: 30px;
     border: #888888 2px solid;
     border-radius: 30px;

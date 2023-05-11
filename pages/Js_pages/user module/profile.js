@@ -100,16 +100,11 @@ pincode.setAttribute("disabled","")
   }
 }
 
-// function aakash(){
-
-//   let ind =user_details.findIndex(function (value){
-// return value.user_email === details});
-
-// // let selectedValue;
-// // district.addEventListener("change", (event) => {
-// //     check = event.target.innerText
-// //     selectedValue = event.target.value;
-// // });
+let my_profile_btn = document.getElementById("my_profile");
+let my_profile_box = document.querySelector(".information");
+my_profile_btn.addEventListener("click",function () {
+  my_profile_box.style.display="block";
+})
 
 
 
