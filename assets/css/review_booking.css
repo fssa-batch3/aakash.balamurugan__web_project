@@ -137,10 +137,10 @@ body{
     background-color: #ffffff;
     padding: 5%;
     margin: 30px;
-    /* margin-left: 300px; */
+    margin-left: 300px;
     width: 350px;
     background-color: #e9ecef;
-    height: 250px;
+    /* height: 250px; */
 
 }
 .Appointment_Details1 {

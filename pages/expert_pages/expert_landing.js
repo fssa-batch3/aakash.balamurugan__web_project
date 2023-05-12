@@ -26,92 +26,13 @@ remove.addEventListener("click",(e) =>{
 
 
 
-let user_details = JSON.parse(localStorage.getItem("user_details"));
+let user_details = JSON.parse(localStorage.getItem("sessioninfo"));
 
 let details = localStorage.getItem("details");
 let result = user_details.find(function (value) {
-    return value.user_email === details;
+    return value.login  === details;
   });
 
-
-let first_name = document.getElementById("user-firstname")
-let last_name = document.getElementById("user-lastname")
-let password_ = document.getElementById("user-password")
-let user_email= document.getElementById("user-email")
-let mobile = document.getElementById("number")
-let district = document.getElementById("district")
-let pincode = document.getElementById("pincode")
-
-document.getElementById("profile").setAttribute("src","https://ui-avatars.com/api/?name=" +result.user_name)
-document.getElementById("customer").innerHTML =result.user_name;
-
-first_name.value=result.user_name;
-last_name.value= result.second_name;
-user_email.value=result.user_email;
-password_.value=result.user_Password;
-mobile.value=result.mobile_number;
-district.value = result.district;
-pincode.value=result.pincode;
-
-first_name.setAttribute("disabled","")
-last_name.setAttribute("disabled","")
-password_.setAttribute("disabled","")
-mobile.setAttribute("disabled","")
-district.setAttribute("disabled","")
-pincode.setAttribute("disabled","")
-
-
-function disabled_input() {
- 
-  first_name.removeAttribute("disabled")
-  last_name.removeAttribute("disabled")
-  password_.removeAttribute("disabled")
-  mobile.removeAttribute("disabled")
-  district.removeAttribute("disabled")
-  pincode.removeAttribute("disabled")
-  
-}
-
-
-function editProfile(){
-
-  for (let i = 0; i < user_details.length; i++) {
-    if(user_details[i]["user_email"] == details){
-      user_details[i]["user_name"] = first_name.value;
-      user_details[i]["second_name"] = last_name.value;
-      user_details[i]["user_Password"] = password_.value;
-      user_details[i]["mobile_number"] = mobile.value;
-      user_details[i]["district"] = district.value;
-      user_details[i]["pincode"] = pincode.value;
-
-
-
-first_name.setAttribute("disabled","")
-last_name.setAttribute("disabled","")
-password_.setAttribute("disabled","")
-mobile.setAttribute("disabled","")
-district.setAttribute("disabled","")
-pincode.setAttribute("disabled","")
-
-
-
-      localStorage.setItem("user_details",JSON.stringify(user_details))
-    }
-  }
-}
-
-let all_divs = document.querySelectorAll(".boxes")
-
-
-
-let my_profile_btn = document.getElementById("my_profile");
-let my_profile_box = document.querySelector(".information");
-my_profile_btn.addEventListener("click",function () {
-  for (let i = 0; i < all_divs.length; i++) {
-    all_divs[i].style.display = "none" ; 
-  }
-  my_profile_box.style.display="block";
-});
 
 my_profile_btn.click()
 
@@ -142,7 +63,7 @@ my_session_btn.addEventListener("click",function () {
 //  return value.person_name === search;
 // });
 
-let personal_expert = result.per_exp_id;
+// let personal_expert = result.per_exp_id;
 let session_details = JSON.parse(localStorage.getItem("sessioninfo"));
 
 
@@ -173,10 +94,10 @@ occupation.innerText = sessions.occupation;
 let appoitement_list = JSON.parse(localStorage.getItem("appoitement_list_srt"))
 
 for (let i = 0; i < appoitement_list.length; i++) {
-  console.log(appoitement_list[i].user_id,result.user_id);
+  console.log(appoitement_list[i].expert_id,result.id);
 
-  if (appoitement_list[i].user_id== result.user_id) {
-  console.log(appoitement_list[i].user_id,result.user_id);
+  if (appoitement_list[i].expert_id== result.id) {
+  console.log(appoitement_list[i].expert_id,result.id);
     let upcoming_appoitment_list = document.createElement("upcoming_appoitment_list");
     upcoming_appoitment_list.setAttribute("class","upcoming_appoitment_list");
 

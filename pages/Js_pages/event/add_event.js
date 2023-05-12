@@ -24,7 +24,7 @@ function new_event() {
   let more_img_1 = document.getElementById("more_img_1").value;
   let more_img_2 = document.getElementById("more_img_2").value;
   
-  let serial_number = info.length ;
+  let serial_number = info.length+1 ;
 
   let eventnew = {
     title: event_name,

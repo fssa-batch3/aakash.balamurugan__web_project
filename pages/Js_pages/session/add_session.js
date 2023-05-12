@@ -55,7 +55,7 @@ function new_session(){
    rating:0,
    no_ratings:"",
    iframe:videolink,
-   id: sessionsitems.length,
+   id: sessionsitems.length + 1,
    startTime:startTime,
    endTime:endTime,
    status:true

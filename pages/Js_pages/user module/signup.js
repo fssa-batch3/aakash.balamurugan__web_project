@@ -23,6 +23,7 @@ const last_name = document.getElementById("last_name").value;
 const email = document.getElementById("gmail").value;
 const password = document.getElementById("password").value;
 const conpass = document.getElementById("conpassword").value;
+const user_id = user.length+1;
 
 let res;
 if (password==conpass) {
@@ -59,13 +60,15 @@ if (res === 0){
         "district":"",
         "mobile_number":"",
         "pincode":"",
-        "per_exp_id":0
+        "per_exp_id":0,
+        "user_id":user_id
         }
 
         user.push(user_data);
             localStorage.setItem("user_details",JSON.stringify(user));
+            localStorage.setItem("details",email)
             
-            window.location.href="./login.html";
+            window.location.href="./../tips.html";
 }
 
 

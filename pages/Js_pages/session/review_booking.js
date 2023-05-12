@@ -12,6 +12,13 @@ let active_user = user_details.find(function (value) {
   return value.user_email === details;
 });
 
+let appoitement_list;
+if (localStorage.getItem("appoitement_list_srt")) {
+  appoitement_list = JSON.parse(localStorage.getItem("appoitement_list_srt"));
+} else {
+  appoitement_list = [];
+}
+
 let result;
 
 sessionsitems.forEach((e) => {
@@ -19,6 +26,16 @@ sessionsitems.forEach((e) => {
     return (result = e);
   }
 });
+
+
+let act_user_id =0;
+for (let i = 0; i < user_details.length; i++) {
+if (user_details[i].user_email == details) {
+  act_user_id = user_details[i].user_id;
+  // console.log(user_details[i].per_exp_id);
+
+}  
+}
 
 console.log(result);
 // timing filter
@@ -86,26 +103,73 @@ for (let i = startIndexNo; i <= endindexNo; i++) {
   let indexno = i % 24;
   let timeKey = `timing${indexno}`;
   ExperttimeOptions[timeKey] = timingOptions[timeKey];
+
 }
 
 // for date
 let date = document.getElementById("appoitment_date");
 
 //let today = new Date().toISOString().split("T")[0];
-let today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
-  .toISOString()
-  .split("T")[0];
-date.setAttribute("min", today);
+let today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+date.setAttribute("min", today );
+
+function getDateOneWeekAfter(date) {
+  const oneWeekLater = new Date(date);
+  oneWeekLater.setDate(oneWeekLater.getDate() + 7);
+  max_date =  oneWeekLater.toISOString().split("T")[0] 
+  return max_date;
+}
+
+const currentDate = new Date();  // Get the current date
+const oneWeekLater = getDateOneWeekAfter(currentDate);
+console.log(oneWeekLater);
+date.setAttribute("max",oneWeekLater);
+// date.addEventListener("")
 
 let select_timings = document.getElementById("time_slot");
 select_timings.setAttribute("class", "timings");
 select_timings.setAttribute("required", "");
 
-for (let time in ExperttimeOptions) {
-  let option_timings = document.createElement("option");
-  option_timings.innerText = ExperttimeOptions[time];
-  select_timings.append(option_timings);
+
+let hour =new Date().getHours();
+let minut = new Date().getMinutes();
+function convertTo12HourFormat(hours) {
+  
+  // let suffix = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12; // Convert 0 to 12
+  return `${hours}`;
 }
+// :${minutes} ${suffix} minutes
+const time12 = convertTo12HourFormat(hour);
+console.log(time12); // Output: "2:30 PM"
+
+let date_input=document.querySelector("#appoitment_date")
+date_input.addEventListener("input",(e)=>{
+  console.log(date_input.value);
+if (date_input.value == today) {
+  alert("Book appoitement one day before")
+} else {
+  for (let time in ExperttimeOptions) {
+    let option_timings = document.createElement("option");
+    option_timings.innerText = ExperttimeOptions[time];
+    for (let i = 0; i < appoitement_list.length; i++) {
+      if (appoitement_list[i].appoitment_date == date_input.value) {
+        if (appoitement_list[i].time_slot == option_timings.innerText ) {
+          option_timings.setAttribute("disabled","")
+        }
+      }
+      
+    }
+
+ 
+    select_timings.append(option_timings);
+   
+  }
+}
+
+
+})
+
 
 let expert_name = document.getElementById("expert_name");
 expert_name.innerText = result.person_name;
@@ -126,19 +190,16 @@ appoitment_book.addEventListener("submit", function (s) {
   appoitment_book_fun();
 });
 
-let appoitement_list;
-if (localStorage.getItem("appoitement_list_srt")) {
-  appoitement_list = JSON.parse(localStorage.getItem("appoitement_list_srt"));
-} else {
-  appoitement_list = [];
-}
+
+
+
 
 function appoitment_book_fun() {
   console.log("entered");
 
   let expert_id = search;
-  let user_id = result.id;
-  let appoitement_id = appoitement_list.length;
+  let user_id = act_user_id;
+  let appoitement_id = appoitement_list.length+1;
   let appoitment_date = document.getElementById("appoitment_date").value;
   let time_slot = document.getElementById("time_slot").value;
   let number = document.getElementById("number").value;
