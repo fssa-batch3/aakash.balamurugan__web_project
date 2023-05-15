@@ -1,12 +1,12 @@
-let info = JSON.parse(localStorage.getItem("info"));
+const info = JSON.parse(localStorage.getItem("info"));
 
-let form = document.querySelector("form");
+const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   new_event();
 });
 
-let display_off = document.getElementById("display_off");
+const display_off = document.getElementById("display_off");
 
 display_off.addEventListener("click", (e) => {
   e.preventDefault();
@@ -14,30 +14,30 @@ display_off.addEventListener("click", (e) => {
 });
 
 function new_event() {
-  let event_name = document.getElementById("event_name").value;
-  let cover_img = document.getElementById("cover_img").value;
-  let venue = document.getElementById("venue").value;
-  let time = document.getElementById("time").value;
-  let date = document.getElementById("date").value;
-  let intro = document.getElementById("intro").value;
-  let about = document.getElementById("about").value;
-  let more_img_1 = document.getElementById("more_img_1").value;
-  let more_img_2 = document.getElementById("more_img_2").value;
-  
-  let serial_number = info.length+1 ;
+  const event_name = document.getElementById("event_name").value;
+  const cover_img = document.getElementById("cover_img").value;
+  const venue = document.getElementById("venue").value;
+  const time = document.getElementById("time").value;
+  const date = document.getElementById("date").value;
+  const intro = document.getElementById("intro").value;
+  const about = document.getElementById("about").value;
+  const more_img_1 = document.getElementById("more_img_1").value;
+  const more_img_2 = document.getElementById("more_img_2").value;
 
-  let eventnew = {
+  const serial_number = info.length + 1;
+
+  const eventnew = {
     title: event_name,
     event_id: serial_number,
     para: intro,
 
-    about: about,
+    about,
     images: { link: cover_img, alt: event_name },
-    date: { date: date, Time: time, venue: venue },
+    date: { date, Time: time, venue },
     images1: more_img_1,
     images2: more_img_2,
-    status :true,
-    Commentt :"",
+    status: true,
+    Commentt: "",
   };
 
   let number = 1;

@@ -804,15 +804,37 @@ footer{
 
 /* ticket booking */
 .ticketbox{
-  margin: 250px 500px;
+  margin: 230px 450px;
   padding: 30px;
+  height: 450px;
+  width: 600px;
+  display: none;
   border: 2px solid rgba(0, 0, 0, 0.418);
   border-radius: 5px;
-
+  position:absolute;
+  background-color: #ecf8f8;
+  top: 20px;
 }
-
+fieldset{
+  border: none;
+}
 .ticketbox input{
-  width: 30px;
+padding: 6px ;
+border-radius: 6px;
+border: solid 1px rgb(196, 195, 195);
+}
+.final{
+  margin-top: 20px;
+}
+.final button{
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 16px;
+}
+.confirm1 button{
+  color: white;
+  background-color: #340163;
+
 }
 
 /* login */
@@ -821,469 +843,7 @@ footer{
 
 
 
-@media (max-width: 414px) {
-  
-  .betterme{
-    padding: 80px 10px;
-    font-size: 20px;
-    
-  }
-  .navbar button {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 10px;
-    padding: 7px 5px;
-    width: 75px;
-    margin-left: 10px;
-  }
-  .navbar .start{
-    padding: 10px 15px;
-   
-    position: relative;
-    top: 5px;
-  }
 
-  .start{
-    background-color: #663595;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    width: 75px;
-    margin-left: 10px;
-    border-radius: 25px;
-    position: relative;
-    top:0px
-  }
-
-  .select{  background-color: #663595;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 10px 20px;
-   
-    margin-left: 20px;
-  }
-  .button {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 10px 20px;
-   
-    margin-left: 20px;
-  }
-
-  .box{
-    background-color:  #663595;
-    color:#fbeaeb ;
-    padding: 20px;
-    margin: 10px;
-    width: 100%;
-    border-radius: 10px;
-    height: 530px;
-  }
-  .box img{
-    height: 150px;
-    align-items: center;
-    margin-left: 100px;
-    border-radius: 10px;
-  }
-
-  .box .flex{
-    display: block;
-  }
-  
- .eventbox{
-
- }
-  .banner{
-    background-image: url(../img/home/elon.webp);
-    height: 40vh;
-    position: 30%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
-    color: #ffffff; 
-    background-color: #1d1c1c83;
-    background-blend-mode: multiply;
-  }
-  .maincont{
-    position: relative;
-    text-align: center;
-    width: 300px;
-    top: 30px;
-    left: 80px;
-    
-    font-family: 'Inconsolata', monospace;
-  }
-  .maincont h1{
-    font-size: 18px;
-  }
-  .maincont ul li{
-    font-size: 12px;
-  }
-
-
-  /* login */
-
-.login{
-  margin: 100px 10px ;
-  padding: 30px;
-  border: #888888 2px solid;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* sign up  */
-
-.signup{
-  margin: 10px;
-  padding: 30px;
-  border: #888888 2px solid;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* content_in_second _section in index page  */
-.second{
-  text-align: center;
-  padding: 10px 50px;
-   
- }
-
- /* content_in_third _section in index page  */
-#works{
-  text-align: center;
-  margin: 0px;
-  padding-top: 75px;
-  width: 414px;
-}
-#works .user{
-  width: 55px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 7px 10px;
-}
-
-#works .user p {
-  font-size: 10px;
-}
-#works .user h2{
-  font-size: 13px;
-  text-align: center;
-}
-.ARROW img{
-  width: 20px;
-}
-#works .flex{
- justify-content: flex-start;
-}
-.banner2 img{
-  height: 200px;
-}
-#works h2{
-  /* margin-left: 20px; */
- 
- }
- #works .ARROW{
-     padding: 100px 0px;
-     margin-right: 10px;
- }
-
-/* content_in third _section in index page  */
-#benifits{
-  width: 414px;
-  color: #ffffff;
-  background-color: rgba(165,160,164,255) ;
-  margin-top: 30px;
-  margin-left: 0px;
-  padding: 0px;
-}
-#benifits .flex{
-  justify-content: flex-start;
-  margin-left: 0px;
-
-}
-.list{
-  padding: 5px 5px;
-}
-.list ul li{
-  font-size: 10px;
-  height: 18px;
-}
-.list h2{
-  font-size: 14px;
-}
-.list img{
-  width: 10px;
-  margin-right: 10px;
-}
-
-#review{
-  width: 414px;
-  padding: 0px;
-}
-#review .user{
-  width: 90px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 7px 10px;
-  margin: 10px;
-  font-size: 9px;
-}
-
-#review .flex{
-  justify-content: flex-start;
-}
-#review .user p {
-  font-size: 5px;
-}
-#review .user .flex h4{
-  font-size: 11px;
-
-  /* margin-left: 20px; */
-}
-#review .user .flex h6{
-  font-size: 9px;
-  /* margin-left: 20px; */
-
-}
-
-#review img{
-  height: 20px;
-  width: 20px;
-  margin-left: 0px;
-
-}
-
-.eventbox{
-  background-color: #663595;
-  border-radius: 10px;
-  display: block;
-  justify-content: space-between ;
-  padding: 10px;
-  margin: 10px;
-  color: #fbeaeb;
-  height: 550px;
-}
-.eventbox img{
- 
- width: 80%;
- margin-left: 40px;
-}
-footer p{
-  font-size: 10px;
-}
-
-.flex .user{
-  font-size: 10px;
-  margin: 3px;
-  padding: 10px;
-} 
-.flex .user img{
-  width: 25px;
-  height: 25px;
-  margin-left: 0px;
-}
- /* videos/youtube video for second section of more event info  */
-
- video{
-
-  height: 300px;
-  width:380px;
-  margin: 40px 20px;
-  border-radius: 10px;
-}
-iframe{
- 
-  height: 300px;
-  width:380px;
-  margin: 40px 20px;
-  border-radius: 10px;
-}
-
-.appoitement{
-  padding: 20px;
-font-size: 13px;
-  margin-left: 150px;
-
-}
-
-.suggestion{
- width: 100px;
-  font-size: 10px;
-  margin: 10px;
-padding: 10px;
-height: 500px;
-}
-
-.suggestion img{
-  width: 100px;
-  padding: 20px 0px;
-}
-.story{
-  font-size: 10px;
-}
-.info{
-display: none;
-}
-/* content page for events */
-.event_content{
-  display: block;
-  padding: 25px;
-  border: #000000 3px solid;
-  margin: 10px;
-  /* height: 350px; */
-  align-items: center;
-}
-
-.event_content img{
-
-  height: 170px;
-}
-
-
-.event_content h2{
-  text-align: center;
-}
-.event_content h1 , .event_content p{
-text-align: center;
-}
-.venue{
-  margin: 30px 0px;
-margin-bottom: 60px;
-}
-.moreimg {
-  font-size: 10px;
-  height: 300px;
-}
-.moreimg img{
-  height: 100px;
-} 
-.brief_on_event {
-  text-align: center;
-  font-size: 10px;
-}
-.brief_on_event h1{
-  font-size: 15px;
-}
-.brief_on_event h2{
-  font-size: 12px;
-}
-.bookingbox{
-  margin: 1px 0px;
-  padding: 30px;
-  border: 2px solid rgba(0, 0, 0, 0.418);
-  border-radius: 5px;
-}
-
-.bookingbox .flex{
-  display: block;
-}
-
-#book{
-  margin: 20px 0px;
-}
-
-.visitbox{
-  margin: 90px 00px;
-  padding: 30px;
-  border: 2px solid rgba(0, 0, 0, 0.418);
-  border-radius: 5px;
-}
-
-.visitbox .cancel{
-  position: relative;
-  top: 10px;
-}
-
-.ticketbox{
-  margin: 50px 20px;
-  padding: 30px;
-  border: 2px solid rgba(0, 0, 0, 0.418);
-  border-radius: 5px;
-
-}
-
-.pho img{
-  height:150px ;
-}
-
-.pho{
-  margin: 3px;
-}
-
-.pic{
- margin: 3px;
-  font-size: 10px;
-}
-.topic{
-  font-size: 10px;
-}
-
-.point{
-  margin-top: 10px;
-}
-
-.head{
-  font-size: 13px;
-  top: 52px;
-}
-
-}
-
-
-/* .box1{
-  background-color: black;
-  color: aliceblue;
-  padding: 12px;
-  border: red 10px solid;
-  height: 250px;
-  
-}
-#box{
-  overflow: scroll;
-  height: 200px;
-}
-.comments{
-  background-color: red;
-  margin: 2px 20px;
-  padding: 5px 10px;
-}
-.comments p{
-  margin: 2px;
-}
-
-#button{
-position: relative;
-
-left: -30px;
-  background-color: black;
-  color: white;
-  height: 50px;
-}
-#name{
-  width: 75%;
-  height: 40px;
- 
-}
-.content{
-  position:sticky;
-  top: 10px;
-  width: 100%;
-  padding: -12px;
-  background-color: black;
-}
-.edit{
-  position: relative;
-  bottom: 25px;
-  left: 260px
-}
-.delete{
-  position: relative;
-  left: 205px;
-  top: 3px
-} */
 
 
 
@@ -1437,4 +997,24 @@ margin: 20px 13%;
   left: 930px;
   top: 430px;
   display: none;
+}
+
+.nj-timepick {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 5000;
+  transition: right 0.7s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+input{
+  width: 400px;
+  height: 30px;
+  margin-bottom: 30px;
 }

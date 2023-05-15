@@ -1,27 +1,23 @@
-let a = JSON.parse(localStorage.getItem("info"));
-
+const a = JSON.parse(localStorage.getItem("info"));
 
 // Initialize result with null
 let result = null;
 let result_index = null;
 
-
-let url = window.location.search;
-let urlparams = new URLSearchParams(url);
-let search = urlparams.get("name");
+const url = window.location.search;
+const urlparams = new URLSearchParams(url);
+const search = urlparams.get("name");
 
 for (let i = 0; i < a.length; i++) {
   console.log("1");
-  if (search==a[i].title) {
-    result=a[i];
+  if (search == a[i].title) {
+    result = a[i];
     result_index = i;
-
   }
-  
 }
 console.log(result);
 
-let body = document.getElementById("main");
+const body = document.getElementById("main");
 
 // Create the elements
 const eventTitle = document.createElement("h1");
@@ -38,7 +34,7 @@ const eventImageWrapper = document.createElement("div");
 eventImageWrapper.appendChild(eventImage);
 
 const venueLink = document.createElement("a");
-venueLink.href = "tickets.html";
+venueLink.href = "#";
 const venueConfirm = document.createElement("span");
 venueConfirm.classList.add("confirm");
 venueConfirm.innerText = "confirm booking";
@@ -103,173 +99,46 @@ container.appendChild(eventFlex);
 
 body.appendChild(container);
 
-// let comt
-// if (localStorage.getItem("comments")) {
-//     comt =JSON.parse(localStorage.getItem("comments"))
-// } else {
-//    comt = [{
-//         comment : "aakash",
-//         user : "wanted",
 
-//        },{
-//         comment : "nithalan",
-//         user : "oneheart",
+const comt = JSON.parse(localStorage.getItem("comments")) ?? [];
 
-//        },{
-//         comment : "isac",
-//         user : "rcb",
+const comment_list = document.getElementById("comment_box");
 
-//        }];
-// }
-
-//     let comt = JSON.parse(localStorage.getItem("comments")) ?? [];
-
-// let potti = document.getElementById("comment_box");
-// function crud() {
-//   let comment = document.getElementById("name").value;
-// let details = localStorage.getItem("details");
-//   let coms = {
-//     comment: comment,
-//     id: Math.floor(Math.random() * Date.now()),
-//     user: details
-//   };
-
-//   comt.push(coms);
-
-//    for(let i=0;i<comt.length;i++){
-
-//  let box = document.createElement("div");
-// box.setAttribute("class" , "comments"  );
-// potti.append(box);
-
-// let user_name = document.createElement("h5");
-// user_name.setAttribute("id" ,"paraa")
-// user_name.innerHTML= comt[i].user;
-// box.append(user_name);
-
-// let para = document.createElement("p");
-// para.setAttribute("id" ,"para")
-// para.innerHTML= comt[i].comment;
-// box.append(para);
-
-// let edit = document.createElement("button");
-// edit.setAttribute("class" , "edit");
-// edit.setAttribute("value" , comt[i].id);
-// edit.setAttribute("onclick" , "upadate()")
-// edit.innerHTML="Update";
-// box.append(edit);
-
-// let delete_btn = document.createElement("button");
-// delete_btn.setAttribute("class" , "delete");
-// delete_btn.setAttribute("value", comt[i].id);
-// delete_btn.innerHTML="delete";
-// box.append(delete_btn);
-
-//    }
-
-//   localStorage.setItem("comments", JSON.stringify(comt));
-//   document.getElementById("name").value="";
-
-// }
-
-// function list_comments() {
-//   potti.innerHTML = ""; // Clear comment_box element
-
-//   comt.forEach((item, index) => {
-
-//     let box = document.createElement("div");
-//     box.setAttribute("class", "comments");
-//     potti.append(box);
-
-//     let user_mail = document.createElement("h5");
-//     user_mail.setAttribute("id", "para");
-//     user_mail.innerText = item.user;
-//     box.append(user_mail);
-
-//     let user_name = document.createElement("p");
-//     user_name.setAttribute("id", "paraa");
-//     user_name.innerText = item.comment;
-//     box.append(user_name);
-
-//     let edit = document.createElement("button");
-//     edit.setAttribute("class", "edit");
-//     edit.setAttribute("onclick", `update(${item.id})`);
-//     edit.innerHTML = "Update";
-//     box.append(edit);
-
-//     let delete_btn = document.createElement("button");
-//     delete_btn.setAttribute("class", "delete");
-//     delete_btn.setAttribute("onclick", `deletecom(${index})`);
-
-//     delete_btn.innerHTML = "delete";
-//     box.append(delete_btn);
-//   });
-// }
-
-// // function update(item) {
-// //   comt.find(function (obj) {
-// //     if (obj.id === item) {
-// //       document.getElementById("name").value = obj.comment;
-
-// //       let sum_button = document.getElementById("button");
-// //       sum_button.value = obj.id
-// //     }
-// //   });
-// // }
-
-// // function deletecom(index){
-
-// //    comt.splice(index, 1);
-
-// //    localStorage.setItem("comments", JSON.stringify(comt));
-
-// //    potti.innerHTML = " ";
-
-// //    list_comments();
-// // }
-
-// list_comments();
-
-let comt = JSON.parse(localStorage.getItem("comments")) ?? [];
-
-let comment_list = document.getElementById("comment_box");
-
-let sum_button = document.getElementById("button");
+const sum_button = document.getElementById("button");
 
 sum_button.addEventListener("click", (e) => {
   e.preventDefault();
-  if ( document.getElementById("name").value!=="") {
+  if (document.getElementById("name").value !== "") {
     comment_list_fun();
   }
 });
 
 for (let i = 0; i < comt.length; i++) {
-  let box = document.createElement("div");
+  const box = document.createElement("div");
   box.setAttribute("class", "comments");
   comment_list.append(box);
 
-  let user_name = document.createElement("h5");
+  const user_name = document.createElement("h5");
   user_name.setAttribute("id", "paraa");
   user_name.innerHTML = comt[i].user;
   box.append(user_name);
 
-  let para = document.createElement("p");
+  const para = document.createElement("p");
   para.setAttribute("id", "para");
   para.setAttribute("value", comt[i].id);
   para.innerHTML = comt[i].comment;
   box.append(para);
 
-  let active_user = localStorage.getItem("details");
+  const active_user = localStorage.getItem("details");
 
-if (comt[i].user==active_user) {
-  
-  let edit = document.createElement("button");
-  edit.setAttribute("id", "edit");
-  edit.setAttribute("value", comt[i].id);
-  // edit.setAttribute("onclick", "upadate()");
-  edit.innerHTML = "Update";
-  box.append(edit);
-}
+  if (comt[i].user == active_user) {
+    const edit = document.createElement("button");
+    edit.setAttribute("id", "edit");
+    edit.setAttribute("value", comt[i].id);
+    // edit.setAttribute("onclick", "upadate()");
+    edit.innerHTML = "Update";
+    box.append(edit);
+  }
 
   // let delete_btn = document.createElement("button");
   // delete_btn.setAttribute("class", "delete");
@@ -279,12 +148,12 @@ if (comt[i].user==active_user) {
 }
 
 function comment_list_fun() {
-  let comment_input = document.getElementById("name").value;
+  const comment_input = document.getElementById("name").value;
 
   if (sum_button.innerText == "Sumbit") {
-    let active_user = localStorage.getItem("details");
+    const active_user = localStorage.getItem("details");
 
-    let comt_info = {
+    const comt_info = {
       comment: comment_input,
       id: comt.length,
       user: active_user,
@@ -293,22 +162,22 @@ function comment_list_fun() {
     comt.push(comt_info);
 
     for (let i = comt.length - 1; i < comt.length; i++) {
-      let box = document.createElement("div");
+      const box = document.createElement("div");
       box.setAttribute("class", "comments");
       comment_list.append(box);
 
-      let user_name = document.createElement("h5");
+      const user_name = document.createElement("h5");
       user_name.setAttribute("id", "paraa");
       user_name.innerHTML = comt[i].user;
       box.append(user_name);
 
-      let para = document.createElement("p");
+      const para = document.createElement("p");
       para.setAttribute("id", "para");
       para.setAttribute("value", comt[i].id);
       para.innerHTML = comt[i].comment;
       box.append(para);
 
-      let edit = document.createElement("button");
+      const edit = document.createElement("button");
       edit.setAttribute("id", "edit");
       edit.setAttribute("value", comt[i].id);
       // edit.setAttribute("onclick", "update()");
@@ -323,7 +192,7 @@ function comment_list_fun() {
     // box.append(delete_btn);
   }
   if (sum_button.innerText == "Update") {
-    let comment_input = document.getElementById("name").value;
+    const comment_input = document.getElementById("name").value;
 
     // for (let i = 0; i < comt.length; i++) {
 
@@ -332,13 +201,13 @@ function comment_list_fun() {
     // console.log(sum_button.value , comt[i].id);
     comt[sum_button.value].comment = comment_input;
 
-    let comt_para = document.querySelectorAll("#para");
+    const comt_para = document.querySelectorAll("#para");
 
     // for (let i = 0; i < comt.length; i++) {
-      // if (comt_para[i] == sum_button.value) {
-        console.log(comt_para[sum_button.value]);
-        comt_para[sum_button.value].innerText = comment_input;
-      // }
+    // if (comt_para[i] == sum_button.value) {
+    console.log(comt_para[sum_button.value]);
+    comt_para[sum_button.value].innerText = comment_input;
+    // }
     // }
     sum_button.value = "";
     sum_button.innerText == "Sumbit";
@@ -346,7 +215,6 @@ function comment_list_fun() {
     //  }
   }
 
-  
   document.getElementById("name").value = "";
 }
 
@@ -359,9 +227,9 @@ function comment_list_fun() {
 //   Delete_comt_fun();
 // });
 
-let delete_btn_all = document.querySelectorAll("#delete");
+const delete_btn_all = document.querySelectorAll("#delete");
 
-let edit_btn_all = document.querySelectorAll("#edit");
+const edit_btn_all = document.querySelectorAll("#edit");
 
 for (let i = 0; i < edit_btn_all.length; i++) {
   edit_btn_all[i].addEventListener("click", (e) => {
@@ -371,7 +239,7 @@ for (let i = 0; i < edit_btn_all.length; i++) {
 }
 
 function Edit_comt_fun(index) {
-  let comment_input = document.getElementById("name");
+  const comment_input = document.getElementById("name");
   sum_button.setAttribute("value", edit_btn_all[index].value);
   for (let i = 0; i < comt.length; i++) {
     if (edit_btn_all[index].value == comt[i].id) {
@@ -380,3 +248,69 @@ function Edit_comt_fun(index) {
     }
   }
 }
+
+
+// ticket details auto fill
+let user_array = JSON.parse(localStorage.getItem("user_details"));
+let details = localStorage.getItem("details")
+
+let active_user = null;
+for (let i = 0; i < user_array.length; i++) {
+if (user_array[i].user_email===details) {
+  active_user = user_array[i]
+}  
+}
+
+document.querySelector("#attendee_name").value=active_user.user_name
+document.querySelector("#attendee_email").value=active_user.user_email
+
+
+let ticket_div = document.querySelector(".ticketbox");
+
+ticket_div.style.display="none";
+
+let ticket_btn = document.querySelector(".confirm");
+
+ticket_btn.addEventListener("click",function () {
+  ticket_div.style.display="block";
+  document.querySelector("main").setAttribute("style","filter:blur(8px)")
+  document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+    document.body.scroll = "no"; // ie only
+})
+
+
+let event_list_lst  ;
+if (localStorage.getItem("event_list_srt")) {
+
+  event_list_lst = JSON.parse(localStorage.getItem("event_list_srt"))
+}else{
+  event_list_lst =[];
+}
+
+let event_attendee_det =document.querySelector("#event_attendee_det");
+event_attendee_det.addEventListener("submit", function (e) {
+e.preventDefault();
+
+  let event_mail = document.querySelector("#attendee_email").value;
+  let attendee_name = document.querySelector("#attendee_name").value;
+  let event_id     = result.event_id;
+  let user_id      = active_user.user_id;
+  let event_book_id = event_list_lst.length +1
+
+let event_obj = {
+  event_id:event_id,
+  user_id:user_id,
+  event_book_id: event_book_id,
+  attendee_name:attendee_name,
+  event_mail:event_mail
+}
+
+event_list_lst.push(event_obj);
+
+localStorage.setItem("event_list_srt",JSON.parse(event_list_lst))
+
+})
+
+
+
+

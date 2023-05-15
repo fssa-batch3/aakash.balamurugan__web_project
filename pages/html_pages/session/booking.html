@@ -13,7 +13,9 @@
     <div class="navbar">
         <div class="logo">
           
-            <span class="betterme"><a href="../home.html">BetterMe</a></span>
+            <span class="betterme">
+<a href="../home.html">BetterMe</a>
+</span>
            
          </div>
          <div class="navs">
@@ -33,51 +35,40 @@
 
   <!-- Appointment booking  -->
 
-
-
-
     <!-- footer  -->
     <footer>
         <p> Copyright © BetterMe. All right reserved.</p>
-         <p>Privacy policy     |     Contact us</p><br><br>
+         <p>Privacy policy     |     Contact us</p>
+<br>
+<br>
          <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
      </footer>
-           
 
-
-     <script>
-
-         let profile_details=JSON.parse(localStorage.getItem("user_details"));
-         let details=JSON.parse(localStorage.getItem("details"));
+     <script>         const profile_details=JSON.parse(localStorage.getItem("user_details"));
+         const details=JSON.parse(localStorage.getItem("details"));
 let res;
          profile_details.find(value=>{
-            if(value.user_email==details.user_email){
-                return res=value;
+   if(value.user_email==details.user_email){
+       return res=value;
 
-            }
-            else{
-                return res=0;
-            }
-         })
+   }
+   
+       return res=0;
+   
+})
 
          if(res){
-            document.getElementById("name").value=res["user_name"];
-            document.getElementById("gmail").value=res["user_email"];
+            document.getElementById("name").value=res.user_name;
+            document.getElementById("gmail").value=res.user_email;
          }
          else{
             console.log("error")
          }
 
-
          function sumbit(){
 
             window.location.href="./../visit_conformation.html"
          }
-
-      
-
-
-    
     </script>
 </body>
 </html>
