@@ -616,19 +616,7 @@ justify-content: space-evenly; */
 
   /* videos/youtube video for second section of more event info  */
 
-  video{
-  margin-left: 400px;
-  height: 400px;
-  width:700px;
-  margin-bottom: 40px;
-}
-iframe{
-  margin-left: 400px;
-  height: 400px;
-  width:700px;
-  margin-bottom: 40px;
-  border-radius: 10px;
-}
+
 
 /* flex the container  */
 
@@ -957,7 +945,7 @@ margin: 20px 13%;
 
 
 
-#startFunction, #stop_vid,#btn_stop{
+#startFunction, #stop_vid,#btn_stop, #Save_btn, #delete_btn{
    width:15vh;
    height: 5vh;
    border-radius: 20px;
@@ -965,21 +953,31 @@ margin: 20px 13%;
    color:#1D2231;
    box-shadow: -15px 4px 16px -16px rgba(0,0,0,0.68);
    margin-top: 20px;
-   border: none;
-   
+   border: none;  
 }
 
-.edit_btns{
-    display: flex;
-    justify-content: space-evenly;
+.video_btn_save{
+  display: none;
+}
+
+#save_d_div , .edit_btns , .edit_btns_cam{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .edit_btns_cam{
-  /* margin-left: 150px; */
-  display: flex;
-  justify-content: space-evenly;
-  
+  margin-bottom: 30px;
 }
+
+video{
+  margin-left: 400px;
+  height: 400px;
+  width:700px;
+  margin-bottom: 40px;
+  background-color: #000000;
+}
+
+
 
 #startFunction:hover,
 #stop_vid:hover,

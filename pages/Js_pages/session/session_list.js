@@ -2,9 +2,29 @@ const session = document.getElementById("sessionbox");
 
 const sessionsitems = JSON.parse(localStorage.getItem("sessioninfo"));
 
+
+const user_details = JSON.parse(localStorage.getItem("user_details"));
+
+const details = localStorage.getItem("details");
+let active_user_expert = 0;
+
+for (let i = 0; i < user_details.length; i++) {
+  if (user_details[i].user_email == details) {
+    active_user_expert = user_details[i].per_exp_id;
+    // console.log(user_details[i].per_exp_id);
+  }
+}
+
+
+
 for (let i = 0; i < sessionsitems.length; i++) {
+  
   const box = document.createElement("div");
   box.classList.add("box");
+  if (sessionsitems[i].id==active_user_expert) {
+    let personal_box = document.getElementById("personal")
+    personal_box.append(box);
+  }
   session.append(box);
 
   const flex = document.createElement("div");
@@ -12,7 +32,7 @@ for (let i = 0; i < sessionsitems.length; i++) {
   box.append(flex);
 
   const pic = document.createElement("div");
-  pic.classList.add("pic");
+  pic.classList.add("pic"); 
   flex.append(pic);
 
   const link = document.createElement("a");

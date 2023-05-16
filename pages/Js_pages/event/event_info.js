@@ -44,7 +44,7 @@ venueWrapper.classList.add("venue");
 venueWrapper.innerHTML = `<p>
 <b>date:</b>${result.date.date}
 <br>
-<b>Time:</b>${result.date.time}<br>
+<b>Time:</b>${result.date.Time}<br>
 <b>Venue:</b>${result.date.venue}
 </p>`;
 venueWrapper.appendChild(venueLink);
@@ -288,6 +288,7 @@ if (localStorage.getItem("event_list_srt")) {
 }
 
 let event_attendee_det =document.querySelector("#event_attendee_det");
+
 event_attendee_det.addEventListener("submit", function (e) {
 e.preventDefault();
 
@@ -307,7 +308,7 @@ let event_obj = {
 
 event_list_lst.push(event_obj);
 
-localStorage.setItem("event_list_srt",JSON.parse(event_list_lst))
+localStorage.setItem("event_list_srt",JSON.stringify(event_list_lst))
 
 })
 

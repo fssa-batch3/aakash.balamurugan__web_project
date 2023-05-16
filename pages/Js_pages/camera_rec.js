@@ -1,3 +1,13 @@
+const url = window.location.search;
+const urlparams = new URLSearchParams(url);
+const search = urlparams.get("selected_expert");
+
+const user_details = JSON.parse(localStorage.getItem("user_details"));
+
+const details = localStorage.getItem("details");
+const act_user_obj = user_details.find((value) => value.user_email === details);
+
+
 const constraints = { video: { width: { max: 320 } }, audio: true };
 
 let theStream;
@@ -65,11 +75,17 @@ function startrecord(stream) {
   recorder.start(100); // 10ms
 }
 
+const Save_btn = document.getElementById("Save_btn");
+const delete_btn = document.getElementById("delete_btn");
+
+let video_append = document.querySelector(".video_btn_save");
+
+let Link;
 function download() {
   const gif = document.getElementById("recording");
   gif.style.display = "none";
 
-  if (recordedChunks == []) {
+  if (recordedChunks === []) {
     alert("start recording first");
   }
   theRecorder.stop();
@@ -77,22 +93,115 @@ function download() {
     track.stop();
   });
 
-  const blob = new Blob(recordedChunks, { type: "video/mp4" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  document.body.appendChild(a);
-  // a.style = "display: none";
-  a.href = url;
-  const video_name = new Date().getTime();
-  a.download = `${video_name}.mp4`;
-  // a.click();
+//   const blob1 = new Blob(recordedChunks, { type: "video/mp4" });
+//   Link = URL.createObjectURL(blob1);
+//   const a = document.createElement("a");
+//   // document.body.appendChild(a);
+//   // a.style = "display: none";
+//   a.href = Link;
+//   const video_name = new Date().getTime();
+//   a.download = `${video_name}.mp4`; 
 
-  const playback_vid = document.createElement("video");
-  // playback_vid.setAttribute("src","C:/Users/AakashBalamurugan/Downloads/"+a.download);
-  // playback_vid.setAttribute("src","./_Untitled - Notepad 2023-04-18 09-38-50.mp4");
-  playback_vid.setAttribute("src", url);
-  // playback_vid.setAttribute("src","./../../Downloads/"+video_name+".mp4");
 
-  playback_vid.setAttribute("controls", "");
-  document.querySelector("#sandeep").append(playback_vid);
+//   // a.click();
+
+//   // const playback_vid = document.createElement("video");
+//   const playback_vid = document.getElementById("videoRecorded")
+//   // playback_vid.setAttribute("src","C:/Users/AakashBalamurugan/Downloads/"+a.download);
+//   // playback_vid.setAttribute("src","./_Untitled - Notepad 2023-04-18 09-38-50.mp4");
+//   playback_vid.setAttribute("src", Link);
+
+//   console.log(Link);
+
+//   let blob = Link;
+// let dataUrl = await 
+//             new Promise(r => {let a=new FileReader(); a.onload=r; a.readAsDataURL(blob)}).then(e => e.target.result);
+// console.log(dataUrl);
+  
+
+processVideo();
+
+// playback_vid.setAttribute("src","./../../Downloads/"+video_name+".mp4");
+
+// video_append.style.display="block";
+video_append.style.display="block";
+
 }
+let dataUrl;
+async function processVideo() {
+  const blob1 = new Blob(recordedChunks, { type: "video/mp4" });
+  const a = document.createElement("a");
+  const video_name = new Date().getTime();
+  a.href = URL.createObjectURL(blob1);
+  a.download = `${video_name}.mp4`;
+
+  const playback_vid = document.getElementById("videoRecorded");
+  playback_vid.setAttribute("src", a.href);
+
+  console.log(a.href);
+
+  dataUrl = await new Promise((resolve) => {
+    let reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.readAsDataURL(blob1);
+  });
+
+  console.log(dataUrl);
+}
+
+let saved_video ;
+if (localStorage.getItem("saved_video_lst")) {
+  saved_video = JSON.parse(localStorage.getItem("saved_video_lst"));
+}else{
+  saved_video =[];
+}
+
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+  .toISOString()
+  .split("T")[0];
+
+
+function save_vid_fun() {
+  
+
+//   blobToDataURL(Link, function(dataurl){
+//     console.log(dataurl);
+// } )
+
+
+
+  let expert = search;
+  let user = act_user_obj.user_id;
+  let video_data_url = dataUrl;
+
+  let video_obj = {
+    "expert_id" : expert,
+    "user_id" : user,
+    "blob" : video_data_url,
+    "date":today
+  }
+
+  console.log(JSON.stringify(video_data_url));
+  saved_video.push(video_obj);
+
+  localStorage.setItem("saved_video_lst", JSON.stringify(saved_video));
+}
+
+
+
+
+let send_vid = document.querySelector("#Save_btn");
+send_vid.addEventListener("click", function () {
+  save_vid_fun()
+  alert("saved sucessfully");
+  // window.location.reload()
+  
+})
+
+let refresh = document.querySelector("#delete_btn");
+
+refresh.addEventListener("click", function (e) {
+window.location.reload();
+  
+})
+

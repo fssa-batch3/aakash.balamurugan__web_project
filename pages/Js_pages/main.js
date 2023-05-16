@@ -65,7 +65,7 @@ const sessionsitems = [
     login: "tanishkai@betterme.com",
     login_pass: "Better@23",
     occupation: "Psychologist",
-    content: ` is a trained Psychologist who holds immense knowledge in mental health concerns ranging between multiple age groups.
+    content: `Tanishka Israni is a trained Psychologist who holds immense knowledge in mental health concerns ranging between multiple age groups.
 
     She is well-versed in counseling for various psychological issues such as Post-traumatic stress disorder, Generalised anxiety disorder, Expressive language disorder, Behavioural addiction and so on. She has had the experience of working with individuals and conducted private therapies and peer counseling sessions through her hands-on knowledge.
     

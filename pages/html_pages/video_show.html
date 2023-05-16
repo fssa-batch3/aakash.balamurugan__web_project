@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Helo</h1>
+
+    <script>
+        const savedVideos = JSON.parse(localStorage.getItem("saved_video_lst"))
+        for (let i = 0; i < savedVideos.length; i++) {
+    console.log(savedVideos[i]["blob"])
+  
+    let vid_blob = savedVideos[i]["blob"]
+
+    const video = document.createElement("video")
+    video.setAttribute("src",vid_blob)
+    video.setAttribute("autoplay","")
+    video.setAttribute("controls","")
+
+    document.querySelector("body").append(video);
+
+}
+    </script>
+</body>
+</html>

@@ -32,6 +32,8 @@ const selected_expert = result.id;
 
 const Appoitment_link = document.getElementById("Appoitment");
 
+const Message = document.querySelector("#Message")
+
 Appoitment_link.addEventListener("click", (e) => {
   e.preventDefault();
   if (active_user_expert == result.id) {
@@ -44,6 +46,19 @@ Appoitment_link.addEventListener("click", (e) => {
     // console.log("2");
   }
 });
+
+Message.addEventListener("click" ,  (e) => {
+  e.preventDefault();
+  if (active_user_expert == result.id) {
+    window.location.href = `./../video_rec.html?selected_expert=${selected_expert}`;
+    // console.log("1");
+  } else if (active_user_expert == 0) {
+    window.location.href = `./../video_rec.html?selected_expert=${selected_expert}`;
+  } else if (active_user_expert !== result.id) {
+    alert("Please video recording to your personal expert");
+    // console.log("2");
+  }
+} )
 
 const expert_name = document.getElementById("expert_name");
 expert_name.innerText = result.person_name;
@@ -66,4 +81,4 @@ education_li.innerHTML = result.education;
 const exprience_li = document.getElementById("exprience_li");
 exprience_li.innerHTML = result.exprience;
 
-//
+
