@@ -14,6 +14,7 @@ const info = [
       Time: "22:00",
       venue: "online",
     },
+    comment:[],
     status: true,
   },
 
@@ -33,6 +34,7 @@ const info = [
       Time: "22:00",
       venue: "Cover it up Studio The Podium KNK Road Chennai",
     },
+    comment:[],
     status: true,
   },
 
@@ -52,6 +54,7 @@ const info = [
       Time: "22:00",
       venue: "PH cafe, EgmoreChennai",
     },
+    comment:[],
     status: true,
   },
 ];

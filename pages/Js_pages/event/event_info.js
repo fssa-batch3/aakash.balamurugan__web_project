@@ -100,7 +100,7 @@ container.appendChild(eventFlex);
 body.appendChild(container);
 
 
-const comt = JSON.parse(localStorage.getItem("comments")) ?? [];
+const comt = a[result_index].comment
 
 const comment_list = document.getElementById("comment_box");
 
@@ -185,6 +185,9 @@ function comment_list_fun() {
       box.append(edit);
     }
 
+    a[result_index].comment= comt;
+
+localStorage.setItem("info",JSON.stringify(a))
     // let delete_btn = document.createElement("button");
     // delete_btn.setAttribute("id", "delete");
     // delete_btn.setAttribute("value", comt[i].id);
@@ -213,9 +216,17 @@ function comment_list_fun() {
     sum_button.innerText == "Sumbit";
     //  }
     //  }
+
+    a[result_index].comment= comt;
+
+localStorage.setItem("info",JSON.stringify(a))
   }
 
   document.getElementById("name").value = "";
+  a[result_index].comment= comt;
+
+localStorage.setItem("info",JSON.stringify(a))
+
 }
 
 // let delete_btn = document.getElementById("delete");
@@ -311,6 +322,8 @@ event_list_lst.push(event_obj);
 localStorage.setItem("event_list_srt",JSON.stringify(event_list_lst))
 
 })
+
+
 
 
 

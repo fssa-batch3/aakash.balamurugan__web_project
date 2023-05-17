@@ -19,38 +19,108 @@
 //   delete1();
 // });
 
-// const user_details = JSON.parse(localStorage.getItem("sessioninfo"));
+// const user_details = JSON.parse(localStorage.getItem("user_details"));
 
 // const details = localStorage.getItem("details");
-// const result = user_details.find((value) => value.login === details);
+// const result = user_details.find((value) => value.user_email === details);
 
-// my_profile_btn.click();
+// const first_name = document.getElementById("user-firstname");
+// const last_name = document.getElementById("user-lastname");
+// const password_ = document.getElementById("user-password");
+// const user_email = document.getElementById("user-email");
+// const mobile = document.getElementById("number");
+// const district = document.getElementById("district");
+// const pincode = document.getElementById("pincode");
 
-// const my_events_btn = document.getElementById("my_events");
-// const my_events_box = document.getElementById("my_events_box");
+// document
+//   .getElementById("profile")
+//   .setAttribute("src", `https://ui-avatars.com/api/?name=${result.user_name}`);
+// document.getElementById("customer").innerHTML = result.user_name;
 
-// my_events_btn.addEventListener("click", () => {
-//   for (let i = 0; i < all_divs.length; i++) {
-//     all_divs[i].style.display = "none";
+// first_name.value = result.user_name;
+// last_name.value = result.second_name;
+// user_email.value = result.user_email;
+// password_.value = result.user_Password;
+// mobile.value = result.mobile_number;
+// district.value = result.district;
+// pincode.value = result.pincode;
+
+// first_name.setAttribute("disabled", "");
+// last_name.setAttribute("disabled", "");
+// password_.setAttribute("disabled", "");
+// mobile.setAttribute("disabled", "");
+// district.setAttribute("disabled", "");
+// pincode.setAttribute("disabled", "");
+
+// function disabled_input() {
+//   first_name.removeAttribute("disabled");
+//   last_name.removeAttribute("disabled");
+//   password_.removeAttribute("disabled");
+//   mobile.removeAttribute("disabled");
+//   district.removeAttribute("disabled");
+//   pincode.removeAttribute("disabled");
+// }
+
+// function editProfile() {
+//   for (let i = 0; i < user_details.length; i++) {
+//     if (user_details[i].user_email == details) {
+//       user_details[i].user_name = first_name.value;
+//       user_details[i].second_name = last_name.value;
+//       user_details[i].user_Password = password_.value;
+//       user_details[i].mobile_number = mobile.value;
+//       user_details[i].district = district.value;
+//       user_details[i].pincode = pincode.value;
+
+//       first_name.setAttribute("disabled", "");
+//       last_name.setAttribute("disabled", "");
+//       password_.setAttribute("disabled", "");
+//       mobile.setAttribute("disabled", "");
+//       district.setAttribute("disabled", "");
+//       pincode.setAttribute("disabled", "");
+
+//       localStorage.setItem("user_details", JSON.stringify(user_details));
+//     }
 //   }
-//   my_events_box.style.display = "block";
-// });
+// }
 
-// const my_session_btn = document.getElementById("my_session");
-// const my_session_box = document.getElementById("my_session_page");
-// my_session_btn.addEventListener("click", () => {
-//   for (let i = 0; i < all_divs.length; i++) {
-//     all_divs[i].style.display = "none";
-//   }
-//   my_session_box.style.display = "block";
-// });
+const all_divs = document.querySelectorAll(".boxes");
+
+const my_profile_btn = document.getElementById("my_profile");
+const my_profile_box = document.querySelector(".information");
+my_profile_btn.addEventListener("click", () => {
+  for (let i = 0; i < all_divs.length; i++) {
+    all_divs[i].style.display = "none";
+  }
+  my_profile_box.style.display = "block";
+});
+
+my_profile_btn.click();
+
+const my_events_btn = document.getElementById("my_events");
+const my_events_box = document.getElementById("my_events_box");
+
+my_events_btn.addEventListener("click", () => {
+  for (let i = 0; i < all_divs.length; i++) {
+    all_divs[i].style.display = "none";
+  }
+  my_events_box.style.display = "block";
+});
+
+const my_session_btn = document.getElementById("my_session");
+const my_session_box = document.getElementById("my_session_page");
+my_session_btn.addEventListener("click", () => {
+  for (let i = 0; i < all_divs.length; i++) {
+    all_divs[i].style.display = "none";
+  }
+  my_session_box.style.display = "block";
+});
 
 // // sessionsitems.forEach(function (value) {
 
 // //  return value.person_name === search;
 // // });
 
-// // let personal_expert = result.per_exp_id;
+// const personal_expert = result.per_exp_id;
 // const session_details = JSON.parse(localStorage.getItem("sessioninfo"));
 
 // // let sessions = session_details.find(function (value) {
@@ -79,10 +149,10 @@
 // );
 
 // for (let i = 0; i < appoitement_list.length; i++) {
-//   console.log(appoitement_list[i].expert_id, result.id);
+//   console.log(appoitement_list[i].user_id, result.user_id);
 
-//   if (appoitement_list[i].expert_id == result.id) {
-//     console.log(appoitement_list[i].expert_id, result.id);
+//   if (appoitement_list[i].user_id == result.user_id) {
+//     console.log(appoitement_list[i].user_id, result.user_id);
 //     const upcoming_appoitment_list = document.createElement(
 //       "upcoming_appoitment_list"
 //     );
@@ -134,6 +204,7 @@
 //     window.location.href = "./login.html";
 //   }
 // }
+
 
 
 let user_array = JSON.parse(localStorage.getItem("user_details"));

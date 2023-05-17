@@ -1,30 +1,124 @@
-const session = document.getElementById("sessionbox");
+
+
+const session = document.querySelector("#sessionbox");
 
 const sessionsitems = JSON.parse(localStorage.getItem("sessioninfo"));
-
-
 const user_details = JSON.parse(localStorage.getItem("user_details"));
 
 const details = localStorage.getItem("details");
 let active_user_expert = 0;
 
 for (let i = 0; i < user_details.length; i++) {
-  if (user_details[i].user_email == details) {
+  if (user_details[i].user_email === details) {
     active_user_expert = user_details[i].per_exp_id;
-    // console.log(user_details[i].per_exp_id);
+    console.log(active_user_expert);
   }
 }
 
+let personal_box = document.querySelector("#personal");
 
+if (active_user_expert!==0) {
+
+
+  let pes_exp =null;
+  for (let i = 0; i < sessionsitems.length; i++) {
+  if (sessionsitems[i].id==active_user_expert) {
+    pes_exp=i;
+  }
+    
+  }
+
+  let personal_h1 = document.createElement("h2");
+  personal_h1.innerText = "Personal expert"
+  personal_h1.classList.add("center")
+  personal_box.append(personal_h1);
+
+  const box = document.createElement("div");
+  box.classList.add("box");
+  personal_box.append(box);
+
+  const flex = document.createElement("div");
+  flex.classList.add("flex");
+  box.append(flex);
+
+  const pic = document.createElement("div");
+  pic.classList.add("pic"); 
+  flex.append(pic);
+
+  const link = document.createElement("a");
+  link.setAttribute(
+    "href",
+    `./sessioninfo.html?name=${sessionsitems[pes_exp].person_name}`
+  );
+  pic.append(link);
+
+  const photo = document.createElement("img");
+   
+    photo.setAttribute(
+      "src",
+      sessionsitems[pes_exp].images.link
+    );
+    
+    photo.setAttribute(
+      "alt",
+      sessionsitems[pes_exp].images.alt
+    );
+    
+    // Append photo img tag to link anchor tag 
+  link.append(photo);
+
+  const detail = document.createElement("div");
+  detail.classList.add("detail");
+  flex.append(detail);
+
+  const link4 = document.createElement("a");
+  link4.setAttribute(
+    "href",
+    `./sessioninfo.html?name=${sessionsitems[pes_exp].person_name}`
+  );
+  detail.append(link4);
+
+  const person = document.createElement("h1");
+  person.innerHTML = sessionsitems[pes_exp].person_name;
+  link4.append(person);
+
+  const occupation = document.createElement("div");
+  occupation.classList.add("occupation");
+  detail.append(occupation);
+
+  const link2 = document.createElement("a");
+  link2.setAttribute(
+    "href",
+    `./sessioninfo.html?name=${sessionsitems[pes_exp].person_name}`
+  );
+  occupation.append(link2);
+
+  const para = document.createElement("p");
+  const span = document.createElement("span");
+  span.innerHTML = "Occupation";
+  para.innerText = sessionsitems[pes_exp].occupation;
+
+  link2.append(span);
+  link2.append(para);
+
+  const person_detail = document.createElement("div");
+  person_detail.classList.add("person_detail");
+  detail.append(person_detail);
+
+  const link3 = document.createElement("a");
+  link3.setAttribute(
+    "href",
+    `./sessioninfo.html?name=${sessionsitems[pes_exp].person_name}`
+  );
+  occupation.append(link3);
+}
 
 for (let i = 0; i < sessionsitems.length; i++) {
   
-  const box = document.createElement("div");
+  if (sessionsitems[i].id !== active_user_expert) {
+    console.log(sessionsitems[i].id ,active_user_expert);
+    const box = document.createElement("div");
   box.classList.add("box");
-  if (sessionsitems[i].id==active_user_expert) {
-    let personal_box = document.getElementById("personal")
-    personal_box.append(box);
-  }
   session.append(box);
 
   const flex = document.createElement("div");
@@ -99,4 +193,5 @@ for (let i = 0; i < sessionsitems.length; i++) {
 
   // para2.prepend(span2);
   // link3.append(para2);
+  }
 }
