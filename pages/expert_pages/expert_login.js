@@ -35,7 +35,7 @@ function aakash() {
   if (res == 1) {
     console.log("1111");
     if (log_password == result.login_pass) {
-      localStorage.setItem("details", result.login);
+      localStorage.setItem("expert_details", result.login);
 
       alert("expert login succes");
 

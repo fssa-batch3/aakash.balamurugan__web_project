@@ -53,7 +53,7 @@ Message.addEventListener("click" ,  (e) => {
     window.location.href = `./../video_rec.html?selected_expert=${selected_expert}`;
     // console.log("1");
   } else if (active_user_expert == 0) {
-    window.location.href = `./../video_rec.html?selected_expert=${selected_expert}`;
+    alert("please select an personal expert");
   } else if (active_user_expert !== result.id) {
     alert("Please video recording to your personal expert");
     // console.log("2");

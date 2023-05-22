@@ -194,7 +194,7 @@ let send_vid = document.querySelector("#Save_btn");
 send_vid.addEventListener("click", function () {
   save_vid_fun()
   alert("saved sucessfully");
-  // window.location.reload()
+  window.location.reload()
   
 })
 
@@ -204,4 +204,11 @@ refresh.addEventListener("click", function (e) {
 window.location.reload();
   
 })
+
+
+for (let i = 0; i < saved_video.length; i++) {
+  console.log(saved_video[i].date)
+
+}
+
 

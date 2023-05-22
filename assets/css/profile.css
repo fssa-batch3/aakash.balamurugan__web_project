@@ -289,3 +289,36 @@ color: var(--text-grey);
     /* height: 100px; */
     align-items: self-end;
   }
+
+
+  .eventbox{
+    background-color: #a9def9;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  width: 90%;
+    justify-content: space-between ;
+    padding: 20px;
+    margin: 30px;
+    /* colo */
+    height: 300px;
+  }
+  .eventbox img{
+   
+    height: 200px;
+    margin-right: 20px;
+  }
+  .eventbox p{
+    font-size: 20px;
+    
+    align-items: center;
+  }
+  
+  .event a{
+    text-decoration: none;
+  }
+  
+  .eventbox:hover{
+    box-shadow: #888888 5px 2px;
+    transform: scale(1.02);
+  }

@@ -115,7 +115,7 @@ if (active_user_expert!==0) {
 
 for (let i = 0; i < sessionsitems.length; i++) {
   
-  if (sessionsitems[i].id !== active_user_expert) {
+  if (sessionsitems[i].id !== Number(active_user_expert)) {
     console.log(sessionsitems[i].id ,active_user_expert);
     const box = document.createElement("div");
   box.classList.add("box");
@@ -195,3 +195,30 @@ for (let i = 0; i < sessionsitems.length; i++) {
   // link3.append(para2);
   }
 }
+
+setTimeout(() => {
+  display_pop();
+}, 1000); 
+
+function display_pop() {
+  let pop_box1 = document.querySelector(".popup");
+  pop_box1.style.display="block";
+  document.querySelector("main").setAttribute("style","filter:blur(8px)")
+  document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+  document.body.scroll = "no"; // ie only
+  
+}
+let close_div = document.querySelector(".close")
+console.log(close_div);
+
+close_div.addEventListener("click",function () {
+  let pop_box1 = document.querySelector(".popup");
+  pop_box1.style.display="none";
+  document.querySelector("main").removeAttribute("style")
+  document.documentElement.style.overflow = 'scroll';  // firefox, chrome
+  document.body.scroll = "yes"; // ie only
+})
+
+
+
+

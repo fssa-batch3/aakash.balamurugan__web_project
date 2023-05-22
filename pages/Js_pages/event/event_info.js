@@ -15,7 +15,6 @@ for (let i = 0; i < a.length; i++) {
     result_index = i;
   }
 }
-console.log(result);
 
 const body = document.getElementById("main");
 
@@ -199,7 +198,6 @@ localStorage.setItem("info",JSON.stringify(a))
 
     // for (let i = 0; i < comt.length; i++) {
 
-    console.log("1");
     // if (sum_button.value===comt[i].id) {
     // console.log(sum_button.value , comt[i].id);
     comt[sum_button.value].comment = comment_input;
@@ -303,6 +301,8 @@ let event_attendee_det =document.querySelector("#event_attendee_det");
 event_attendee_det.addEventListener("submit", function (e) {
 e.preventDefault();
 
+console.log("aakash");
+
   let event_mail = document.querySelector("#attendee_email").value;
   let attendee_name = document.querySelector("#attendee_name").value;
   let event_id     = result.event_id;
@@ -317,12 +317,38 @@ let event_obj = {
   event_mail:event_mail
 }
 
-event_list_lst.push(event_obj);
+let aakash = 0
+for (let i = 0; i < event_list_lst.length; i++) {
 
-localStorage.setItem("event_list_srt",JSON.stringify(event_list_lst))
+  if (event_list_lst[i].event_id==event_id) {
+    if (event_list_lst[i].user_id==user_id) {
+      aakash= 1;
+        alert("cannot booked"); 
+    }
+  }  
+}
+
+if(aakash==0){
+    alert("yes")
+    event_list_lst.push(event_obj);
+    aakash =2 ;
+    localStorage.setItem("event_list_srt",JSON.stringify(event_list_lst));
+    window.location.href="./event_list.html";
+}
 
 })
 
+
+let close_div = document.querySelector(".close")
+
+
+close_div.addEventListener("click",function () {
+
+  ticket_div.style.display="none";
+  document.querySelector("main").removeAttribute("style")
+  document.documentElement.style.overflow = 'scroll';  // firefox, chrome
+  document.body.scroll = "yes"; // ie only
+})
 
 
 

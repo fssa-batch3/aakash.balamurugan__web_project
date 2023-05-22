@@ -7,7 +7,7 @@ for (let i = 0; i < info.length; i++) {
       "href",
       `../events/eventinfo.html?name=${info[i].title}`
     );
-    document.body.append(redirect);
+    document.querySelector("main").append(redirect);
 
     const div_event = document.createElement("div");
     div_event.setAttribute("class", "event");
@@ -51,3 +51,31 @@ for (let i = 0; i < info.length; i++) {
     div_nothing.append(venue);
   }
 }
+
+setTimeout(() => {
+  display_pop();
+}, 1000); 
+
+
+
+function display_pop() {
+  let pop_box1 = document.querySelector(".popup");
+  pop_box1.style.display="block";
+  document.querySelector("main").setAttribute("style","filter:blur(8px)")
+  document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+  document.body.scroll = "no"; // ie only
+  
+}
+let close_div = document.querySelector(".close")
+
+
+close_div.addEventListener("click",function () {
+  let pop_box1 = document.querySelector(".popup");
+  pop_box1.style.display="none";
+  document.querySelector("main").removeAttribute("style")
+  document.documentElement.style.overflow = 'scroll';  // firefox, chrome
+  document.body.scroll = "yes"; // ie only
+})
+
+
+

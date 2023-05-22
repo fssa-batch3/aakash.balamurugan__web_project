@@ -58,15 +58,11 @@
 .betterme a{
   color:#d1d1d1 ;
   
-
-
 }
 .logo a{
   text-decoration: none;
   
 }
-
-
 
 /* This navs */
 .navs, .start{
@@ -117,16 +113,6 @@
     border-radius: 40px;
     margin-left: 20px;
   }
-  .button {
-    background-color: #90e0ef;
-    color: #000000;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 14px 30px;
-    border: 0px;
-    border-radius: 40px;
-    margin-left: 20px;
-  }
 
   .box1{
     display: flex;
@@ -139,19 +125,6 @@
     margin: 5%;
     border-radius: 50%;
   }
-
-  #Message{
-    background-color: var(--primary) ;
-    padding: 3%;
-    margin: 3%;
-  }
-
-  #Appoitment{
-    background-color: var(--secondery);
-    padding: 3%;
-    margin: 3%;
-  }
-
   #summary{
 
 padding: 4%;
@@ -162,15 +135,87 @@ box-shadow: var(--box-shadow0);
 
   #education{
     margin: 2%;
-
     padding: 4%;
     box-shadow: var(--box-shadow0);
 
   }
+  .box1 button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   
+   .box1 button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #3848f4 0%, #00d4ff 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .box1 button:hover::before {
+    width: 9em;
+   }
+
+   .box1 button:hover{
+    color: white;
+   }
+#Message{
+ margin-right: 30px;
+}
+
+.button {
+  background-color: #90e0ef;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 0px;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+
+.cont1 p {
+    text-align:left;
+    font-size: 18px;
+}
+
+.cont1 h5{
+  font-size: 19px;
+}
+.cont1 h1 {
+  margin-top: 80px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.session_booking_btn{
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+  #Reviews{
+    margin: 2%;
+
+    padding: 4%;
+    box-shadow: var(--box-shadow0);
+  }
 
 #exprience{
     margin: 2%;
-
     padding: 4%;
     box-shadow: var(--box-shadow0);
 }

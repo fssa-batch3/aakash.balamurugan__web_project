@@ -214,4 +214,4 @@ let vido_lst_arr = JSON.parse(localStorage.getItem("saved_video_lst"));
 let event_lst_arr = JSON.parse(localStorage.getItem("event_list_srt"))
 
 
-let active_user = localStorage.getItem("details");
+let active_expert = localStorage.getItem("expert_details");
