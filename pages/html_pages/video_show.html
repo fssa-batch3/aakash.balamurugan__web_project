@@ -7,7 +7,46 @@
     <link rel="stylesheet" href="../../assets/css/vid.css">
     <title>Document</title>
 </head>
+<header>
+    <div class="navbar">
+        <div class="logo">
+    
+          <span class="betterme">
+    <a href="./../home.html">BetterMe</a>
+    </span>
+    
+        </div>
+        <div class="navs">
+          <a href="./tips.html">
+            <div class="button"> Tips</div>
+          </a>
+          <a href="./events/event_list.html">
+            <div class="button">Events</div>
+          </a>
+          <a href="./session/session_list.html">
+            <div class="select">Session</div>
+          </a>
+          <a href="./user_module/profile.html">
+            <div class="profile">profile</div>
+          </a>
+        </div>
+      </div>
+</header>
 <body>
+
+   
+
+ <div class="big_vid_pag">
+    <div class="vid_pag_main">
+        <div class="video">
+    </div>
+    </div>
+    <div class="comments">
+        <div id="comt">hi, the video is good</div>
+        <input type="text" name="" id="">
+        <button class="send_btn">Send</button>
+    </div>
+ </div>
    
 
     <script>
@@ -19,9 +58,8 @@
 
     const video = document.createElement("video")
     video.setAttribute("src",vid_blob)
-    video.setAttribute("autoplay","")
     video.setAttribute("controls","");
-    video.setAttribute("class", "")
+    video.setAttribute("class", "video")
 
     const video_show_para = document.createElement("p");
     video_show_para.setAttribute("class", "")
@@ -33,7 +71,7 @@
     video_show_div.append(video);
 
 
-    document.querySelector("body").append(video_show_div);
+    document.querySelector(".video").append(video_show_div);
 
 }
     </script>
