@@ -178,7 +178,9 @@ function save_vid_fun() {
     "expert_id" : expert,
     "user_id" : user,
     "blob" : video_data_url,
-    "date":today
+    "date":today,
+    "feedback":""
+
   }
 
   console.log(JSON.stringify(video_data_url));

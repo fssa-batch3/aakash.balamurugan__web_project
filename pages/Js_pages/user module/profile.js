@@ -115,6 +115,15 @@ my_session_btn.addEventListener("click", () => {
   my_session_box.style.display = "block";
 });
 
+const vid_show = document.getElementById("show_vid");
+const vid_btn = document.getElementById("video_list");
+vid_btn.addEventListener("click", () => {
+  for (let i = 0; i < all_divs.length; i++) {
+    all_divs[i].style.display = "none";
+  }
+  vid_show.style.display = "block";
+});
+
 // sessionsitems.forEach(function (value) {
 
 //  return value.person_name === search;
@@ -203,6 +212,7 @@ let event_list = JSON.parse(localStorage.getItem("event_list_srt"));
 for (let i = 0; i < info.length; i++) {
 for (let j = 0; j < event_list.length; j++) {
 
+if(result.user_id==event_list[i].user_id){
   if (info[i].event_id==event_list[i].event_id) {
     
     const redirect = document.createElement("a");
@@ -254,6 +264,7 @@ for (let j = 0; j < event_list.length; j++) {
     div_nothing.append(venue);
   }
 }
+}
   
 }
 
@@ -266,4 +277,33 @@ function logout() {
     localStorage.setItem("details", "");
     window.location.href = "./login.html";
   }
+}
+
+
+
+// show videos
+
+const savedVideos = JSON.parse(localStorage.getItem("saved_video_lst"))
+for (let i = 0; i < savedVideos.length; i++) {
+console.log(savedVideos[i]["blob"])
+
+let vid_blob = savedVideos[i]["blob"]
+
+const video = document.createElement("video")
+video.setAttribute("src",vid_blob)
+video.setAttribute("controls","");
+video.setAttribute("class", "video")
+
+const video_show_para = document.createElement("p");
+video_show_para.setAttribute("class", "")
+video_show_para.innerText = `Date:${savedVideos[i]["date"]}`
+
+const video_show_div = document.createElement("div");
+video_show_div.setAttribute("class", "")
+video_show_div.append(video_show_para);
+video_show_div.append(video);
+
+
+document.querySelector(".video").append(video_show_div);
+
 }
