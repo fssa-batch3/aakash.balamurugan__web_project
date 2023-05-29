@@ -8,8 +8,12 @@ function aakash() {
   const log_email = document.getElementById("log_email").value;
   const log_password = document.getElementById("log_password").value;
 
-  const arr = JSON.parse(localStorage.getItem("user_details"));
-
+  let arr ;
+  if (localStorage.getItem("user_details")) {
+    arr = JSON.parse(localStorage.getItem("user_details"));
+  }else{
+    arr = [];
+  }
   //   let result = arr.find(function (value) {
   //     return value.user_email === log_email;
   //   });
