@@ -3,107 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- displays site properly based on user's device -->
+   <!-- Use of external CSS file to style the page -->
    <link rel="stylesheet" href="assets/css/new.css">
    <title>BetterMe</title>
+   <!-- Adding a favicon for the website -->
    <link rel="icon" type="img/png" sizes="32x32" href="assets/img/self.png">
    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inconsolata:wght@500;900&family=Kdam+Thmor+Pro&family=Lobster+Two&family=Outfit:wght@300;400;600&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> -->
    </head>
+
    <body>
 
-    <!-- navbar  -->
+    <!-- Navigation bar section using div tag and class attribute -->
      <div class="navbar">
         <div class="logo">
-          
-           <a href="index.html"> <span class="betterme">BetterMe</a></span>
-           
+           <!-- Using anchor tag to link to the home page -->
+           <a href="index.html"> 
+               <!-- Adding a logo image and text for the website name -->
+               <span class="betterme">BetterMe </span>
+           </a>           
          </div>
       <div class="navs">
-        <a href="#works"> <button type="button">how it works</button></a>
-        <a href="#review"><button type="button">review</button></a>
-        <a href="pages/login/login.html"> <span class="start">
+        <a href="#works">
+ <button type="button">How It Works</button>
+</a>
+        <a href="#review">
+<button type="button">Review</button>
+</a>
+        <a href="pages/html_pages/user_module/login.html">
+ <span class="start">
                 Log in
             </span></a>
       </div>
     </div>
-    <!-- first section  -->
+
+    <!-- First banner section using div tag and class attribute-->
     <div class="banner">
         <div id="maincont">
             <h1>Achieve your potential with BetterMe with our experts</h1>
-            <ul>
+            <!-- <ul class="align">
                 <li> &#9989; Start immediately</li>
                 <li> &#9989; Boost up the confidence</li>
             </ul>
-            <a href="pages/login/login.html"> <span class="start">
-                Get started
-            </span></a></div>
+            <br> -->
+            <a href="pages/html_pages/user_module/login.html">
+                <!-- Adding a button element with text content-->
+                 <button class = "start">Get started</button>        
+        </a>
+        </div>
     </div>
      
     <!-- second section on index -->
     <div class="second">
-        <h2>Therapy for how we live today</h2><br><br>
+        <h2>Therapy for how we live today</h2>
         <p>BetterMe is an online therapy platform that provides users the confidential support of a licensed
-             therapist through an easy-to-use and HIPAA-compliant app.</p><br><br><br>
-        <p>Improve your mental health in the most convenient and affordable way! You'll get matched with a licensed 
-            therapist in your state from the comfort of your device, and receive ongoing support via secure messaging 
-            and live video sessions.</p>
+            therapist through an easy-to-use and HIPAA-compliant app.</p>
+            <div class="tpo-align">
+                <div class="pic">
+                    <img src="./assets/img/home/Work_6.jpg" alt="">
+                </div>
+                <p>Improve your mental health in the most convenient and affordable way! You'll get matched with a licensed 
+                    therapist in your state from the comfort of your device, and receive ongoing support via secure messaging 
+                    and live video sessions.</p>
+            </div>
+        
     </div>
      
     <!-- third section on index -->
     <div id="works">
-     <h2>   How it works</h2><br><hr><br> 
-     <p>Start your journey in just 3 easy steps!</p>
+        <div>
+            <h2>How it works</h2>
+      <p>Start your journey in just 4 easy steps!</p>
+        </div>
+     
     <div class="flex">
         <div class="user">
-            <h2>Taking Tips</h2><br>
+            <h3>Taking Tips</h3>
             <p>Take notes of tips and following in our daily life</p>
          </div>
-         <div class="ARROW"><img src="assets/img/icons/right.png" alt="arrow"></div>
+         <!-- <div class="ARROW"><img src="assets/img/icons/right.png" alt="arrow"></div> -->
          <div class="user">
-            <h2>Trying it daily</h2><br>
+            <h3>Trying it daily</h3>
             <p>Following the tips regurally so that you can find that what are you lacking of.. </p>
          </div>
-         <div class="ARROW"><img src="assets/img/icons/right.png" alt="arrow"></div>
+         <!-- <div class="ARROW"><img src="assets/img/icons/right.png" alt="arrow"></div> -->
          <div class="user">
-            <h2>Session with our experts</h2><br>
+            <h3>Session with our experts</h3>
             <p>Talking with our experts , it give you a personalisied suggestion of your problems.</p>
          </div>
-         <div class="ARROW"><img src="assets/img/icons/right.png" alt="arrow" ></div>
+         <!-- <div class="ARROW"><img src="assets/img/icons/right.png" alt="arrow" ></div> -->
          <div class="user">
-            <h2>Attending public sessions </h2><br>
+            <h3>Attending public sessions </h3>
             <p>in this session, we get together with peoples who are with the same problems as you</p>
          </div>
-    </div><br>
-     <a href="pages/login/login.html"> <span class="start">
-        Log In
-    </span></a>
+    </div>
+    <!-- <div>
+        <a href="pages/html_pages/user_module/login.html"> <span class="start">
+            Log In
+        </span></a>
+    </div> -->
+     
     </div>
     <br>
   <!-- fourth section on index -->
     <div id="benifits">
         
         <div class="flex">
-            <div class="banner2"><img src="assets/img/home/banner2.jpeg" alt="banner" ></div>
+            <div class="banner2">
+<img src="./assets/img/home/confident.jpg" alt="banner">
+</div>
         <div class="list">
             <h2>Benefits of BetterMe</h2>
             <ul>
            
-            <li><img src="assets/img/icons/schedule.png" alt="schedule">Eliminate commute time and scheduling hassles</li>
+            <li>
+<img src="assets/img/icons/schedule.png" alt="schedule">Eliminate commute time and scheduling hassles
+</li>
             
-            <li><img src="assets/img/icons/heart.png" alt="heart">Flexible plans to meet your needs and lifestyle</li>
+            <li>
+<img src="assets/img/icons/heart.png" alt="heart">Flexible plans to meet your needs and lifestyle
+</li>
           
-            <li><img src="assets/img/icons/overpopulation.png" alt="overpopulation">Seamlessly switch therapists, at no extra cost</li>
+            <li>
+<img src="assets/img/icons/overpopulation.png" alt="overpopulation">Seamlessly switch therapists, at no extra cost
+</li>
            
-            <li><img src="assets/img/icons/dollar.png" alt="dollar">Save money while receiving high-quality care</li>
+            <li>
+<img src="assets/img/icons/dollar.png" alt="dollar">Save money while receiving high-quality care
+</li>
         </ul>
     </div>
     </div>
     </div>
-    <br><br><br>
+    <br>
+<br>
+<br>
 
     <!-- user review section on index -->
     <div id="review">
-<h2 class="center">USERS REVIEWS</h2> <hr>
+<h2 class="center">USERS REVIEWS</h2>
+ <hr>
         <div class="flex">
             <div class="user">
                 <div class="flex">
@@ -112,7 +150,8 @@
                     </div>
                 <div class=""> 
                  <h4>Steve jobs</h4>
-                 <h6>@apple.inc</h6></div></div>
+                 <h6>@apple.inc</h6>
+</div></div>
                 <p> I like BetterMe. It's nice to be able to say what I need to, and have somebody check in with me daily giving me feedback.
                   It makes me feel more grounded and determined to do things.</p>
              </div>
@@ -124,7 +163,8 @@
                     </div>
                  <div class=""> 
                   <h4>Jayalalithaa</h4>
-                  <h6>@Amma</h6></div></div>
+                  <h6>@Amma</h6>
+</div></div>
                   <p>I'm incredibly grateful for receiving the best help right now. Thank you so much @BetterMe ❤️✨.</p>
               </div>
      
@@ -139,120 +179,22 @@
                   <p>Thank god for talkspace therapy. Sending my therapist messages at 2 in the morning feels less weird when that's how most of your communication occurs.</p>
               </div>
         </div>
-    
+
     </div>
-    <br><br>
+    <br>
+<br>
 
     <!-- footer -->
     <footer>
-       <p> Copyright © BetterMe. All right reserved.</p>
-        <p>Privacy policy     |     Contact us</p><br><br>
-        <p>If you are in a life threatening situation - don’t use this site. Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
+        <p>Copyright © BetterMe. All right reserved.</p>
+        <p>Privacy policy     |     Contact us</p>
+<br>
+<br>
+        <p>If you are in a life threatening situation - don’t use this site.
+           Call +1 (800) 273-8255 or use these resources to get immediate help.</p>
     </footer>
-    <script>
-        const info = [
-        {
-          title: "Phoenix Books Virtual Poetry Open Mic",
-          para: "Join us for an evening of poetry hosted by Phoenix Books' own Bianca Amira Zanella!",
-          about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
-          ,
-          images: { link: "../assets/img/events/phoneix_event.webp",
-            alt: "Phoenix Books Virtual Poetry Open Mic",
-          },
-          date: {
-            date: "15th December 2022",
-            Time: "5:30am To 7 PM ",
-            venue: "online",
-          },
-        },
-
-        {
-          title: "It's All Connected - Open Mic by Pooja",
-          para: "Ever wondered what your favourite inanimate thing would say if they could express their emotions? What if they were brought to life and allowed to talk? Well we've got a stage for you.",
-          about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
-          ,
-          images: {link: "../assets/img/events/pooja_open_mic.webp",
-            alt: "It's All Connected - Open Mic by Pooja",
-          },
-          date:{date: " 10th December 2022",
-          Time: "4 PM To 6 PM ",
-          venue: "Cover it up Studio The Podium KNK Road Chennai",}
-        },
-
-        {
-          title: "Spot On - More than an Open Mic",
-          para: "We can hear the gears twisting and turning in your heads trying to figure out what this collaborative event with House of T is all about.",
-          about:" Bianca Amira Zanella is a cis queer Vermont-based performance poet, artist, and advocate living on traditionally Abenaki land. She is the Poet-in-Residence at Phoenix Books Rutland, hosting an international monthly open mic. Her poems have most recently appeared in The Artful Mind, The Rutland Herald, The Mountain Troubadour, and The Reverie. Their poem films, sculptural poems, and poem paintings have also been on exhibit with PoemCity Montpelier, Merwin Gallery, Stone Valley Arts, SPACE: a Pop Up Art Gallery, and Surdam Gallery"
-          ,
-          images: { link: "../assets/img/events/spot_on_open_mic.jpg",
-            alt: "Spot On - More than an Open Mic",
-          },
-          date:{date: "11th December 2022",
-          Time: " 3 PM To 5 PM ",
-          venue: "PH cafe, EgmoreChennai",}
-        }
-      ];
-
-
-      let sessionsitems =[{
-        person_name:"Deepak Chopra",
-        images:{link:"../assets/img/session/Deepak_Chopra.jpg",alt:"Deepak Chopra"},
-        occupation:"Alternative medicine advocatepublic speakerwriter",
-        content:`is an Indian-American author and alternative medicine advocate. A prominent figure in
-        the New Age movement, his books and videos have made him one of the best-known and wealthiest figures in
-        alternative medicine.His discussions of quantum healing have been characterised as technobabble "incoherent
-        babbling strewn with scientific terms" which drives those who actually understand physics "crazy" and as
-        "redefining Wrong".`,
-        rating:4,
-        no_ratings:"(30 reviews)",
-    
-    },
-    {
-        person_name:"Chris Gardner",
-        images:{link:"../assets/img/session/Chris_Gardner.jpg", alt:"Chris Gardner"},
-        occupation:"Businessman, motivational speaker ",
-        content:`is an American businessman and motivational speaker. During the early 1980s,
-        Gardner struggled with homelessness while raising a toddler son. He became a stockbroker and eventually
-        founded his own brokerage firm Gardner Rich & Co in 1987. In 2006, Gardner sold his minority stake in the
-        firm and published a memoir. That book was made into the motion picture The Pursuit of Happyness starring
-        Will Smith.`,
-        rating:3,
-        no_ratings:"(12 reviews)",
-    
-    },
-    {
-        person_name:"Iyanla Vanzant",
-        images:{link:"../assets/img/session/Iyanla_Vanzant.png", alt:"Iyanla Vanzant"},
-        occupation:"Inspirational speaker, lawyer, spiritual teacher, author, TV personality",
-        content:`is an American inspirational speaker, lawyer, New Thought spiritual teacher, author,
-        life coach, and television personality. She is known primarily for her books, her eponymous talk show, and
-        her appearances on The Oprah Winfrey Show. She can currently be seen on television as the host of Iyanla:
-        Fix My Life, on OWN: Oprah Winfrey Network`,
-        rating:3,
-        no_ratings:"(12 reviews)",
-    
-    },
-    {
-        person_name:"Darren Hardy",
-        images:{link:"../assets/img/session/Darren_Hardy.jpg",alt:"Darren Hardy"},
-        occupation:`Writer
-        CEO Advisor
-        High_Performance Trainer
-        Motivational Speaker `,
-        content:`is an American author, keynote speaker, advisor, and former publisher of SUCCESS
-        magazine. Hardy is a New York Times best-selling author, who wrote The Entrepreneur Roller Coaster, Living
-        Your Best Year Ever and The Compound Effect .`,
-        rating:3,
-        no_ratings:"(12 reviews)",
-    
-    }]
-    
-    
-    
-    
-    localStorage.setItem("sessioninfo" , JSON.stringify(sessionsitems));
-
-localStorage.setItem("info" , JSON.stringify(info));
+    <script src="./pages/Js_pages/main.js">
+       
     </script>
     
    </body>
