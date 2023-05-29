@@ -31,9 +31,11 @@ function aakash() {
     }
   }
   console.log(res);
-  if (res == 0) {
+  if ( res !==1) {
     alert("don't have an account ,create a new account");
+    window.location.href = "./signup.html"
   }
+
   const ind = arr.findIndex((value) => value == result);
 
   if (res == 1) {
